@@ -17,7 +17,57 @@
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+  <div ng-controller="NavController">
+
+    <!-- NAVIGATION - make into directive -->
+    <nav ng-hide="Data.examInProgress" class="animate-hide-nav">
+      <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down ">
+          <li><a href="/">Home</a></li>
+          <li><a href="/page1">Page1</a></li>
+          <li><a href="/page2">Page2</a></li>
+        </ul>
+
+        <!-- Mobile Slide Out Navigation -->
+        <ul id="slide-out" class="side-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/page1">Page1</a></li>
+          <li><a href="/page2">Page2</a></li>
+        </ul>
+        <a href="#" class="button-collapse" data-activates="slide-out" data-sidenav="right" data-menuwidth="250" data-closeonclick="true"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <p>
+        Input is : <strong>{{Data.FirstName}}</strong>
+      </p>
+    </div>
+  </div>
+
+  <div ng-view autoscroll="true" class="animate {{pageClass}}"></div>
+
+  <!-- FOOTER - make into directive -->
+  <footer class="page-footer container z-depth-2">
+    <div class="row all-rows">
+      <div class="col s12">
+        <div class="row">
+          <div class="center col s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="footer-copyright">
+              © 2017 Copyright | Designed &amp; and Coded by Sebastian Kulig
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Required to load first for MaterializeCSS script to work correctly -->
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
