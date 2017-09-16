@@ -18,6 +18,12 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
     .otherwise({ redirectTo: '/' });
 })
 
+
+// testing disappearing navigation on button click
+.factory('Data', function(){
+    return { firstName: '' };
+})
+
 // ngView autoscroll delay(due to css transition property) fix:
 // set timeout for scroll-to-top to 0 seconds to remove delay
 .run(function ($rootScope, $timeout, $window) {
