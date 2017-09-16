@@ -1,0 +1,19 @@
+{
+  "name": "stream1-project",
+  "version": "1.0.0",
+  "description": "Examination Platform on AngularJS + MaterializeCSS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebam2k4/stream1-project.git"
+  },
+  "author": "Sebastian Kulig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebam2k4/stream1-project/issues"
+  },
+  "homepage": "https://github.com/sebam2k4/stream1-project#readme"
+}
