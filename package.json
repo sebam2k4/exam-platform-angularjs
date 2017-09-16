@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/sebam2k4/stream1-project/issues"
   },
-  "homepage": "https://github.com/sebam2k4/stream1-project#readme"
+  "homepage": "https://github.com/sebam2k4/stream1-project#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-route": "^1.6.6"
+  }
 }
