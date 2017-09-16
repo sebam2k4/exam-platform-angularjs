@@ -17,3 +17,13 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
     })
     .otherwise({ redirectTo: '/' });
 })
+
+// ngView autoscroll delay(due to css transition property) fix:
+// set timeout for scroll-to-top to 0 seconds to remove delay
+.run(function ($rootScope, $timeout, $window) {
+    $rootScope.$on('$routeChangeSuccess', function () {
+      $timeout(function () {
+        $window.scrollTo(0,0);
+      }, 0);
+    });
+})
