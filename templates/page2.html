@@ -17,7 +17,17 @@
             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates
               components and animations that provide more feedback to users. Additionally, a single underlying responsive
               system across all platforms allow for a more unified user experience.</p>
-          </div>
+              <form action="#">
+                  <p>
+                    <!-- make this work from ng-view controllers -->
+                    <input type="checkbox" ng-model="Data.examInProgress" aria-label="Toggle ngHide" id="test1" />
+                    <label for="test1">Toggle Hide Navigation</label>
+                  </p>
+                </form>
+                <div class="center">
+                    <a ng-click="Data.examInProgress = true" class="waves-effect waves-light btn">Start Exam</a>
+                  </div>
+            </div>
         </div>
         <div class="divider"></div>
         <div class="row">
