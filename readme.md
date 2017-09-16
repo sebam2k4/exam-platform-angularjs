@@ -58,8 +58,6 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
     - Plugin that includes few directives to ensure materialize plays nice with angular framework.
 - **[npm](https://www.npmjs.com/)**
     - Helps manage most of the dependencies in the application
-- **[bower](https://bower.io/)**
-    - Used to manage the installation of our libraries and frameworks
 
 ## Contributing
 
