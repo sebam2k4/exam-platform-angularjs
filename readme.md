@@ -28,9 +28,22 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 - None yet :)
  
 ### Features Left to Implement
-- User Based Features
-    - Logout
-    - Login
+- Pages (html, css)
+    - Home
+    - Faq
+    - Exams list
+    - Exam info
+    - Exam review
+    - Score report
+    - login form
+    - registration form
+- Exam (javascript)
+    - questions and answers loaded form JSON
+    - shuffle/randomize questions order
+    - shuffle answer position
+    - keep score
+    - keep time/duration and record time-stamp
+    - remove main navigation on test start
 
 ## Tech Used
 
@@ -50,7 +63,7 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 
 ## Contributing
 
-- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :)
+- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :) However feel free to download the project and experiment!
 
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
