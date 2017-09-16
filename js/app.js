@@ -11,7 +11,7 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
         templateUrl: "templates/page1.html",
         controller: "Page1Controller"
     })
-    .when('/page2', {
+    .when('/exams', {
         templateUrl: "templates/page2.html",
         controller: "Page2Controller"
     })

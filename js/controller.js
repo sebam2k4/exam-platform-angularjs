@@ -22,8 +22,8 @@ angular.module('RouteControllers', [])
     $scope.subheading = 'Subheading of Page 1';
 })
 .controller('Page2Controller', function($scope) {
-    $scope.pageClass = 'page-page2';
-    $scope.heading = 'Page 2';
-    $scope.subheading = 'Subheading of Page 2';
+    $scope.pageClass = 'page-exams';
+    $scope.heading = 'Exams';
+    $scope.subheading = 'Test Your Super Powers';
 
 })
