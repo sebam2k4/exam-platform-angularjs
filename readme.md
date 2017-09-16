@@ -6,8 +6,6 @@ Examination Platform on AngularJS + MaterializeCSS
 
 (workig demo to come)
 
-# Angular To-Do App
-
 ## Overview
 
 ### What is this app for?
