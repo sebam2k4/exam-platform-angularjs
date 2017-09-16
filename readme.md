@@ -4,7 +4,9 @@
 
 Examination Platform on AngularJS + MaterializeCSS
 
-(workig demo to come)
+Demo of the progress so far: [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project/exams)
+
+Please note: might not always work as it is a work in porgress preview
 
 ## Overview
 
