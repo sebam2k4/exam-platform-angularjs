@@ -30,12 +30,12 @@ angular.module('RouteControllers', [])
 
     $http({
       method: 'GET',
-      url: '/data/exam1.json'
+      url: 'data/exam1.json'
     }).then(function successCallback(response) {
       $scope.exam = response.data;
     },
     function errorCallback(response) {
-      console.log("Couldn't load JSON file");
+      console.log("Couldn't load JSON file from /data/");
     });
 
 
