@@ -19,9 +19,9 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
   })
 
 
-  // testing disappearing navigation on button click
+  // testing disappearing navigation on button click & toggle
   .factory('HideNav', function () {
-    return { firstName: '' };
+    return { examInProgress: '' };
   })
 
   // ngView autoscroll delay(due to css transition property) fix:

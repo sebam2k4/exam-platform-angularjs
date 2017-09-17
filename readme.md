@@ -79,6 +79,6 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 8. Happy days!
 
 
-## Current Notes & Issues (For author):
+## Notes & current issues (For myself):
 
 * need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
