@@ -71,10 +71,14 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 3. Once **npm** is installed, you'll need to install all of the dependencies in *package.json*:
   ```
   npm install
-
   ```
 4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this may require sudo on Mac/Linux```
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost:8080](http://127.0.0.1:8080)
 7. Make changes to the code and refresh your browser.
 8. Happy days!
+
+
+## Current Notes & Issues (For author):
+
+* need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
