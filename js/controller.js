@@ -41,7 +41,7 @@ angular.module('AppRouteControllers', [])
 
     $http({
       method: 'GET',
-      url: 'https://github.com/sebam2k4/stream1-project/blob/gh-pages/data/exam1.json'
+      url: 'data/exam1.json'
     }).then(function successCallback(response) {
       $scope.exam = response.data;
     },
