@@ -41,7 +41,7 @@ angular.module('AppRouteControllers', [])
 
     $http({
       method: 'GET',
-      url: '/data/exam1.json'
+      url: 'data/exam1.json'
     }).then(function successCallback(response) {
       $scope.exam = response.data;
     },
