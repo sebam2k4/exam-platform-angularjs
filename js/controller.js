@@ -6,8 +6,8 @@ angular.module('RouteControllers', [])
   // })
 
   // Navigation Controller
-  .controller('NavController', function ($scope, Data) {
-    $scope.Data = Data;
+  .controller('NavController', function ($scope, HideNav) {
+    $scope.hideNav = HideNav;
   })
 
   // ngView controllers
@@ -21,9 +21,9 @@ angular.module('RouteControllers', [])
     $scope.heading = 'Page 1';
     $scope.subheading = 'Subheading of Page 1';
   })
-  .controller('Page2Controller', function ($scope, Data) {
+  .controller('Page2Controller', function ($scope, HideNav) {
     $scope.pageClass = 'page-exams';
     $scope.heading = 'Exams';
     $scope.subheading = 'Test Your Super Powers';
-    $scope.Data = Data;
+    $scope.hideNav = HideNav;
   })

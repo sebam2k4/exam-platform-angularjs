@@ -20,7 +20,7 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
 
 
   // testing disappearing navigation on button click
-  .factory('Data', function () {
+  .factory('HideNav', function () {
     return { firstName: '' };
   })
 
