@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Platform</title>
   <!-- needed for Angular HTML5 mode -->
-  <base href="/">
+  <base href="/stream1-project/">
   <!-- MaterializeCSS styles -->
-  <link rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- App CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -22,18 +22,18 @@
     <!-- NAVIGATION - make into directive -->
     <nav ng-hide="hideNav.examInProgress" class="animate-hide-nav">
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo">Logo</a>
+        <a href="." class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down ">
-          <li><a href="/">Home</a></li>
-          <li><a href="/page1">Page1</a></li>
-          <li><a href="/exams">Exams</a></li>
+          <li><a href=".">Home</a></li>
+          <li><a href="page1">Page1</a></li>
+          <li><a href="exams">Exams</a></li>
         </ul>
 
         <!-- Mobile Slide Out Navigation -->
         <ul id="slide-out" class="side-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/page1">Page1</a></li>
-          <li><a href="/exams">Exams</a></li>
+          <li><a href=".">Home</a></li>
+          <li><a href="page1">Page1</a></li>
+          <li><a href="exams">Exams</a></li>
         </ul>
         <a href="#" class="button-collapse" data-activates="slide-out" data-sidenav="right" data-menuwidth="250" data-closeonclick="true"><i class="material-icons">menu</i></a>
       </div>
@@ -63,15 +63,13 @@
     </div>
   </footer>
 
-  <!-- Required to load first for MaterializeCSS script to work correctly -->
-  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-  <!-- Angular scripts -->
-  <script src="/node_modules/angular/angular.min.js"></script>
-  <script src="/node_modules/angular-route/angular-route.min.js"></script>
-  <script src="/node_modules/angular-animate/angular-animate.min.js"></script>
-  <!-- MaterializeCSS scripts -->
-  <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
-  <script src="/node_modules/angular-materialize/src/angular-materialize.min.js"></script>
+  <!-- using cdn versions for github deployment purposes -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
   <!-- App, Controllers, factories, etc... -->
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/controller.js"></script>
