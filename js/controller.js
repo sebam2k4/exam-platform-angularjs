@@ -6,7 +6,7 @@ angular.module('RouteControllers', [])
   // })
 
   // Navigation Controller
-  .controller('NavController', function ($scope, HideNav) {
+  .controller('HideController', function ($scope, HideNav) {
     $scope.hideNav = HideNav;
   })
 

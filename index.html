@@ -17,21 +17,21 @@
 </head>
 
 <body>
-  <div ng-controller="NavController">
+  <div ng-controller="HideController">
     <!-- NAVIGATION - make into directive -->
-    <nav ng-hide="hideNav.examInProgress" class="animate-hide-nav">
+    <nav ng-hide="hideNav.examInProgress" class="animate-hide-nav white">
       <div class="nav-wrapper container">
         <a href="." class="brand-logo">Logo</a>
-        <ul class="right hide-on-small-only ">
+        <ul class="right hide-on-small-only">
           <li><a href=".">Home</a></li>
           <li><a href="faq">FAQ</a></li>
           <li><a href="pricing">Pricing</a></li>
           <li><a href="exams">Exams</a></li>
-          <li><a href="login">login</a></li>
+          <li class="deep-orange lighten-1"><a class=" white-text" href="login">login</a></li>
         </ul>
 
         <!-- Mobile Slide Out Navigation -->
-        <ul id="slide-out" class="side-nav">
+        <ul ng-hide="hideNav.examInProgress" id="slide-out" class="side-nav">
           <li><a href=".">Home</a></li>
           <li><a href="faq">FAQ</a></li>
           <li><a href="pricing">Pricing</a></li>
@@ -47,22 +47,24 @@
   <div ng-view autoscroll="true" class="animate"></div>
 
   <!-- FOOTER - make into directive -->
-  <footer class="container page-footer z-depth-2">
-    <div class="row">
-      <div class="col s12 center">
-        <h5>Footer Content</h5>
-        <p>Hello There</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12 center">
-        <div class="footer-copyright">
-          2017 Copyright | Designed and Coded by Sebastian Kulig
+  <div ng-controller="HideController">
+    <footer class="container page-footer z-depth-2 animate-hide-footer deep-orange lighten-1" ng-hide="hideNav.examInProgress">
+      <div class="row">
+        <div class="col s12 center">
+          <h5>Footer Content</h5>
+          <p>Hello There</p>
         </div>
       </div>
-    </div>
-  </footer>
+
+      <div class="row">
+        <div class="col s12 center">
+          <div class="footer-copyright">
+            2017 Copyright | Designed and Coded by Sebastian Kulig
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <!-- Required to load first for MaterializeCSS script to work correctly -->
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
