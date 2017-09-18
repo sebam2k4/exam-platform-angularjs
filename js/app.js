@@ -7,13 +7,21 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
         templateUrl: "templates/home.html",
         controller: "HomeController"
       })
-      .when('/page1', {
-        templateUrl: "templates/page1.html",
-        controller: "Page1Controller"
+      .when('/faq', {
+        templateUrl: "templates/faq.html",
+        controller: "PageFaqController"
+      })
+      .when('/pricing', {
+        templateUrl: "templates/pricing.html",
+        controller: "PagePricingController"
       })
       .when('/exams', {
-        templateUrl: "templates/page2.html",
-        controller: "Page2Controller"
+        templateUrl: "templates/exams-list.html",
+        controller: "PageExamsController"
+      })
+      .when('/login', {
+        templateUrl: "templates/login.html",
+        controller: "PageLoginController"
       })
       .otherwise({ redirectTo: '/' });
   })

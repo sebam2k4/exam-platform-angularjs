@@ -12,18 +12,18 @@ angular.module('RouteControllers', [])
 
   // ngView controllers
   .controller('HomeController', function ($scope) {
-    $scope.pageClass = 'page-home';
+    $scope.pageClass = '';
     $scope.heading = 'Validating Your Skills';
     $scope.subheading = 'Expert Examination Platform';
     $scope.images = [];
   })
-  .controller('Page1Controller', function ($scope) {
-    $scope.pageClass = 'page-page1';
+  .controller('PageFaqController', function ($scope) {
+    $scope.pageClass = '';
     $scope.heading = 'Page 1';
     $scope.subheading = 'Subheading of Page 1';
   })
-  .controller('Page2Controller', function ($scope, $http, HideNav) {
-    $scope.pageClass = 'page-exams';
+  .controller('PageExamsController', function ($scope, $http, HideNav) {
+    $scope.pageClass = '';
     $scope.heading = 'Exams';
     $scope.subheading = 'Test Your Super Powers';
     $scope.hideNav = HideNav;
