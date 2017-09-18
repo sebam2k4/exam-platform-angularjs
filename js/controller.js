@@ -11,13 +11,18 @@ angular.module('RouteControllers', [])
   })
 
   // ngView controllers
-  .controller('HomeController', function ($scope) {
+  .controller('PageHomeController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Validating Your Skills';
     $scope.subheading = 'Expert Examination Platform';
     $scope.images = [];
   })
   .controller('PageFaqController', function ($scope) {
+    $scope.pageClass = '';
+    $scope.heading = 'Page 1';
+    $scope.subheading = 'Subheading of Page 1';
+  })
+  .controller('PagePricingController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Page 1';
     $scope.subheading = 'Subheading of Page 1';
@@ -37,7 +42,9 @@ angular.module('RouteControllers', [])
     function errorCallback(response) {
       console.log("Couldn't load JSON file from /data/");
     });
-
-
-
+  })
+  .controller('PageLoginController', function ($scope) {
+    $scope.pageClass = '';
+    $scope.heading = 'Page 1';
+    $scope.subheading = 'Subheading of Page 1';
   })

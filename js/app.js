@@ -5,7 +5,7 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
     $routeProvider
       .when('/', {
         templateUrl: "templates/home.html",
-        controller: "HomeController"
+        controller: "PageHomeController"
       })
       .when('/faq', {
         templateUrl: "templates/faq.html",
