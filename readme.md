@@ -4,9 +4,10 @@
 
 Examination Platform on AngularJS + MaterializeCSS
 
-Demo of the progress so far: [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project/exams)
+Check out the interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) to get an idea of what the design and ui are going to be like.
 
-Please note: might not always work as it is a work in porgress preview
+
+Working demo of the progress so far (May be behind Master branch though): [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project/exams)
 
 ## Overview
 
