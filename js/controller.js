@@ -11,26 +11,23 @@ angular.module('RouteControllers', [])
   })
 
   // ngView controllers
-  .controller('PageHomeController', function ($scope) {
+  .controller('PageHomeController', function ($scope, $rootScope) {
     $scope.pageClass = '';
     $scope.heading = 'Validating Your Skills';
-    $scope.subheading = 'Expert Examination Platform';
+    $rootScope.subheading = 'Expert Examination Platform'
     $scope.images = [];
   })
   .controller('PageFaqController', function ($scope) {
     $scope.pageClass = '';
-    $scope.heading = 'Page 1';
-    $scope.subheading = 'Subheading of Page 1';
+    $scope.heading = 'Want Some Answers?!?';
   })
   .controller('PagePricingController', function ($scope) {
     $scope.pageClass = '';
-    $scope.heading = 'Page 1';
-    $scope.subheading = 'Subheading of Page 1';
+    $scope.heading = 'Subscription Options';
   })
   .controller('PageExamsController', function ($scope, $http, HideNav) {
     $scope.pageClass = '';
-    $scope.heading = 'Exams';
-    $scope.subheading = 'Test Your Super Powers';
+    $scope.heading = 'Test Your Super Powers';
     $scope.hideNav = HideNav;
 
     $http({
@@ -45,6 +42,5 @@ angular.module('RouteControllers', [])
   })
   .controller('PageLoginController', function ($scope) {
     $scope.pageClass = '';
-    $scope.heading = 'Page 1';
-    $scope.subheading = 'Subheading of Page 1';
+    $scope.heading = 'Access Your Dashboard';
   })

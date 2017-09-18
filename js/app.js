@@ -26,7 +26,7 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
       .otherwise({ redirectTo: '/' });
   })
 
-
+  // SERVICES:
   // testing disappearing navigation on button click & toggle
   .factory('HideNav', function () {
     return { examInProgress: '' };
