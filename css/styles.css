@@ -4,15 +4,16 @@ html {
 body {
   background-color: #ddd
 }
-img {
-  border: solid 3px rgb(255,112,67);
-}
+
 .container {
   max-width: 980px;
 }
 .divider {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+.bold-text {
+  font-weight: 700;
 }
 nav .button-collapse {
   float: right;
@@ -42,6 +43,18 @@ nav ul a:hover {
 .page-content .row {
   padding: 2rem 2rem;
 }
+
+.card .card-content {
+  color: white;
+}
+.card .card-action {
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: white;
+}
+
+
 .page-footer {
   margin-bottom: 5rem;
   box-shadow:
