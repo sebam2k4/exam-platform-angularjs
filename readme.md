@@ -77,9 +77,9 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
   ```
   npm run server
   ```
-to start a live preview of the website.
+to start http-server and preview the website.
 5. The project will now run on [localhost:8080](http://127.0.0.1:8080)
-6. This is using live-server and will watch for changes to your files and refresh the page in browser automatically.
+6. Make changes to the code and refresh the browser window to see your changes.
 7. Happy days!
 
 
