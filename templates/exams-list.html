@@ -22,100 +22,58 @@
     </div>
   </section>
   <div class="divider"></div>
+
+
   <section>
     <div class="row">
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
+
+      <form action="#" id="examFilter">
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="showAll" checked />
+          <label for="showAll">Show All</label>
         </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="coding" />
+          <label for="coding">Coding</label>
         </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="math" />
+          <label for="math">Mathematics</label>
         </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="productivity" />
+          <label for="productivity">Productivity</label>
         </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="itTech" />
+          <label for="itTech">IT Tech</label>
         </div>
-      </div>
-      <div class="col s12 m6 l4">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src="http://via.placeholder.com/300x200">
-            <span class="card-title">JavaScript</span>
-          </div>
-          <div class="card-content">
-            <p>Provider: Code Instutute</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Info</a>
-            <a href="#">Take Exam</a>
-          </div>
-        </div>
-      </div>
+      
+      </form>
+
     </div>
   </section>
+
+  <section>
+      <div class="row">
+        <div class="col s12 m6 l4" data-ng-repeat="exam in examList">
+          <div class="card hoverable deep-orange lighten-1">
+            <div class="card-image">
+              <img data-ng-src="{{ exam.image }}">
+              <span class="card-title">{{ exam.name }}</span>
+            </div>
+            <div class="card-content">
+              <p>Provider: {{ exam.provider}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Info</a>
+              <a href="#">Take Exam</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
   <div class="divider"></div>
   <section>
     <div class="row">
