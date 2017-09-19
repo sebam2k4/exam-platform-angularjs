@@ -29,24 +29,28 @@
 
       <form action="#" id="examFilter">
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="showAll" checked />
+          <input class="with-gap" name="examFilter" type="radio" id="showAll" value="" data-ng-model="selectedType" ng-checked="true"/>
           <label for="showAll">Show All</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="coding" />
+          <input class="with-gap" name="examFilter" type="radio" id="coding" value="coding" data-ng-model="selectedType" />
           <label for="coding">Coding</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="math" />
+          <input class="with-gap" name="examFilter" type="radio" id="math" value="math" data-ng-model="selectedType" />
           <label for="math">Mathematics</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="productivity" />
+          <input class="with-gap" name="examFilter" type="radio" id="productivity" value="productivity" data-ng-model="selectedType" />
           <label for="productivity">Productivity</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="itTech" />
+          <input class="with-gap" name="examFilter" type="radio" id="itTech" value="it_tech" data-ng-model="selectedType" />
           <label for="itTech">IT Tech</label>
+        </div>
+        <div class="col s6 m4 l2">
+          <input class="with-gap" name="examFilter" type="radio" id="other" value="other" data-ng-model="selectedType" />
+          <label for="other">Other</label>
         </div>
       
       </form>
@@ -56,7 +60,7 @@
 
   <section>
       <div class="row">
-        <div class="col s12 m6 l4" data-ng-repeat="exam in examList">
+        <div class="col s12 m6 l4" data-ng-repeat="exam in examList | filter: {type:selectedType} | orderBy: '-name'">
           <div class="card hoverable deep-orange lighten-1">
             <div class="card-image">
               <img data-ng-src="{{ exam.image }}">
@@ -66,7 +70,7 @@
               <p>Provider: {{ exam.provider}}</p>
             </div>
             <div class="card-action">
-              <a href="#">Info</a>
+              <a href="{{ exam.path }}">Info</a>
               <a href="#">Take Exam</a>
             </div>
           </div>
