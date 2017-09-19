@@ -68,16 +68,19 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
-2. After you've that you'll need to make sure that you have **npm** installed - You can get **npm** by installing Node from [here](https://nodejs.org/en/)
+2. After you've that, you'll need to make sure that you have **npm** installed - You can get **npm** by installing Node from [here](https://nodejs.org/en/)
 3. Once **npm** is installed, you'll need to install all of the dependencies in *package.json*:
   ```
   npm install
   ```
-4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this may require sudo on Mac/Linux```
-5. Once **http-server** is installed run ```http-server -c-1```
-6. The project will now run on [localhost:8080](http://127.0.0.1:8080)
-7. Make changes to the code and refresh your browser.
-8. Happy days!
+4. After those dependencies have been installed, you can run
+  ```
+  npm run server
+  ```
+to start a live preview of the website.
+5. The project will now run on [localhost:8080](http://127.0.0.1:8080)
+6. This is using live-server and will watch for changes to your files and refresh the page in browser automatically.
+7. Happy days!
 
 
 ## Notes & current issues (For myself):

@@ -2,9 +2,10 @@
   "name": "stream1-project",
   "version": "1.0.0",
   "description": "Examination Platform on AngularJS + MaterializeCSS",
-  "main": "app.js",
+  "main": "js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "",
+    "server": "live-server"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "materialize-css": "^0.100.2"
   },
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "live-server": "^1.2.0"
   }
 }
