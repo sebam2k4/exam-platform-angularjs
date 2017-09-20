@@ -18,39 +18,36 @@
   </section>
 
   <section>
-      <div class="row">
-        <!-- run function on submit after from validates -->
-        <form name="userForm" ng-submit="submitForm(true)" class="col s12 m8 push-m2 l6 push-l3">
-          <!-- EMAIL -->
-          <div class="row">
-            <div input-field class="col s12">
-              <input id="email" name="email" type="email" class="validate" required>
-              <label for="email" data-error="incorrect - this doesn't appear to be a valid email address" data-success="looks like a valid email">Email Address</label>
-            </div>
+    <div class="row">
+      <!-- run function on submit after from validates -->
+      <form name="userForm" ng-submit="submitForm(true)" class="col s12 m8 push-m2 l6 push-l3">
+        <!-- EMAIL -->
+        <div class="row">
+          <div input-field class="col s12">
+            <input id="email" name="email" type="email" class="validate" required>
+            <label for="email" data-error="incorrect - this doesn't appear to be a valid email address" data-success="looks like a valid email">Email Address</label>
           </div>
-          <!-- PASSWORD -->
-          <div class="row">
-            <div input-field class="col s12">
-              <input id="password" name="password" type="password" class="validate" minlength="5" required>
-              <label for="password" data-error="minimum 5 characters required!" data-success="looks good!">password</label>
-            </div>
+        </div>
+        <!-- PASSWORD -->
+        <div class="row">
+          <div input-field class="col s12">
+            <input id="password" name="password" type="password" class="validate" minlength="5" required>
+            <label for="password" data-error="minimum 5 characters required!" data-success="looks good!">password</label>
           </div>
-          <!-- SUBMIT BUTTON -->
-          <div class="row">
-            <div class="col s12">
-              <button type="submit" class="waves-effect waves-light btn-large btn-submit">Submit</button>
-            </div>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <div class="row">
+          <div class="col s12">
+            <button type="submit" class="waves-effect waves-light btn-large btn-submit">Submit</button>
           </div>
-          <!-- ERROR MESAGE -->
-          <div class="row">
-            <div class="col s12">
-              <p class="error-text" ng-show="noUser">Wrong email address or password! <br>
-              No account? <span class="bold-text"><a href="register">Register</a></span></p>
-            </div>
+        </div>
+        <!-- ERROR MESSAGE -->
+        <div class="row">
+          <div class="col s12">
+            <p class="error-text" ng-show="noUser">Wrong email address or password! <br> No account? <span class="bold-text"><a href="register">Register</a></span></p>
           </div>
-  
-        </form>
-      </div>
-    </section>
-  </main>
-
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
