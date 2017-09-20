@@ -1,3 +1,7 @@
+
+/* LAYOUT STYLES */
+/*===============*/
+
 html {
   font-size: 16px; /* set font-size on root for rem units */
 }
@@ -8,35 +12,10 @@ body {
 .container {
   max-width: 980px;
 }
-.divider {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.bold-text {
-  font-weight: 700;
-}
-nav .button-collapse {
-  float: right;
-}
-nav .brand-logo {
-  -webkit-transform: none;
-  transform: none;
-  left: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  color: black;
-}
-nav a,
-nav ul a {
-  color: black;
-}
-nav ul a:hover {
-  background-color: rgba(255,112,67, 0.1)
-}
 .page-header {
   background-color: transparent;
-  padding: 0 2rem;
-  margin: 3rem auto;
+  padding-left: 1rem;
+  margin: 0 auto 2rem auto;
 }
 .row {
   margin-bottom: 0;
@@ -44,7 +23,53 @@ nav ul a:hover {
 .page-content .row {
   padding: 2rem 2rem;
 }
+.exam-in-progress {
+  margin-top: 5rem;
+}
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .container {
+    width: 93%;
+  }
+  .page-header {
+    padding-left: 2rem;
+    margin: 2rem auto 3rem auto;
+  }
+}
+@media only screen and (min-width: 993px) {  /* LARGE */
+  .container {
+    width: 90%;
+  }
+}
 
+
+/* GENERAL STYLES */
+/*================*/
+
+.divider {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.bold-text {
+  font-weight: 700;
+}
+.nav-top .button-collapse {
+  float: right;
+}
+.nav-top .brand-logo {
+  -webkit-transform: none;
+  transform: none;
+  left: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: black;
+}
+.nav-top a,
+.nav-top ul a {
+  color: black;
+}
+.nav-top ul a:hover {
+  background-color: rgba(255,112,67, 0.1)
+}
 .card .card-content {
   color: white;
 }
@@ -54,17 +79,12 @@ nav ul a:hover {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: white;
 }
-
 .duration {
   padding-left: 1rem;
 }
 ul.nested-list {
   padding-left: 1rem;
   font-size: .875rem;
-}
-
-.exam-in-progress {
-  margin-top: 5rem;
 }
 ul.icon >li {
   padding-left: 1rem;
@@ -79,7 +99,12 @@ ul.icon >li::before {
   margin-top: -7px;
   /* revert back to just font-size: 1rem without absolute and margins in bugs */
 }
-
+.left-border {
+  border-left: 4px solid rgb(255,112,67);
+  padding-left: 20px;
+  margin: 0;
+  line-height: 100%;
+}
 .btn,
 .btn-large {
   background-color: rgb(255,112,67);
@@ -105,21 +130,21 @@ ul.icon >li::before {
   font-size: 0.875rem;
 }
 
-@media only screen and (min-width: 601px) {
-  .left-border {
+
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .left-border-m {
     border-left: 4px solid rgb(255,112,67);
     padding-left: 20px;
     margin: 0;
     line-height: 100%;
   }
 }
+@media only screen and (min-width: 993px) {  /* LARGE */
 
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 85%;
-  }
 }
 
+
+/* ANIMATIONS & TRANSITIONS */
 /* Nav hide animation */
 .animate-hide-nav.ng-hide {
   display: block !important;
@@ -157,8 +182,7 @@ ul.icon >li::before {
 /* weird stuff: */
 /* reset all left & right aligned elements to align center on small screens */
 @media only screen and (max-width: 600px) {
-  .left-align,
-  .right-align {
+  .center-s {
     text-align: center;
   }
 }
