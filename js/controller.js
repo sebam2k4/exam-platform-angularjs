@@ -18,39 +18,12 @@ angular.module('AppRouteControllers', [])
   .controller('PagePricingController', function ($scope) {
     $scope.heading = 'Subscription Options';
   })
-<<<<<<< HEAD
 
   .controller('PageExamsController', function ($scope, ExamList, HideNav) {
     $scope.heading = 'Test Your Super Powers';
     $scope.examList = ExamList;
-<<<<<<< HEAD
     $scope.hideNav = HideNav;
     $scope.hideNav.removeNav = "";                      // remove .remove-nav class from top navigation and footer
-=======
-<<<<<<< HEAD
-=======
-
-
-    
-=======
-  .controller('Page2Controller', function ($scope, $http, Data) {
-    $scope.pageClass = 'page-exams';
-    $scope.heading = 'Exams';
-    $scope.subheading = 'Test Your Super Powers';
-    $scope.Data = Data;
-
-    $http({
-      method: 'GET',
-      url: 'data/exam1.json'
-    }).then(function successCallback(response) {
-      $scope.exam = response.data;
-    },
-    function errorCallback(response) {
-      console.log("Couldn't load JSON file");
-    });
->>>>>>> fetch data with http
->>>>>>> fetch data with http
->>>>>>> fetch data with http
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
