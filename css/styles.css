@@ -8,14 +8,16 @@ html {
 body {
   background-color: #ddd
 }
-
-.container {
-  max-width: 980px;
-}
 .page-header {
   background-color: transparent;
   padding-left: 1rem;
   margin: 0 auto 2rem auto;
+}
+.container {
+  max-width: 980px;
+}
+.container.form {
+  padding-bottom: 3rem;
 }
 .row {
   margin-bottom: 0;
@@ -30,7 +32,7 @@ body {
 .col > .row {
   padding: 0;
 }
-.col > .row > .col {
+.content .col > .row > .col {
   margin-top: 2rem;
 }
 
@@ -43,7 +45,7 @@ body {
     padding-left: 2rem;
     margin: 2rem auto 3rem auto;
   }
-  .col > .row > .col:first-child {
+  .content .col > .row > .col:first-child {
     margin-top: 0;
   }
 }
@@ -56,7 +58,9 @@ body {
 
 /* GENERAL STYLES */
 /*================*/
-
+h1 {
+  font-weight: 700;
+}
 .page-header h2 {
   font-size: 1.64rem;
   line-height: 110%;
@@ -71,6 +75,16 @@ h5 {
 }
 .bold-text {
   font-weight: 700;
+}
+.error-text {
+  color: #F44336;
+  font-size: .875rem;
+}
+.bold-text a {
+  color: rgb(255,112,67)
+}
+.bold-text a:hover {
+  color: #ff8a65;
 }
 .nav-top .button-collapse {
   float: right;
