@@ -26,7 +26,8 @@ nav .brand-logo {
   margin-right: 1rem;
   color: black;
 }
-nav ul a{
+nav a,
+nav ul a {
   color: black;
 }
 nav ul a:hover {
