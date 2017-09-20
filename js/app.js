@@ -27,6 +27,10 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
         templateUrl: "templates/exam-info.html",
         controller: "ExamInfo"
       })
+      .when('/exams/exam-start', {
+        templateUrl: "templates/exam-start.html",
+        controller: "ExamStart"
+      })
       .otherwise({ redirectTo: '/' });
   })
 

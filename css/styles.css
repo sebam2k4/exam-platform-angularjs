@@ -63,6 +63,19 @@ ul.nested-list {
   font-size: .875rem;
 }
 
+.exam-in-progress {
+  margin-top: 5rem;
+}
+
+.btn,
+.btn-large {
+  background-color: rgb(255,112,67);
+}
+
+.btn:hover,
+.btn-large:hover {
+  background-color: #ff8a65;
+}
 .page-footer {
   margin-bottom: 5rem;
   box-shadow:

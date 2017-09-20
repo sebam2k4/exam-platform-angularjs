@@ -43,7 +43,14 @@ angular.module('RouteControllers', [])
     $scope.heading = 'Access Your Dashboard';
   })
 
-  .controller('ExamInfo', function ($scope, HideNav, ExamList, $http) {
+  .controller('ExamInfo', function ($scope, ExamList) {
+    $scope.examList = ExamList;
+    var examName = $scope.examList[0].name;
+    $scope.heading = examName;
+    // how to select the current exam's data from the ExamList Service?
+  })
+
+  .controller('ExamStart', function ($scope, ExamList, HideNav, $http) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
 
