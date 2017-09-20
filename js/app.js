@@ -36,9 +36,27 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
     return { examInProgress: '' };
   })
 
-  .factory('ExamInfo', function(){
-    return { name: '' }
+  .factory('ExamList', function(){
+    return [
+        { 
+          name: 'Sample Coding Exam',
+          provider: 'Code Institute',
+          path: 'exams/exam-info',
+          image: 'img/300x200.png',
+          type: 'coding' 
+        },
+        { name: 'Calculus', provider: 'The Mathmagicians', path: '#', image: 'img/300x200.png', type: 'math' },
+        { name: 'Python', provider: 'The Monty Snake?', path: '#', image: 'img/300x200.png', type: 'coding' },
+        { name: 'JavaScript Basics', provider: 'Code Institute', path: '#', image: 'img/300x200.png', type: 'coding' },
+        { name: 'Routing & Switching', provider: 'Cisco', path: '#', image: 'img/300x200.png', type: 'it_tech' },
+        { name: 'Office365', provider: 'Cool guys at Microsoft', path: '#', image: 'img/300x200.png', type: 'productivity' },
+        { name: 'Machine Code', provider: 'CPU', path: '#', image: 'img/300x200.png', type: 'coding' },
+        { name: 'Debugging', provider: 'Rubber Duckie', path: '#', image: 'img/300x200.png', type: 'coding' },
+        { name: 'Proper Etiquetter', provider: 'Your Aunt Mary', path: '#', image: 'img/300x200.png', type: 'other' }
+      ];
   })
+
+
   // ngView autoscroll delay(due to css transition property) fix:
   // set timeout for scroll-to-top to 0 seconds to remove delay
   .run(function ($rootScope, $timeout, $window) {
