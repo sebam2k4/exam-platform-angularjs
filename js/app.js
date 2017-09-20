@@ -47,20 +47,21 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
   .factory('ExamList', function(){
     return [
         { 
+          examId: '1',
           name: 'Sample Coding Exam',
           provider: 'Code Institute',
           path: 'exams/exam-info',
           image: 'img/300x200.png',
           type: 'coding' 
         },
-        { name: 'Calculus', provider: 'The Mathmagicians', path: '#', image: 'img/300x200.png', type: 'math' },
-        { name: 'Python', provider: 'The Monty Snake?', path: '#', image: 'img/300x200.png', type: 'coding' },
-        { name: 'JavaScript Basics', provider: 'Code Institute', path: '#', image: 'img/300x200.png', type: 'coding' },
-        { name: 'Routing & Switching', provider: 'Cisco', path: '#', image: 'img/300x200.png', type: 'it_tech' },
-        { name: 'Office365', provider: 'Cool guys at Microsoft', path: '#', image: 'img/300x200.png', type: 'productivity' },
-        { name: 'Machine Code', provider: 'CPU', path: '#', image: 'img/300x200.png', type: 'coding' },
-        { name: 'Debugging', provider: 'Rubber Duckie', path: '#', image: 'img/300x200.png', type: 'coding' },
-        { name: 'Proper Etiquetter', provider: 'Your Aunt Mary', path: '#', image: 'img/300x200.png', type: 'other' }
+        { examId: '2', name: 'Calculus', provider: 'The Mathmagicians', path: 'exams/exam-info', image: 'img/300x200.png', type: 'math' },
+        { examId: '3', name: 'Python', provider: 'The Monty Snake?', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '4', name: 'JavaScript Basics', provider: 'Code Institute', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '5', name: 'Routing & Switching', provider: 'Cisco', path: 'exams/exam-info', image: 'img/300x200.png', type: 'it_tech' },
+        { examId: '6', name: 'Office365', provider: 'Cool guys at Microsoft', path: 'exams/exam-info', image: 'img/300x200.png', type: 'productivity' },
+        { examId: '7', name: 'Machine Code', provider: 'CPU', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '8', name: 'Debugging', provider: 'Rubber Duckie', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '9', name: 'Proper Etiquetter', provider: 'Your Aunt Mary', path: 'exams/exam-info', image: 'img/300x200.png', type: 'other' }
       ];
   })
 
