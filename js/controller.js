@@ -50,7 +50,12 @@ angular.module('RouteControllers', [])
     // how to select the current exam's data from the ExamList Service?
   })
 
-  .controller('ExamStart', function ($scope, ExamList, HideNav, $http) {
+  .controller('ExamStart', function ($scope, ExamList, HideNav) {
+    $scope.hideNav = HideNav;
+    $scope.examList = ExamList;
+  })
+
+  .controller('ExamInProgress', function ($scope, ExamList, HideNav, $http) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
 

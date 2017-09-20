@@ -117,7 +117,7 @@ ul.nested-list {
 }
 .animate-hide-footer.ng-hide {
   display: block !important;
-  transform: translateY( 65px );
+  transform: translateY( 35px );
   transition: all linear 0.5s;
   opacity: 0;
 }
