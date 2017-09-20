@@ -38,6 +38,16 @@ angular.module('RouteControllers', [])
   .controller('PageLoginController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Access Your Dashboard';
+    // Show incorrect email/pass message on validated login attempt:
+    $scope.submitForm = function(isValid) {
+      //$scope.submitted = true;
+      if (isValid) {
+        //alert('Test: this form is amazing!');
+        $scope.noUser = true;
+      } else {
+
+      }
+    }
   })
 
   .controller('PageRegisterController', function ($scope) {

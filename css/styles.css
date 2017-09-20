@@ -143,10 +143,14 @@ ul.icon >li::before {
 .btn-large {
   background-color: rgb(255,112,67);
 }
-
 .btn:hover,
-.btn-large:hover {
+.btn:focus,
+.btn-large:hover, 
+.btn-large:focus {  
   background-color: #ff8a65;
+}
+.btn-submit {
+  margin-top: 1rem;
 }
 .page-footer {
   margin-bottom: 5rem;
