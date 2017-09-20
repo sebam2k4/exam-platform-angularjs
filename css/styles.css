@@ -66,6 +66,19 @@ ul.nested-list {
 .exam-in-progress {
   margin-top: 5rem;
 }
+ul.icon >li {
+  padding-left: 1rem;
+}
+
+ul.icon >li::before {
+  font-family: "Material Icons";
+  content:'\e409';
+  font-size: 1.5rem;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: -7px;
+  /* revert back to just font-size: 1rem without absolute and margins in bugs */
+}
 
 .btn,
 .btn-large {
