@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
   {
     "questionId": 100,
     "questionText": "Which of the following is true about jQuery?",
@@ -256,73 +255,3 @@
     ]
   }
 ]
-=======
-    {
-      "examId": 1,
-      "name": "Exam 1 For Testing",
-      "description": "Exam description",
-      "questions": [
-        {
-          "questionId": 101,
-          "name": "QUESTION 1",
-          "choices": [
-            {
-              "choiceId": 1,
-              "name": "Choice 1",
-              "isAnswer": false
-            },
-            {
-              "choiceId": 2,
-              "name": "Choice 2",
-              "isAnswer": true
-            },
-            {
-              "choiceId": 3,
-              "name": "Choice 3",
-              "isAnswer": false
-            },
-            {
-              "choiceId": 1058,
-              "name": "Choice 4",
-              "isAnswer": false
-            }
-          ],
-          "mediaAid": {
-            "required": false,
-            "path": ""
-          }
-        },
-        {
-          "questionId": 102,
-          "name": "QUESTION 2",
-          "choices": [
-            {
-              "choiceId": 1,
-              "name": "Choice 1",
-              "isAnswer": false
-            },
-            {
-              "choiceId": 2,
-              "name": "Choice 2",
-              "isAnswer": true
-            },
-            {
-              "choiceId": 3,
-              "name": "Choice 3",
-              "isAnswer": false
-            },
-            {
-              "choiceId": 4,
-              "name": "Choice 4",
-              "isAnswer": false
-            }
-          ],
-          "mediaAid": {
-            "required": true,
-            "path": "/mediaAid/movie.mp4"
-          }
-        }
-      ]
-    }
-  ]
->>>>>>> Added data
