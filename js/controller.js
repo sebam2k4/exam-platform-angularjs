@@ -17,21 +17,23 @@ angular.module('RouteControllers', [])
     $rootScope.subheading = 'Expert Examination Platform'
     $scope.images = [];
   })
+
   .controller('PageFaqController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Want Some Answers?!?';
   })
+
   .controller('PagePricingController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Subscription Options';
   })
-  .controller('PageExamsController', function ($scope, $http, HideNav) {
+
+  .controller('PageExamsController', function ($scope, $http) {
     $scope.pageClass = '';
     $scope.heading = 'Test Your Super Powers';
-    $scope.hideNav = HideNav;
 
     $scope.examList = [
-      { name: 'Sample Coding Exam', provider: 'Code Institute', path: '#', image: 'img/300x200.png', type: 'coding' },
+      { name: 'Sample Coding Exam', provider: 'Code Institute', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
       { name: 'Calculus', provider: 'The Mathmagicians', path: '#', image: 'img/300x200.png', type: 'math' },
       { name: 'Python', provider: 'The Monty Snake?', path: '#', image: 'img/300x200.png', type: 'coding' },
       { name: 'JavaScript Basics', provider: 'Code Institute', path: '#', image: 'img/300x200.png', type: 'coding' },
@@ -52,7 +54,12 @@ angular.module('RouteControllers', [])
       console.log("Couldn't load JSON file from ./data/");
     });
   })
+
   .controller('PageLoginController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Access Your Dashboard';
+  })
+
+  .controller('ExamInfo', function ($scope, HideNav) {
+    $scope.hideNav = HideNav;
   })

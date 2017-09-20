@@ -1,0 +1,52 @@
+<header class="container page-header">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="header">{{ heading }}</h1>
+      <h5 class="light subheader">{{ subheading }}</h5>
+    </div>
+  </div>
+</header>
+
+<main class="container page-content z-depth-5 white">
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <h5 class="left-border">Section 2</h5>
+        <ul>
+          <div ng-repeat="qs in exam">
+            <div ng-repeat="question in qs.questions">
+              <p>{{ question.name }}</p>
+              <ul>
+                <li ng-repeat="choice in question.choices">{{ choice.name }}</li>
+              </ul>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <section>
+    <div class="row">
+      <div class="col">
+        <h5 class="left-border">Section 3</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque. In id tellus sodales, vestibulum ipsum quis, vulputate turpis. Sed sed quam
+          augue. Vestibulum sed massa nulla. Nunc sodales pellentesque turpis, eu ullamcorper mi sodales sed. Aenean rutrum
+          felis vel elit malesuada imperdiet. Mauris lacinia lacus at turpis dapibus, quis sollicitudin odio egestas. Pellentesque
+          feugiat varius sem, quis porta urna porttitor ut. Phasellus imperdiet erat orci, et volutpat massa finibus ac.
+          Praesent elementum non nisl et elementum.</p>
+        <form action="#">
+          <p>
+            <!-- make this work from ng-view controllers -->
+            <input type="checkbox" ng-model="hideNav.examInProgress" aria-label="Toggle ngHide" id="test1" />
+            <label for="test1">Toggle Hide Navigation</label>
+          </p>
+          <div class="center">
+            <a ng-click="hideNav.examInProgress = true" class="waves-effect waves-light btn">Start Exam</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
