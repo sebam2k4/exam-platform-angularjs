@@ -16,7 +16,7 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
         controller: "PagePricingController"
       })
       .when('/exams', {
-        templateUrl: "templates/exams-list.html",
+        templateUrl: "templates/exams.html",
         controller: "PageExamsController"
       })
       .when('/login', {
@@ -36,6 +36,9 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
     return { examInProgress: '' };
   })
 
+  .factory('ExamInfo', function(){
+    return { name: '' }
+  })
   // ngView autoscroll delay(due to css transition property) fix:
   // set timeout for scroll-to-top to 0 seconds to remove delay
   .run(function ($rootScope, $timeout, $window) {
