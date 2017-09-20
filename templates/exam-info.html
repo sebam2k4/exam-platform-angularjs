@@ -1,7 +1,7 @@
 <header class="container page-header">
   <div class="row">
     <div class="col s12">
-      <h1 class="header">{{ heading }}</h1>
+      <h1 class="header">{{ examList[0].name }}</h1>
       <h5 class="light subheader">{{ subheading }}</h5>
     </div>
   </div>
@@ -11,41 +11,63 @@
   <section>
     <div class="row">
       <div class="col s12">
-        <h5 class="left-border">Section 2</h5>
-        <ul>
-          <div ng-repeat="qs in exam">
-            <div ng-repeat="question in qs.questions">
-              <p>{{ question.name }}</p>
-              <ul>
-                <li ng-repeat="choice in question.choices">{{ choice.name }}</li>
-              </ul>
-            </div>
-          </div>
-        </ul>
+        <h5 class="left-border">About This Exam</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque. In id tellus sodales, vestibulum ipsum quis, vulputate turpis. Sed sed quam
+          augue. Vestibulum sed massa nulla. Nunc sodales pellentesque turpis, eu ullamcorper mi sodales sed. Aenean rutrum
+          felis vel elit malesuada imperdiet.</p>
+
+        <div>
+          <a class="waves-effect waves-light btn-large deep-orange lighten-1">Take This Exam</a><span class="duration">Duration: max 45 minutes</span>
+        </div>
+
       </div>
     </div>
   </section>
   <div class="divider"></div>
   <section>
     <div class="row">
-      <div class="col">
-        <h5 class="left-border">Section 3</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
-          a gravida libero, id efficitur neque. In id tellus sodales, vestibulum ipsum quis, vulputate turpis. Sed sed quam
-          augue. Vestibulum sed massa nulla. Nunc sodales pellentesque turpis, eu ullamcorper mi sodales sed. Aenean rutrum
-          felis vel elit malesuada imperdiet. Mauris lacinia lacus at turpis dapibus, quis sollicitudin odio egestas. Pellentesque
-          feugiat varius sem, quis porta urna porttitor ut. Phasellus imperdiet erat orci, et volutpat massa finibus ac.
-          Praesent elementum non nisl et elementum.</p>
-        <form action="#">
-          <p>
-            <!-- make this work from ng-view controllers -->
-            <input type="checkbox" ng-model="hideNav.examInProgress" aria-label="Toggle ngHide" id="test1" />
-            <label for="test1">Toggle Hide Navigation</label>
-          </p>
-          <div class="center">
-            <a ng-click="hideNav.examInProgress = true" class="waves-effect waves-light btn">Start Exam</a>
-          </div>
-        </form>
+      <div class="col s12 m7">
+        <h5 class="left-border">Skills Measured</h5>
+        <p>This exam measures your ability to accomplish the technical tasks listed below.</p>
+        <ul class="browser-default">
+          <li>JavaScript
+            <ul class="nested-list">
+              <li>Use comparison operators</li>
+              <li>Use conditional statements</li>
+              <li>Create and implement objects and methods</li>
+              <li>Establish Scope of variables and objects</li>
+            </ul>
+          </li>
+          <li>jQuery
+            <ul class="nested-list">
+              <li>Find elements by using CSS selectors and jQuery</li>
+              <li>Apply animations</li>
+            </ul>
+          </li>
+          <li>Other
+            <ul class="nested-list">
+              <li>Some HTML and CSS may be in here as well</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col s12 m5">
+        <h5 class="left-border">Preparation Options</h5>
+        <ul class="browser-default">
+          <li>Code Institute</li>
+          <li>Codecademy</li>
+          <li>Eloquent JavaScript Book</li>         
+          <li>Online Tutorials</li>
+        </ul>
+        <h5 class="left-border">Pass Requirements</h5>
+        <ul class="browser-default">
+          <li>Answer 70% of questions correctly</li>
+        </ul>
+        <h5 class="left-border">Next Step After Passing</h5>
+        <ul class="browser-default">
+          <li>Learn more new things and take more exams!</li>
+        </ul>
       </div>
     </div>
   </section>

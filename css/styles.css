@@ -55,6 +55,13 @@ nav ul a:hover {
   color: white;
 }
 
+.duration {
+  padding-left: 1rem;
+}
+ul.nested-list {
+  padding-left: 1rem;
+  font-size: .875rem;
+}
 
 .page-footer {
   margin-bottom: 5rem;
