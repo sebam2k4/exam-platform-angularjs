@@ -18,7 +18,6 @@
 
 <body>
   <div ng-controller="HideController">
-    <!-- NAVIGATION - make into directive -->
     <nav ng-hide="hideNav.examInProgress" class="animate-hide-nav white">
       <div class="nav-wrapper container">
         <a href="." class="brand-logo">Logo</a>
@@ -46,7 +45,6 @@
 
   <div ng-view autoscroll="true" class="animate"></div>
 
-  <!-- FOOTER - make into directive -->
   <div ng-controller="HideController">
     <footer class="container page-footer z-depth-2 animate-hide-footer deep-orange lighten-1" ng-hide="hideNav.examInProgress">
       <div class="row">
