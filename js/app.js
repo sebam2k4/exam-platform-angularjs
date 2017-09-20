@@ -23,6 +23,10 @@ angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.mater
         templateUrl: "templates/login.html",
         controller: "PageLoginController"
       })
+      .when('/register', {
+        templateUrl: "templates/register.html",
+        controller: "PageRegisterController"
+      })
       .when('/exams/exam-info', {
         templateUrl: "templates/exam-info.html",
         controller: "ExamInfo"

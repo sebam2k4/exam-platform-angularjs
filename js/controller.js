@@ -33,14 +33,16 @@ angular.module('RouteControllers', [])
     $scope.heading = 'Test Your Super Powers';
 
     $scope.examList = ExamList;
-
-
-    
   })
 
   .controller('PageLoginController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Access Your Dashboard';
+  })
+
+  .controller('PageRegisterController', function ($scope) {
+    $scope.pageClass = '';
+    $scope.heading = 'Register a New Account';
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
