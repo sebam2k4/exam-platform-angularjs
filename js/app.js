@@ -1,4 +1,4 @@
-angular.module('examApp', ['ngRoute', 'RouteControllers', 'ngAnimate', 'ui.materialize'])
+angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'ngAnimate', 'ui.materialize'])
   .config(function ($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true); // Enable href routing without hashes
 

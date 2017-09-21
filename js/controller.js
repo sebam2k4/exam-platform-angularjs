@@ -1,4 +1,4 @@
-angular.module('RouteControllers', [])
+angular.module('AppRouteControllers', [])
 
   //parent controller
   // .controller('ParentController', function($scope) {
