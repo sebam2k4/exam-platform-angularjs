@@ -1,49 +1,93 @@
 <header class="container page-header">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="header">{{ heading }}</h1>
+      <h2 class="light subheader">{{ subheading }}</h2>
+    </div>
+  </div>
+</header>
+
+<main class="container page-content z-depth-5 white form">
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <h5 class="left-border">Register <br>Your Account</h5>
+        <p>Fill out the form below to register for an account. <span class="bold-text">For Testing purposes only - Use fake input details</span></p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <!-- run function on submit after from validates -->
+      <form name="register-form" ng-submit="submitForm(true)" class="col s12 m10 push-m1 l8 push-l2">
+        <!-- EMAIL -->
         <div class="row">
-          <div class="col s12">
-            <h1 class="header">{{ heading }}</h1>
-            <h2 class="light subheader">{{ subheading }}</h2>
+          <div input-field class="col s12">
+            <!-- must contain only 2 to 3 letters from a-z after . -->
+            <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="validate" required>
+            <label for="email" data-error="This doesn't appear to be a valid email address" data-success="looks like a valid email">Email Address</label>
           </div>
         </div>
-      </header>
-      
-      <main class="container page-content z-depth-5 white form">
-        <section>
-          <div class="row">
-            <div class="col s12">
-              <h5 class="left-border">Register <br>Your Account</h5>
-              <p>Fill out the form below to register for an account. <span class="bold-text">For testing purposes only - Use fake details</span></p>
+        <!-- PASSWORD -->
+        <div class="row">
+          <div input-field class="col s12">
+            <!-- must contain 8 or more characters & include at least one number, and one uppercase and lowercase letter -->
+            <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
+            <label for="password" data-error="minimum 8 characters &amp; 1 number &amp; 1 uppercase letter" data-success="looks good!">Password</label>
+          </div>
+        </div>
+        <!-- SELECT ACCOUNT -->
+        <p>
+          <input id="account-type-user" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account" value="user"/>
+          <label for="account-type-user">Exam Taker</label>
+        </p>
+        <p>
+          <input id="account-type-org" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account" value="org"/>
+          <label for="account-type-org">Organization</label>
+        </p>
+        <!-- NAME -->
+        <div ng-show="account == 'user'" class="row">
+          <div input-field class="col s12">
+            <input id="name-user" name="name-user" type="text" class="validate" required>
+            <label for="name-user" data-error="Can't be blank" data-success="Yey!">Name</label>
+          </div>
+        </div>
+        <!-- ORGANIZATION NAME -->
+        <div ng-show="account == 'org'" class="row">
+          <div input-field class="col s12">
+            <input id="name-org" name="name-org" type="text" class="validate" required>
+            <label for="name-org" data-error="Can't be blank" data-success="Yey!">Organization Name</label>
+          </div>
+        </div>
+          <!-- ADDRESS -->
+        <div ng-show="account == 'user' || account =='org'" class="row">
+            <div input-field class="col s12">
+              <input id="address" name="address" type="text" class="validate" required>
+              <label for="address" data-error="Can't be blank" data-success="looks good!">Address</label>
             </div>
           </div>
-        </section>
-        <section>
-          <div class="row">
-            <form class="col s12 m8 push-m2 l6 push-l3">
-      
-              <div class="row">
-                <div input-field class="col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email" data-error="incorrect - this doesn't appear to be a valid email address" data-success="looks like a valid email">Email Address</label>
-                </div>
-              </div>
-              <div class="row">
-                <div input-field class="col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">password</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12">
-                  <a class="waves-effect waves-light btn-large" >Submit</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12">
-                    <p class="error-text" ng-show="showError">Wrong email address or password!</p>
-                </div>
-              </div>
-      
-            </form>
+          <!-- TELEPHONE NO -->
+        <div ng-show="account == 'user' || account == 'org'" class="row">
+            <div input-field class="col s12">
+              <!-- Digits only -->
+              <input id="tel" name="tel" type="tel" pattern="\d*" class="validate" required>
+              <label for="tel" data-error="Digits only" data-success="looks good!">Telephone No</label>
+            </div>
           </div>
-        </section>
-      </main>
+        <!-- SUBMIT BUTTON -->
+        <div class="row">
+          <div class="col s12">
+            <button type="submit" class="waves-effect waves-light btn-large btn-submit">Submit</button>
+          </div>
+        </div>
+        <!-- ERROR MESSAGE -->
+        <div class="row">
+          <div class="col s12">
+            <p class="error-text" ng-show="noUser">Wrong email address or password! <br> No account? <span class="bold-text"><a href="register">Register</a></span></p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</main>

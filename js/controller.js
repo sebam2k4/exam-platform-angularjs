@@ -44,8 +44,6 @@ angular.module('RouteControllers', [])
       if (isValid) {
         //alert('Test: this form is amazing!');
         $scope.noUser = true;
-      } else {
-
       }
     }
   })
@@ -53,6 +51,16 @@ angular.module('RouteControllers', [])
   .controller('PageRegisterController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Register a New Account';
+
+    $scope.submitForm = function(isValid) {
+      //$scope.submitted = true;
+      if (isValid) {
+        //alert('Test: this form is amazing!');
+        $scope.noUser = true;
+      } else {
+
+      }
+    };
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
