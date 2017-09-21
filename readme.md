@@ -28,18 +28,20 @@ This app is built on AngularJS and uses JSON data to generate exam questions and
 ## Features
  
 ### Existing Features
-- None yet :)
+- Pages (html, css)
+    - Home
+    - Exams list
+    - Exam info
+    - Exam start
+- Forms
+    - Login validation
+    - Registration validation
  
 ### Features Left to Implement
 - Pages (html, css)
-    - Home
     - Faq
-    - Exams list
-    - Exam info
     - Exam review
     - Score report
-    - login form
-    - registration form
 - Exam (javascript)
     - questions and answers loaded form JSON
     - shuffle/randomize questions order
