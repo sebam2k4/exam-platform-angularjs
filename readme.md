@@ -113,6 +113,9 @@ to start the http-server to allow you to preview the website.
 8. Happy days!
 
 
+## Bugs
+1. Modal on Register Page only displays after second button click. 
+
 ## Notes & current issues (For myself):
 
 * need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
