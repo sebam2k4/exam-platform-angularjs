@@ -30,6 +30,7 @@ This is a Single Page Application on AngularJS and uses JSON data to generate ex
   - HTTP Communication with XHR [(XML Http Request)](https://en.wikipedia.org/wiki/XMLHttpRequest)
   - DOM Manipulation
   - State and Routing
+  - MVC (MVVM in this case)
 - Benefits:
   - Two-Way Data Binding
   - Many ways to do things
