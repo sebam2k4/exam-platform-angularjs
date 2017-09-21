@@ -5,7 +5,7 @@ angular.module('RouteControllers', [])
   //   $scope.name = 'Sebastian';
   // })
 
-  // Navigation Controller
+  // Hide Controller outside of ngView
   .controller('HideController', function ($scope, HideNav) {
     $scope.hideNav = HideNav;
   })
