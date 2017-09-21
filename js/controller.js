@@ -42,8 +42,8 @@ angular.module('RouteControllers', [])
     $scope.submitForm = function(isValid) {
       //$scope.submitted = true;
       if (isValid) {
-        //alert('Test: this form is amazing!');
-        $scope.noUser = true;
+        console.log('This Login form validated'); // Test
+        $scope.validated = true;
       }
     }
   })
@@ -56,7 +56,7 @@ angular.module('RouteControllers', [])
     $scope.submitForm = function(isValid) {
       //$scope.submitted = true;
       if (isValid) {
-        //alert('Test: this form is amazing!');
+        console.log('This Registration form validated!'); // Test
         $scope.validated = true;
       }
     }
