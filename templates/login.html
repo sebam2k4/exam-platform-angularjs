@@ -42,9 +42,9 @@
           </div>
         </div>
         <!-- ERROR MESSAGE -->
-        <div class="row">
+        <div class="row" ng-show="noUser">
           <div class="col s12">
-            <p class="error-text" ng-show="noUser">Wrong email address or password! <br> No account? <span class="bold-text"><a href="register">Register</a></span></p>
+            <p class="error-text">Wrong email address or password! <br> No account? <span class="bold-text"><a href="register">Register</a></span></p>
           </div>
         </div>
       </form>
