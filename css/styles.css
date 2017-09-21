@@ -28,8 +28,8 @@ body {
 .exam-in-progress {
   margin-top: 5rem;
 }
-
-.col > .row {
+.col > .row,
+.directive-wrapper > .row {
   padding: 0;
 }
 .content .col > .row > .col {
