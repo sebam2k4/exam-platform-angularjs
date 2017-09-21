@@ -28,27 +28,27 @@
 
       <form action="#" id="examFilter">
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="showAll" value="" data-ng-model="selectedType" ng-checked="true"/>
+          <input class="with-gap" name="examFilter" type="radio" id="showAll" value="" data-ng-model="exam.type" ng-checked="true"/>
           <label for="showAll">Show All</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="coding" value="coding" data-ng-model="selectedType" />
+          <input class="with-gap" name="examFilter" type="radio" id="coding" value="coding" data-ng-model="exam.type" />
           <label for="coding">Coding</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="math" value="math" data-ng-model="selectedType" />
+          <input class="with-gap" name="examFilter" type="radio" id="math" value="math" data-ng-model="exam.type" />
           <label for="math">Mathematics</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="productivity" value="productivity" data-ng-model="selectedType" />
+          <input class="with-gap" name="examFilter" type="radio" id="productivity" value="productivity" data-ng-model="exam.type" />
           <label for="productivity">Productivity</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="itTech" value="it_tech" data-ng-model="selectedType" />
+          <input class="with-gap" name="examFilter" type="radio" id="itTech" value="it_tech" data-ng-model="exam.type" />
           <label for="itTech">IT Tech</label>
         </div>
         <div class="col s6 m4 l2">
-          <input class="with-gap" name="examFilter" type="radio" id="other" value="other" data-ng-model="selectedType" />
+          <input class="with-gap" name="examFilter" type="radio" id="other" value="other" data-ng-model="exam.type" />
           <label for="other">Other</label>
         </div>
       
@@ -59,7 +59,7 @@
 
   <section>
       <div class="row">
-        <div class="col s12 m6 l4" data-ng-repeat="exam in examList | filter: {type:selectedType} | orderBy: '-name'">
+        <div class="col s12 m6 l4" data-ng-repeat="exam in examList | filter: {type:exam.type} | orderBy: '-name'">
           <div class="card hoverable deep-orange lighten-1">
             <div class="card-image">
               <img data-ng-src="{{ exam.image }}">
