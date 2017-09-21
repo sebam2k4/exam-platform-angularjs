@@ -37,29 +37,30 @@
         <!-- SELECT ACCOUNT -->
         <p>Select Account Type:</p>
         <p>
-          <input id="account-type-user" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account" value="user" />
+          <input id="account-type-user" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type" value="user" />
           <label for="account-type-user">Exam Taker <span class="light">(Free Account)</span></label>
         </p>
         <p>
-          <input id="account-type-org" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account" value="org" />
+          <input id="account-type-org" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type" value="org" />
           <label for="account-type-org">Organization <span class="light">(&#8364;20/month)</span></label>
         </p>
         <!-- NAME -->
-        <div ng-show="account == 'user'" class="row">
+        <div ng-show="account.type == 'user'" class="row">
           <div input-field class="col s12">
-            <input id="name-user" name="name-user" type="text" class="validate" ng-model="nameUser" ng-required="account == 'user'">
+            <input id="name-user" name="name-user" type="text" class="validate" ng-model="account.name" ng-required="account.type == 'user'">
             <label for="name-user" data-error="Can't be blank" data-success="Yey!">Name*</label>
           </div>
         </div>
         <!-- ORGANIZATION NAME -->
-        <div ng-show="account == 'org'" class="row">
+        <div ng-show="account.type == 'org'" class="row">
           <div input-field class="col s12">
-            <input id="name-org" name="name-org" type="text" class="validate" ng-model="nameOrg" ng-required="account == 'org'">
+            <input id="name-org" name="name-org" type="text" class="validate" ng-model="account.name" ng-required="account.type == 'org'">
             <label for="name-org" data-error="Can't be blank" data-success="Yey!">Organization Name*</label>
           </div>
         </div>
+        <p>name: {{ account.name }}</p>
         <!-- ADDRESS -->
-        <div class="directive-wrapper" ng-show="account == 'user' || account =='org'">
+        <div class="directive-wrapper" ng-show="account.type == 'user' || account.type =='org'">
           <div class="row">
             <div input-field class="col s8">
               <input id="address-line1" name="address" type="text" class="validate" required>
@@ -101,31 +102,31 @@
           </div>
         </div>
         <!-- ORGANIZATION TYPE -->
-        <div class="directive-wrapper" ng-show="account == 'org'">
+        <div class="directive-wrapper" ng-show="account.type == 'org'">
           <p>Select Organization Type:</p>
           <p>
-            <input id="org-type-edu" name="org-type" type="radio" class="validate with-gap" ng-required="account == 'org'" />
+            <input id="org-type-edu" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-edu">Educational</label>
           </p>
           <p>
-            <input id="org-type-gov" name="org-type" type="radio" class="validate with-gap" ng-required="account == 'org'" />
+            <input id="org-type-gov" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-gov">Government</label>
           </p>
           <p>
-            <input id="org-type-np" name="org-type" type="radio" class="validate with-gap" ng-required="account == 'org'" />
+            <input id="org-type-np" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-np">Non-Profit</label>
           </p>
           <p>
-            <input id="org-type-biz" name="org-type" type="radio" class="validate with-gap" ng-required="account == 'org'" />
+            <input id="org-type-biz" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-biz">Business Company</label>
           </p>
           <p>
-            <input id="org-type-other" name="org-type" type="radio" class="validate with-gap" ng-required="account == 'org'" />
+            <input id="org-type-other" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-other">Other</label>
           </p>
         </div>
         <!-- PAYMENT -->
-        <div class="directive-wrapper" ng-show="account == 'org'">
+        <div class="directive-wrapper" ng-show="account.type == 'org'">
           <div class="row">
             <div class="col s12">
               <p>Payment Details:</p>
@@ -133,7 +134,7 @@
           </div>
           <div class="row">
             <div input-field class="col s8">
-              <input id="card-number" name="payment" type="text" pattern="[0-9]{16,}" class="validate" ng-required="account == 'org'">
+              <input id="card-number" name="payment" type="text" pattern="[0-9]{16,}" class="validate" ng-required="account.type == 'org'">
               <label for="card-number" data-error="minimum 16 numbers" data-success="looks good!">Card Number</label>
             </div>
             <div input-field class="col s4">
@@ -156,12 +157,12 @@
                 on-set="onSet()" on-stop="onStop()" />
             </div>
             <div input-field class="col s4">
-              <input id="caed-ccv" name="payment" type="text" class="validate" ng-required="account == 'org'">
+              <input id="caed-ccv" name="payment" type="text" class="validate" ng-required="account.type == 'org'">
               <label for="card-ccv" data-error="Can't be blank" data-success="Thanks ;)">CCV (security code)</label>
             </div>
           </div>
           <p>
-            <input type="checkbox" id="terms" ng-required="account == 'org'" />
+            <input type="checkbox" id="terms" ng-required="account.type == 'org'" />
             <label for="terms">Accept Terms &amp; Conditions</label>
           </p>
         </div>
@@ -171,19 +172,21 @@
             <button type="submit" class="waves-effect waves-light btn-large btn-submit">Submit</button>
           </div>
         </div>
-        <!-- MESSAGE -->
+        <!-- SUCCESS MESSAGE -->
         <div class="row" ng-show="validated">
           <div class="col s12">
-            <p><span class="bold-text">Congratulations!</span> Your form inputs validated correctly!</span>
+            <p><span class="bold-text">Congratulations {{ account.name }}!</span> Your form inputs validated correctly!</span>
             </p>
             <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been
-              collected.</p>
+              collected.
+            </p>
           </div>
         </div>
       </form>
     </div>
   </section>
 
+  <!-- MODAL -->
   <section>
     <div class="row">
       <div class="col s12">
@@ -194,9 +197,11 @@
         <!-- Modal Structure -->
         <div id="demoModal" class="modal">
           <div class="modal-content">
-            <h4>Modal header</h4>
-            <p>{{ name + ' how are you?'}}</p>
-            <p>Good job on validating this awesome form!</p>
+            <h4>Nice!</h4>
+            <p><span class="bold-text">Congratulations {{ account.name }}!</span></p>
+            <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been
+              collected.
+            </p>
           </div>
           <div class="modal-footer">
             <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
