@@ -173,10 +173,11 @@
             <button type="submit" class="waves-effect waves-light btn-large btn-submit">Submit</button>
           </div>
         </div>
-        <!-- ERROR MESSAGE -->
-        <div class="row">
+        <!-- MESSAGE -->
+        <div class="row" ng-show="validated">
           <div class="col s12">
-            <p class="error-text" ng-show="noUser">Wrong email address or password! <br> No account? <span class="bold-text"><a href="register">Register</a></span></p>
+            <p><span class="bold-text">Congratulations!</span> Your form inputs validated correctly!</span></p>
+            <p>However, the registration and account features of this project are not currently implemented. No data has been collected.</p>
           </div>
         </div>
 
