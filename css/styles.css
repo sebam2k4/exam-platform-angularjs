@@ -51,6 +51,11 @@ body {
 .exam-list .flex-item .card {
   margin: .5rem .5rem 1rem .5rem;
 }
+.exam-list .date-added,
+.exam-list .date-added i {
+  font-size: 0.875rem;
+  opacity: .6;
+}
 @media only screen and (min-width: 601px) {  /* MEDIUM */
   .container {
     width: 93%;
