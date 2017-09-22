@@ -48,6 +48,7 @@ angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'n
     return { examInProgress: '' };
   })
 
+  // Exam list in object array. (Want to keep the list and exam data seperate. Both could be json though, loaded from external file.)
   .factory('ExamList', function(){
     return [
         { 
@@ -63,9 +64,12 @@ angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'n
         { examId: '4', name: 'JavaScript Basics', provider: 'Code Institute', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
         { examId: '5', name: 'Routing & Switching', provider: 'Cisco', path: 'exams/exam-info', image: 'img/300x200.png', type: 'it_tech' },
         { examId: '6', name: 'Office365', provider: 'Cool guys at Microsoft', path: 'exams/exam-info', image: 'img/300x200.png', type: 'productivity' },
-        { examId: '7', name: 'Machine Code', provider: 'CPU', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '7', name: 'Secutity', provider: 'CompTIA', path: 'exams/exam-info', image: 'img/300x200.png', type: 'it_tech' },
         { examId: '8', name: 'Debugging', provider: 'Rubber Duckie', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
-        { examId: '9', name: 'Proper Etiquetter', provider: 'Your Aunt Mary', path: 'exams/exam-info', image: 'img/300x200.png', type: 'other' }
+        { examId: '9', name: 'Proper Etiquette', provider: 'Your Aunt Mary', path: 'exams/exam-info', image: 'img/300x200.png', type: 'other' },
+        { examId: '10', name: 'Machine Code', provider: 'CPU', path: 'exams/exam-info', image: 'img/300x200.png', type: 'coding' },
+        { examId: '11', name: 'UE4', provider: 'Unreal', path: 'exams/exam-info', image: 'img/300x200.png', type: 'other' },
+        { examId: '12', name: 'Six Sigma', provider: 'Black Belt Coach', path: 'exams/exam-info', image: 'img/300x200.png', type: 'productivity' }
       ];
   })
 

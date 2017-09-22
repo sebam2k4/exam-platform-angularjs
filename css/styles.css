@@ -1,7 +1,6 @@
 
 /* LAYOUT STYLES */
 /*===============*/
-
 html {
   font-size: 16px; /* set font-size on root for rem units */
 }
@@ -35,7 +34,20 @@ body {
 .content .col > .row > .col {
   margin-top: 2rem;
 }
-
+/* Use flex to fix ng-repeat layout for examList */
+.exam-list .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.exam-list .flex-item{
+  width: 100%;
+}
+.exam-list .flex-item .card {
+  margin: .5rem .5rem 1rem .5rem;
+}
 @media only screen and (min-width: 601px) {  /* MEDIUM */
   .container {
     width: 93%;
@@ -47,10 +59,16 @@ body {
   .content .col > .row > .col:first-child {
     margin-top: 0;
   }
+  .exam-list .flex-item{
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 993px) {  /* LARGE */
   .container {
     width: 90%;
+  }
+  .exam-list .flex-item{
+    width: 33%;
   }
 }
 
