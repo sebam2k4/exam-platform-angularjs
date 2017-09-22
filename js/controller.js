@@ -117,7 +117,21 @@ angular.module('AppRouteControllers', [])
       method: 'GET',
       url: 'data/exam1.json'
     }).then(function successCallback(response) {
-      $scope.exam = response.data;
+      $scope.examData = response.data;
+    },
+    function errorCallback(response) {
+      console.log("Couldn't load JSON file from ./data/");
+    });
+  })
+  .controller('TestsController', function ($scope, ExamList, HideNav, $http) {
+    $scope.hideNav = HideNav;
+    $scope.examList = ExamList;
+
+    $http({
+      method: 'GET',
+      url: 'data/exam1.json'
+    }).then(function successCallback(response) {
+      $scope.examData = response.data;
     },
     function errorCallback(response) {
       console.log("Couldn't load JSON file from ./data/");

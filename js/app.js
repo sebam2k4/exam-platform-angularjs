@@ -39,6 +39,10 @@ angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'n
         templateUrl: "templates/exam-inprogress.html",
         controller: "ExamInProgress"
       })
+      .when('/tests', { // FOR TESTING
+        templateUrl: "templates/tests.html",
+        controller: "TestsController"
+      })
       .otherwise({ redirectTo: '/' });
   })
 

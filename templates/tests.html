@@ -1,0 +1,25 @@
+<div header></div>
+
+<main class="container page-content z-depth-5 white content">
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <h5 class="left-border">Section 1</h5>
+        <p>Paragraph 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque.</p>
+        <p ng-show="!showParagraph">Paragraph 2 - ng-show=!showParagraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque</p>
+        <p ng-show="showParagraph">Paragraph 3 - ng-show=showParagraph- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et neque in nibh tincidunt tempor. Pellentesque
+          a gravida libero, id efficitur neque.</p>
+        <p ng-if="showSection">SECTION - ng-if=showSeciont</p>
+          <button class="waves-effect waves-light btn-large" ng-click="showParagraph = true">showParagraph = true</button>
+          <button class="waves-effect waves-light btn-large" ng-click="showParagraph = false">showParagraph = false</button>
+          <button class="waves-effect waves-light btn-large" ng-click="showSection = true">OPEN SECTION (true)</button>
+          <button class="waves-effect waves-light btn-large" ng-click="showSection = false">CLOSE SECTION (false)</button>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+</main>
