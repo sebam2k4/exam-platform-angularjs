@@ -30,11 +30,13 @@
         <!-- SELECT ACCOUNT -->
         <p>Select Account Type:</p>
         <p>
-          <input id="account-type-user" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type" value="user" />
+          <input id="account-type-user" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type"
+            value="user" />
           <label for="account-type-user">Exam Taker <span class="light">(Free Account)</span></label>
         </p>
         <p>
-          <input id="account-type-org" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type" value="org" />
+          <input id="account-type-org" name="acccount-type" type="radio" class="validate with-gap" required ng-model="account.type"
+            value="org" />
           <label for="account-type-org">Organization <span class="light">(&#8364;20/month)</span></label>
         </p>
         <!-- NAME -->
@@ -95,7 +97,7 @@
         </div>
         <!-- ORGANIZATION TYPE -->
         <div class="directive-wrapper" ng-show="account.type == 'org'">
-          <p>Select Organization Type:</p>
+          <p>Select Type of Organization:</p>
           <p>
             <input id="org-type-edu" name="org-type" type="radio" class="validate with-gap" ng-required="account.type == 'org'" />
             <label for="org-type-edu">Educational</label>
@@ -126,8 +128,8 @@
           </div>
           <div class="row">
             <div input-field class="col s8">
-              <input id="card-number" name="payment" type="text" pattern="[0-9]{16,}" class="validate" ng-required="account.type == 'org'">
-              <label for="card-number" data-error="minimum 16 numbers" data-success="looks good!">Card Number</label>
+              <input id="card-number" name="payment" type="text" pattern="[0-9]{16}" maxlength="16" data-length="16" class="validate" ng-required="account.type == 'org'">
+              <label for="card-number" data-error="must be 16 numbers" data-success="looks good!">Card Number</label>
             </div>
             <div input-field class="col s4">
               <select id="card-type" name="payment" material-select>
@@ -149,8 +151,8 @@
                 on-set="onSet()" on-stop="onStop()" />
             </div>
             <div input-field class="col s4">
-              <input id="caed-ccv" name="payment" type="text" class="validate" ng-required="account.type == 'org'">
-              <label for="card-ccv" data-error="Can't be blank" data-success="Thanks ;)">CCV (security code)</label>
+              <input id="card-ccv" name="payment" type="text" pattern="[0-9]{3}" maxlength="3" data-length="3" class="validate" ng-required="account.type == 'org'">
+              <label for="card-ccv" data-error="need 3 numbers" data-success="Thanks ;)">CCV (security code)</label>
             </div>
           </div>
           <p>
@@ -167,38 +169,32 @@
         <!-- SUCCESS MESSAGE -->
         <div class="row" ng-show="validated">
           <div class="col s12">
-            <p><span class="bold-text">Congratulations {{ account.name }}!</span> Your form inputs validated correctly!</span>
-            </p>
-            <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been
-              collected.
-            </p>
+            <p><span class="bold-text">Congratulations {{ account.name }}!</span> Your form inputs validated correctly!</span></p>
+            <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been collected.</p>
           </div>
         </div>
       </form>
     </div>
   </section>
 
+
   <!-- MODAL -->
   <section>
-    <div class="row">
-      <div class="col s12">
-        <!-- Modal Trigger -->
-        <div class="col">
-          <a class='btn' data-target='demoModal' href="#demoModal" modal>Show Modal</a>
-        </div>
-        <!-- Modal Structure -->
-        <div id="demoModal" class="modal">
-          <div class="modal-content">
-            <h4>Nice!</h4>
-            <p><span class="bold-text">Congratulations {{ account.name }}!</span></p>
-            <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been
-              collected.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
+    <!-- Modal Trigger - open modal from controller -->
+    <div data-target='demoModal3' modal open="openModal"></div>
+    <!-- Modal Structure -->
+    <div id="demoModal3" class="modal">
+      <div class="modal-content">
+        <h4>Thank you for joining us</h4>
+        <p><span class="bold-text">Congratulations {{ account.name }}!</span></p>
+        <p>Your form inputs validated correctly!</p>
+        <p class="error-text">However, the registration and account features of this project are not currently implemented. No data has been
+          collected.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Back</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Clear</a>
+        <a href="exams" class=" modal-action modal-close waves-effect waves-green btn-flat">View Exams</a>
       </div>
     </div>
   </section>

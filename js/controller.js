@@ -38,12 +38,12 @@ angular.module('AppRouteControllers', [])
   .controller('PageLoginController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Access Your Dashboard';
-    // Show incorrect email/pass message on validated login attempt:
+    // run on validated login form submit:
     $scope.submitForm = function(isValid) {
-      //$scope.submitted = true;
       if (isValid) {
+        //$scope.submitted = true;
         console.log('This Login form validated'); // Test
-        $scope.validated = true;
+        $scope.validated = true; // show message on page
       }
     }
   })
@@ -51,13 +51,15 @@ angular.module('AppRouteControllers', [])
   .controller('PageRegisterController', function ($scope) {
     $scope.pageClass = '';
     $scope.heading = 'Register a New Account';
-
+    $scope.openModal = false;
     $scope.countries = ['United Kingdom', 'Ireland', 'USA', 'Spain', 'Sweden', 'Poland', 'Norway']
+    // run on validated register form submit:
     $scope.submitForm = function(isValid) {
-      //$scope.submitted = true;
       if (isValid) {
+        //$scope.submitted = true;
         console.log('This Registration form validated!'); // Test
-        $scope.validated = true;
+        $scope.validated = true;  // show message on page
+        $scope.openModal = true;  // trigger modal
       }
     }
 
