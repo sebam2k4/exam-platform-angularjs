@@ -24,8 +24,8 @@ body {
 .page-content .row {
   padding: 2rem 2rem;
 }
-.exam-in-progress {
-  margin-top: 5rem;
+.row.collapsible-faq {
+  padding-top: 0;
 }
 .col > .row,
 .directive-wrapper > .row {
@@ -33,6 +33,9 @@ body {
 }
 .content .col > .row > .col {
   margin-top: 2rem;
+}
+.exam-in-progress {
+  margin-top: 1rem;
 }
 /* Use flex to fix ng-repeat layout for examList */
 .exam-list .flex-container {
@@ -55,6 +58,9 @@ body {
   .page-header {
     padding-left: 2rem;
     margin: 2rem auto 3rem auto;
+  }
+  .exam-in-progress {
+    margin-top: 3rem;
   }
   .content .col > .row > .col:first-child {
     margin-top: 0;
@@ -192,8 +198,7 @@ ul.icon >li::before {
 /* ANIMATIONS & TRANSITIONS */
 /* Nav hide animation */
 .animate-hide-nav.ng-hide {
-  display: block !important;
-  visibility: hidden;
+  display: block !important; /* transition doesn't work with display:none */
   transform: translateY( -65px );
   transition: all linear 0.5s;
   opacity: 0;
@@ -222,7 +227,13 @@ ul.icon >li::before {
 .animate.ng-enter.ng-enter-active{
   opacity: 1;
 }
-
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
 /* weird stuff: */
 /* reset all left & right aligned elements to align center on small screens */
