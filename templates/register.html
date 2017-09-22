@@ -129,7 +129,7 @@
           <div class="row">
             <div input-field class="col s8">
               <input id="card-number" name="payment" type="text" pattern="[0-9]{16}" maxlength="16" data-length="16" class="validate" ng-required="account.type == 'org'">
-              <label for="card-number" data-error="must be 16 numbers" data-success="looks good!">Card Number</label>
+              <label for="card-number" data-error="must be 16 numbers" data-success="looks good!">Card Number*</label>
             </div>
             <div input-field class="col s4">
               <select id="card-type" name="payment" material-select>
@@ -152,7 +152,7 @@
             </div>
             <div input-field class="col s4">
               <input id="card-ccv" name="payment" type="text" pattern="[0-9]{3}" maxlength="3" data-length="3" class="validate" ng-required="account.type == 'org'">
-              <label for="card-ccv" data-error="need 3 numbers" data-success="Thanks ;)">CCV (security code)</label>
+              <label for="card-ccv" data-error="need 3 numbers" data-success="Thanks ;)">CCV*)</label>
             </div>
           </div>
           <p>
