@@ -53,7 +53,7 @@ angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'n
     return { examInProgress: '' };
   })
 
-  // pass data collected in registration form to other views. Includes some default values
+  // pass data collected in registration form to other views. Includes some default values for placeholder if user hasn't done the form.
   .factory('UserDetails', function () {
     return { userName: 'NAME',
              accountType: 'User Type' };
