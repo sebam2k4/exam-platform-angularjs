@@ -156,10 +156,13 @@ h5 {
   color: #D32F2F;
   font-size: .875rem;
 }
-.bold-text a {
-  color: rgb(255,112,67)
+.bold-text a,
+a.bold-text {
+  color: rgb(255,112,67);
+  font-weight: 700;
 }
-.bold-text a:hover {
+.bold-text a:hover,
+a.bold-text:hover {
   color: #ff8a65;
 }
 .nav-top .button-collapse {
