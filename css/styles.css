@@ -51,6 +51,29 @@ body {
 .exam-list .flex-item .card {
   margin: .5rem .5rem 1rem .5rem;
 }
+.exam-list img {
+  filter: sepia(0.5) saturate(200%);
+}
+.exam-list img.nghover {
+  filter: sepia(0) saturate(150%);
+}
+.gradient-overlay::after { /* Kind of a hack to get gradient overlay work over img */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+59,0+59,0.5+81 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.5) 81%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+.card-title {
+  z-index: 100;
+}
 .exam-list .date-added,
 .exam-list .date-added i {
   font-size: 0.875rem;
