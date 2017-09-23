@@ -17,36 +17,64 @@
 </head>
 
 <body>
-  <div ng-controller="HideController">
+
+  <!-- TOP NAV -->
+  <div ng-controller="NavigationController">
     <nav ng-hide="hideNav.examInProgress" class="nav-top animate-hide-nav white">
       <div class="nav-wrapper container">
         <a href="." class="brand-logo">Logo</a>
         <ul class="right hide-on-small-only">
-          <li><a href="tests">Tests</a></li>  <!-- FOR TESTING ANGULAR THINGS -->
+          <li><a href="tests">Tests</a></li>
+          <!-- TEMPORARY FOR TESTING ANGULAR THINGS -->
           <li><a href=".">Home</a></li>
           <li><a href="faq">FAQ</a></li>
           <li><a href="pricing">Pricing</a></li>
           <li><a href="exams">Exams</a></li>
+          <li><a href="#" data-activates="slide-out" data-sidenav="right"><i class="material-icons account deep-orange-text text-lighten-1">account_circle</i></a></li>
           <li class="deep-orange lighten-1"><a class="white-text" href="login">login</a></li>
         </ul>
 
         <!-- Mobile Slide Out Navigation -->
         <ul ng-hide="hideNav.examInProgress" id="slide-out" class="side-nav">
-          <li><a href=".">Home</a></li>
-          <li><a href="faq">FAQ</a></li>
-          <li><a href="pricing">Pricing</a></li>
-          <li><a href="exams">Exams</a></li>
-          <li><a href="login">login</a></li>
+          <li class="user-details deep-orange lighten-1">
+            <div class="row">
+              <div class="col s4">
+                <img src="img/user-avatar.jpg" class="circle responsive-img valign user-profile-image">
+              </div>
+              <div class="col s8">
+                <p class="user-name">{{userDetails.userName}}</p>
+                <p class="user-role">{{userDetails.accountType}}</p>
+              </div>
+            </div>
+          </li>
+          <div class="nav-items hide-on-med-and-up">
+            <li><a href=".">Home</a></li>
+            <li><a href="faq">FAQ</a></li>
+            <li><a href="pricing">Pricing</a></li>
+            <li><a href="exams">Exams</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="register">Register</a></li>
+          </div>
+          <div class="divider"></div>
+          <div class="dashboard-items">
+            <li>Account</li>
+            <li>Notifications</li>
+            <li>Certificates</li>
+            <li>Where is the cake?</li>
+            <li>Logout</li>
+          </div>
         </ul>
-        <a href="#" class="button-collapse hide-on-med-and-up" data-activates="slide-out" data-sidenav="right" data-menuwidth="250"
+        <a href="#" class="button-collapse hide-on-med-and-up right" data-activates="slide-out" data-sidenav="right" data-menuwidth="250"
           data-closeonclick="true"><i class="material-icons">menu</i></a>
       </div>
     </nav>
   </div>
 
+  <!-- NG-VIEW -->
   <div ng-view autoscroll="true" class="animate"></div>
 
-  <div ng-controller="HideController">
+  <!-- FOOTER -->
+  <div ng-controller="NavigationController">
     <footer class="container page-footer z-depth-2 animate-hide-footer" ng-hide="hideNav.examInProgress">
       <div class="row">
         <div class="col s12 center">

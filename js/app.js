@@ -53,6 +53,12 @@ angular.module('examApp', ['ngRoute', 'AppRouteControllers', 'AppDirectives', 'n
     return { examInProgress: '' };
   })
 
+  // pass data collected in registration form to other views. Includes some default values
+  .factory('UserDetails', function () {
+    return { userName: 'NAME',
+             accountType: 'User Type' };
+  })
+
   // Exam list in object array. (Want to keep the list and exam data seperate. Both could be json though, loaded from external file.)
   .factory('ExamList', function(){
     return [
