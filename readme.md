@@ -53,13 +53,19 @@ Overall, benefits outweigh the downsides!
   - Exams list
   - Exam info
   - Exam start
+  - FAQ
 - Forms
   - Login validation
   - Registration validation
- 
+    - bind user input values for name and account type
+
+- Navigation
+  - Top Nav
+  - Trigger side dashboard with user icon
+  - Mobile slide out navigation
+
 ### Features Left to Implement
 - Pages (html, css)
-  - Faq
   - Exam review
   - Score report
 - Exam (javascript)
@@ -107,15 +113,22 @@ Overall, benefits outweigh the downsides!
   ```
   npm run server
   ```
-to start the http-server to allow you to preview the website.
+6. This will start the http-server to allow you to preview the website.
 6. The project will now run on [localhost:8080](http://127.0.0.1:8080)
 7. Make changes to the code and refresh the browser window to see your changes.
 8. Happy days!
 
 
 ## Bugs
-1. Modal on Register Page only displays after second button click. 
 
-## Notes & current issues (For myself):
+* Slide-out side navigation doesn't close when clicked too far away from its container.
+
+## Notes (For myself):
 
 * need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
+
+## To Do:
+
+Low priority taks listed here so I don't forget about them.
+
+1. Fix examList flex display. Don't use space-between.
