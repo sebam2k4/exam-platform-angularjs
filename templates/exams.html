@@ -54,7 +54,7 @@
         <div class="flex-item" data-ng-repeat="exam in examList | filter: {type:exam.type}">
           <div class="card hoverable deep-orange lighten-1"  ng-mouseenter="isHover = true" ng-mouseleave="isHover = false">
             <div class="card-image gradient-overlay">
-              <img class="" ng-class="{nghover: isHover}" data-ng-src="{{ exam.image }}">
+              <img class="filter" ng-class="{nghover: isHover}" data-ng-src="{{ exam.image }}">
               <span class="card-title">{{ exam.name }}</span>
             </div>
             <div class="card-content">

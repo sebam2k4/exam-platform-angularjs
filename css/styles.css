@@ -51,10 +51,11 @@ body {
 .exam-list .flex-item .card {
   margin: .5rem .5rem 1rem .5rem;
 }
-.exam-list img {
-  filter: sepia(0.5) saturate(200%);
+img.filter {
+  filter: sepia(0.35) saturate(200%);
 }
-.exam-list img.nghover {
+img.nghover,
+img.filter:hover {
   filter: sepia(0) saturate(150%);
 }
 .gradient-overlay::after { /* Kind of a hack to get gradient overlay work over img */
