@@ -15,7 +15,7 @@ angular.module('AppRouteControllers', [])
   .controller('PageHomeController', function ($scope, $rootScope) {
     $scope.heading = 'Validating Your Skills';
     $rootScope.subheading = 'Expert Examination Platform'
-    $scope.images = [];
+    $scope.images = ['img/img1.jpg', 'img/img4.jpg', 'img/img5.jpg'];
   })
 
   .controller('PageFaqController', function ($scope) {
