@@ -2,7 +2,7 @@ angular.module('AppRouteControllers', [])
 
   // parent controller - Controller of all controllers
   .controller('ParentController', function($scope) {
-    $scope.subheading = 'Expert Examination Platform'
+    $scope.subheading = 'Expert Examination Platform';
   })
 
   // Navigation (top/side-nav & footer) Controller outside of ngView
@@ -77,14 +77,14 @@ angular.module('AppRouteControllers', [])
         console.log('This Login form validated'); // Test
         $scope.validated = true; // show message on page
       }
-    }
+    };
   })
 
   .controller('PageRegisterController', function ($scope, UserDetails) {
     $scope.userDetails = UserDetails;
     $scope.heading = 'Register a New Account';
     $scope.openModal = false;
-    $scope.countries = ['United Kingdom', 'Ireland', 'USA', 'Spain', 'Sweden', 'Poland', 'Norway']
+    $scope.countries = ['United Kingdom', 'Ireland', 'USA', 'Spain', 'Sweden', 'Poland', 'Norway'];
     // run on validated register form submit:
     $scope.submitForm = function(isValid) {
       if (isValid) {
@@ -94,13 +94,13 @@ angular.module('AppRouteControllers', [])
 
         // pass some user details to other controllers:
         $scope.userDetails.userName = $scope.account.name;
-        if ($scope.account.type == 'user'){
+        if ($scope.account.type === 'user'){
           $scope.userDetails.accountType = 'Exam Taker';
         } else {
           $scope.userDetails.accountType = 'Organization';
         }
       }
-    }
+    };
 
     // Required for MaterializeCSS input-date directive to work
     var currentTime = new Date();

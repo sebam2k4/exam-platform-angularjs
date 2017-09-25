@@ -48,5 +48,5 @@ angular.module('AppServices', [])
     }
     return {
       getExamData: getExamData
-    }
+    };
   })
