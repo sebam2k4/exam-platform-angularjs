@@ -96,9 +96,9 @@ angular.module('AppRouteControllers', [])
         // pass some user details to other controllers:
         $scope.userDetails.userName = $scope.account.name;
         if ($scope.account.type == 'user'){
-          return $scope.userDetails.accountType = 'Exam Taker';
+          $scope.userDetails.accountType = 'Exam Taker';
         } else {
-          return $scope.userDetails.accountType = 'Organization';
+          $scope.userDetails.accountType = 'Organization';
         }
       }
     }
