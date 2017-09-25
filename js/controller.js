@@ -44,33 +44,29 @@ angular.module('AppRouteControllers', [])
     $scope.examList = ExamList;
   })
 
-  .controller('ExamInProgress', function ($scope, ExamList, HideNav, $http) {
+  .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
-
-    $http({
-      method: 'GET',
-      url: 'data/exam1.json'
-    }).then(function successCallback(response) {
-      $scope.examData = response.data;
+    ExamData.getExamData().then(function successCallback(response) { // Resolve promise
+      console.log(response);  // Test
+      $scope.examData = response.data; //get the data property of response
     },
-    function errorCallback(response) {
-      console.log("Couldn't load JSON file from ./data/");
-    });
+      function errorCallback(response) {
+        console.log("Couldn't load JSON file from ./data/");
+      });
   })
-  .controller('TestsController', function ($scope, ExamList, HideNav, $http) {
+
+  .controller('TestsController', function ($scope, ExamList, HideNav, ExamData) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
 
-    $http({
-      method: 'GET',
-      url: 'data/exam1.json'
-    }).then(function successCallback(response) {
-      $scope.examData = response.data;
+    ExamData.getExamData().then(function successCallback(response) { // Resolve promise
+      console.log(response);  // Test
+      $scope.examData = response.data; //get the data property of response
     },
-    function errorCallback(response) {
-      console.log("Couldn't load JSON file from ./data/");
-    });
+      function errorCallback(response) {
+        console.log("Couldn't load JSON file from ./data/");
+      });
   })
 
   .controller('PageLoginController', function ($scope) {
