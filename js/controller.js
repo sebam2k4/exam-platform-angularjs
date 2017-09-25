@@ -1,9 +1,9 @@
 angular.module('AppRouteControllers', [])
 
-  //parent controller
-  // .controller('ParentController', function($scope) {
-  //   $scope.name = 'Sebastian';
-  // })
+  // parent controller - Controller of all controllers
+  .controller('ParentController', function($scope) {
+    $scope.subheading = 'Expert Examination Platform'
+  })
 
   // Navigation (top/side-nav & footer) Controller outside of ngView
   .controller('NavigationController', function ($scope, HideNav, UserDetails ) {
@@ -12,9 +12,8 @@ angular.module('AppRouteControllers', [])
   })
 
   // ngView controllers
-  .controller('PageHomeController', function ($scope, $rootScope) {
+  .controller('PageHomeController', function ($scope) {
     $scope.heading = 'Validating Your Skills';
-    $rootScope.subheading = 'Expert Examination Platform'
     $scope.images = ['img/img1.jpg', 'img/img4.jpg', 'img/img5.jpg'];
   })
 
