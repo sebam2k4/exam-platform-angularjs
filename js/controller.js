@@ -47,6 +47,7 @@ angular.module('AppRouteControllers', [])
   .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
+    $scope.examAnswers = {};
     ExamData.getExamData().then(function successCallback(response) { // Resolve promise
       console.log(response);  // Test
       $scope.examData = response.data; //get the data property of response
