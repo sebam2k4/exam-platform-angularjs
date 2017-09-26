@@ -16,14 +16,14 @@
         <!-- EMAIL - must contain only 2 to 3 letters from a-z after . -->
         <div class="row">
           <div input-field class="col s12">
-            <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="validate" required>
+            <input id="email" name="email" type="email" class="validate" required>
             <label for="email" data-error="This doesn't appear to be a valid email address" data-success="looks like a valid email">Email Address*</label>
           </div>
         </div>
         <!-- PASSWORD - must contain 8 or more characters & include at least one number, and one uppercase and lowercase letter -->
         <div class="row">
           <div input-field class="col s12">
-            <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
+            <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}" class="validate" required>
             <label for="password" data-error="minimum 8 characters &amp; 1 number &amp; 1 uppercase letter" data-success="looks good!">Password*</label>
           </div>
         </div>
@@ -128,7 +128,7 @@
           </div>
           <div class="row">
             <div input-field class="col s8">
-              <input id="card-number" name="payment" type="text" pattern="[0-9]{16}" maxlength="16" data-length="16" class="validate" ng-required="account.type == 'org'">
+              <input id="card-number" name="payment" type="text" pattern="[0-9]{16}" maxlength="16" data-length="16" autocomplete="off" class="validate" ng-required="account.type == 'org'">
               <label for="card-number" data-error="must be 16 numbers" data-success="looks good!">Card Number*</label>
             </div>
             <div input-field class="col s4">
@@ -151,7 +151,7 @@
                 on-set="onSet()" on-stop="onStop()" />
             </div>
             <div input-field class="col s4">
-              <input id="card-ccv" name="payment" type="text" pattern="[0-9]{3}" maxlength="3" data-length="3" class="validate" ng-required="account.type == 'org'">
+              <input id="card-ccv" name="payment" type="text" pattern="[0-9]{3}" maxlength="3" data-length="3" autocomplete="off" class="validate" ng-required="account.type == 'org'">
               <label for="card-ccv" data-error="need 3 numbers" data-success="Thanks ;)">CCV*)</label>
             </div>
           </div>
@@ -193,7 +193,7 @@
       </div>
       <div class="modal-footer">
         <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Back</a>
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Clear</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Again!</a>
         <a href="exams" class=" modal-action modal-close waves-effect waves-green btn-flat">View Exams</a>
       </div>
     </div>
