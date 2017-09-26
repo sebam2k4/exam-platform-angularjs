@@ -17,13 +17,13 @@
       <div class="col s12">
         <h5 class="left-border">Fetching JSON data from ./data/exam1.json ...</h5>
         <ul>
-          <div ng-repeat="qs in examData">
-            <div ng-repeat="question in qs.questions">
+          <div ng-repeat="exam in examData">
+            <div ng-repeat="question in exam.questions">
               <p>{{ question.name }}</p>
               <ul>
                 <li ng-repeat="choice in question.choices">
-                  <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" name="questionId-{{question.questionId}}" type="radio" class="with-gap"
-                    ng-model="examAnswers['questionId' + question.questionId]" value="choiceId-{{question.questionId}}-{{choice.choiceId}}" />
+                  <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" type="radio" class="with-gap"
+                    ng-model="examAnswers.selections['questionId-' + question.questionId]" value="choiceId-{{question.questionId}}-{{choice.choiceId}}"/>
                   <label for="choiceId-{{question.questionId}}-{{choice.choiceId}}">{{ choice.name }} - {{choice.isAnswer}}</label>
                 </li>
               </ul>
@@ -36,9 +36,8 @@
   <section>
     <div class="row">
       <div class="col s12">
-        <pre>
-        Answers: {{ examAnswers | json }}
-        </pre>
+          Answers:
+        <pre>{{ examAnswers | json }}</pre>
       </div>
     </div>
   </section>
