@@ -44,46 +44,51 @@ angular.module('AppRouteControllers', [])
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
     
-      ExamData.getExamData('data/exam1.json')
-      .then(function successCallback(response) {
-        $scope.examData = response.data;
-        console.log($scope.examData); //test
-      },
-      function errorCallback(response) {
-        console.log("Couldn't load JSON file - check if exam1.json file exiss in /data directory");
-      });
+    ExamData.getExamData('data/exam1.json')
+    .then(function successCallback(response) {
+      $scope.examData = response.data;
+      console.log($scope.examData); //test
+    },
+    function errorCallback(response) {
+      console.log("Couldn't load JSON file - check if exam1.json file exisy in /data directory");
+    });
 
-      $scope.submitExam = function(){
-        console.log($scope.examData); // test
-        $scope.correctCount = 0;
-        var examLength = $scope.examData.length;
-        console.log('number of questions:', examLength); // test;
-        for(var i=0; i<examLength; i++){
-          if($scope.examData[i].selected == $scope.examData[i].answer) {
-            console.log("You answered a question correctly! "); // test
-            $scope.examData[i].isCorrect = true;
-            $scope.correctCount += 1;
-          } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
-            console.log("You answered incorrectly :("); // test
-            $scope.examData[i].isCorrect = false;
-          } else console.log("You didn't answer a question"); // test
-        };
-        var scorePercent = calcPercentage($scope.correctCount, examLength);
-        $scope.scorePercent = scorePercent + '%';
-        $scope.scoreResult = getResult(scorePercent);
+    // Function runs on submitting exam:
+    $scope.submitExam = function(){
+      console.log($scope.examData); // test
+      $scope.correctCount = 0;
+      var examLength = $scope.examData.length;
+      console.log('number of questions:', examLength); // test;
+      // check answers and keep count of correct answers:
+      for(var i=0; i<examLength; i++){
+        if($scope.examData[i].selected == $scope.examData[i].answer) {
+          console.log("You answered a question correctly! "); // test
+          $scope.examData[i].isCorrect = true;
+          $scope.correctCount += 1;
+        } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
+          console.log("You answered incorrectly :("); // test
+          $scope.examData[i].isCorrect = false;
+        } else console.log("You didn't answer a question"); // test
       };
+      // Get some exam metrics:
+      var scorePercent = calcPercentage($scope.correctCount, examLength);
+      $scope.scorePercent = scorePercent + '%';
+      $scope.scoreResult = getResult(scorePercent);
+    };
 
-      calcPercentage = function(correct, total) {
-        return (correct/total * 100).toFixed(2)
-      }
+    // convert score to percentage value
+    calcPercentage = function(correct, total) {
+      return (correct/total * 100).toFixed(2)
+    }
 
-      getResult = function(percentage) {
-        if (percentage >= 70) {
-          return 'Pass'
-        } else {
-          return 'Fail'
-        }
+    // return pass or fail result depending on score percentage
+    getResult = function(percentage) {
+      if (percentage >= 70) {
+        return 'Pass'
+      } else {
+        return 'Fail'
       }
+    }
 
   })
 
@@ -95,7 +100,7 @@ angular.module('AppRouteControllers', [])
 
   .controller('PageLoginController', function ($scope) {
     $scope.heading = 'Access Your Dashboard';
-    // run on validated login form submit:
+    // Function runs on validated login form submit:
     $scope.submitForm = function(isValid) {
       if (isValid) {
         console.log('This Login form validated'); // Test
@@ -109,24 +114,24 @@ angular.module('AppRouteControllers', [])
     $scope.heading = 'Register a New Account';
     $scope.openModal = false;
     $scope.countries = ['United Kingdom', 'Ireland', 'USA', 'Spain', 'Sweden', 'Poland', 'Norway'];
-    // run on validated register form submit:
+    // Function runs on validated registration form submit:
     $scope.submitForm = function(isValid) {
       if (isValid) {
         console.log('This Registration form validated!'); // Test
-        $scope.validated = true;  // show message on page
-        $scope.openModal = true;  // trigger info modal
+        $scope.validated = true;  // shows message in view
+        $scope.openModal = true;  // triggers info modal in view
 
-        // pass some user details to other controllers:
+        // Make account.name and account.type collected in view available to other controllers:
         $scope.userDetails.userName = $scope.account.name;
         if ($scope.account.type === 'user'){
           $scope.userDetails.accountType = 'Exam Taker';
-        } else {
+        } else if ($scope.account.type === 'org'){
           $scope.userDetails.accountType = 'Organization';
         }
       }
     };
 
-    // Required for MaterializeCSS input-date directive to work
+    // Required for MaterializeCSS input-date directive to work - copied from official documentation
     var currentTime = new Date();
     $scope.currentTime = currentTime;
     $scope.month = ['Januar', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
