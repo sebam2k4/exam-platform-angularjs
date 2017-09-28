@@ -92,12 +92,6 @@ angular.module('AppRouteControllers', [])
 
   })
 
-  .controller('TestsController', function ($scope, ExamList, HideNav) {
-    $scope.hideNav = HideNav;
-    $scope.examList = ExamList;
-
-  })
-
   .controller('PageLoginController', function ($scope) {
     $scope.heading = 'Access Your Dashboard';
     // Function runs on validated login form submit:
