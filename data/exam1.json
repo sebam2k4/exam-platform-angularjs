@@ -4,27 +4,23 @@
     "questionText": "QUESTION 1",
     "selected": null,
     "answer": 0,
-    "isCorrect": false,
+    "isCorrect": null,
     "choices": [
       {
         "choiceId": 1,
-        "name": "Choice 1",
-        "isAnswer": false
+        "name": "Choice 1"
       },
       {
         "choiceId": 2,
-        "name": "Choice 2",
-        "isAnswer": true
+        "name": "Choice 2"
       },
       {
         "choiceId": 3,
-        "name": "Choice 3",
-        "isAnswer": false
+        "name": "Choice 3"
       },
       {
         "choiceId": 4,
-        "name": "Choice 4",
-        "isAnswer": false
+        "name": "Choice 4"
       }
     ]
   },
@@ -33,27 +29,23 @@
     "questionText": "QUESTION 2",
     "selected": null,
     "answer": 1,
-    "isCorrect": false,
+    "isCorrect": null,
     "choices": [
       {
         "choiceId": 1,
-        "name": "Choice 1",
-        "isAnswer": true
+        "name": "Choice 1"
       },
       {
         "choiceId": 2,
-        "name": "Choice 2",
-        "isAnswer": false
+        "name": "Choice 2"
       },
       {
         "choiceId": 3,
-        "name": "Choice 3",
-        "isAnswer": false
+        "name": "Choice 3"
       },
       {
         "choiceId": 4,
-        "name": "Choice 4",
-        "isAnswer": false
+        "name": "Choice 4"
       }
     ]
   },
@@ -62,27 +54,23 @@
     "questionText": "QUESTION 3",
     "selected": null,
     "answer": 2,
-    "isCorrect": false,
+    "isCorrect": null,
     "choices": [
       {
         "choiceId": 1,
-        "name": "Choice 1",
-        "isAnswer": false
+        "name": "Choice 1"
       },
       {
         "choiceId": 2,
-        "name": "Choice 2",
-        "isAnswer": false
+        "name": "Choice 2"
       },
       {
         "choiceId": 3,
-        "name": "Choice 3",
-        "isAnswer": false
+        "name": "Choice 3"
       },
       {
         "choiceId": 4,
-        "name": "Choice 4",
-        "isAnswer": true
+        "name": "Choice 4"
       }
     ]
   }
