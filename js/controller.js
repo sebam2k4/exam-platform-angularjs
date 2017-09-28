@@ -33,12 +33,13 @@ angular.module('AppRouteControllers', [])
   .controller('ExamStart', function ($scope, ExamList, HideNav) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
+    $scope.hideNav.examInProgress = true; // hides navigation
   })
 
-  .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData) {
+  .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData, ExamMetrics) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
-    $scope.hideNav.examInProgress = true; // hides navigation
+    $scope.examMetrics = ExamMetrics;
 
     // retrieve promise from ExamData service
     // and assign response data to scope variable
@@ -55,7 +56,8 @@ angular.module('AppRouteControllers', [])
     // checks answers and creates metrics
     $scope.submitExam = function(){
       console.log($scope.examData); // test
-      $scope.correctCount = 0;
+      $scope.examFinished = true // shows 'Next' button in view after submitting exam
+      var correctCount = 0;
       var examLength = $scope.examData.length;
       console.log('number of questions:', examLength); // test;
       // check answers and keep count of correct answers:
@@ -63,17 +65,18 @@ angular.module('AppRouteControllers', [])
         if($scope.examData[i].selected == $scope.examData[i].answer) {
           console.log("You answered a question correctly! "); // test
           $scope.examData[i].isCorrect = true;
-          $scope.correctCount += 1;
+          correctCount += 1;
         } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
           console.log("You answered incorrectly :("); // test
           $scope.examData[i].isCorrect = false;
         } else console.log("You didn't answer a question"); // test
       };
       // Get some exam metrics:
-      var scorePercent = calcPercentage($scope.correctCount, examLength);
-      $scope.scorePercent = scorePercent + '%';
-      $scope.scoreResult = getResult(scorePercent);
-      $scope.examFinished = true // shows 'Next' button in view after submitting exam
+      $scope.examMetrics.correctCount = correctCount;
+      var scorePercent = calcPercentage(correctCount, examLength);
+      $scope.examMetrics.scorePercent = scorePercent + '%';
+      $scope.examMetrics.scoreResult = getResult(scorePercent);
+      
     };
 
     // convert score to percentage value
@@ -89,6 +92,11 @@ angular.module('AppRouteControllers', [])
         return 'Fail'
       }
     };
+  })
+
+  .controller('CertificateController', function ($scope, HideNav, ExamMetrics) {
+    $scope.hideNav = HideNav;
+    $scope.examMetrics = ExamMetrics;
   })
 
   .controller('PageLoginController', function ($scope) {
