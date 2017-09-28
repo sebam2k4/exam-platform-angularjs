@@ -1,0 +1,12 @@
+<main class="container page-content exam-in-progress z-depth-5 white content">
+  <div class="divider"></div>
+  <section>
+    <div class="row">
+      <div class="col s8">
+        <p>Percentage correct: {{ examMetrics.scorePercent }}</p>
+        <p>Pass or Fail? {{ examMetrics.scoreResult }}</p>
+        <a class="waves-effect waves-light btn-large" ng-click="hideNav.examInProgress = false" href="exams">Back to exams</a>
+      </div>
+    </div>
+  </section>
+</main>
