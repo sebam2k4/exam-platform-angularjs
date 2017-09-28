@@ -1,10 +1,5 @@
 angular.module('AppRouteControllers', [])
 
-  // parent controller - Controller of all controllers
-  .controller('ParentController', function($scope) {
-    $scope.subheading = 'Expert Examination Platform';
-  })
-
   // Navigation (top/side-nav & footer) Controller outside of ngView
   .controller('NavigationController', function ($scope, HideNav, UserDetails ) {
     $scope.hideNav = HideNav;
