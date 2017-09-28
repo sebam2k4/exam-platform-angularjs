@@ -38,17 +38,21 @@ angular.module('AppRouteControllers', [])
   .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
-    
+    $scope.hideNav.examInProgress = true; // hides navigation
+
+    // retrieve promise from ExamData service
+    // and assign response data to scope variable
     ExamData.getExamData('data/exam1.json')
     .then(function successCallback(response) {
       $scope.examData = response.data;
       console.log($scope.examData); //test
     },
     function errorCallback(response) {
-      console.log("Couldn't load JSON file - check if exam1.json file exisy in /data directory");
+      console.log("Couldn't load JSON file - check if exam1.json file exists in /data directory");
     });
 
     // Function runs on submitting exam:
+    // checks answers and creates metrics
     $scope.submitExam = function(){
       console.log($scope.examData); // test
       $scope.correctCount = 0;
@@ -69,6 +73,7 @@ angular.module('AppRouteControllers', [])
       var scorePercent = calcPercentage($scope.correctCount, examLength);
       $scope.scorePercent = scorePercent + '%';
       $scope.scoreResult = getResult(scorePercent);
+      $scope.examFinished = true // shows 'Next' button in view after submitting exam
     };
 
     // convert score to percentage value
@@ -83,8 +88,7 @@ angular.module('AppRouteControllers', [])
       } else {
         return 'Fail'
       }
-    }
-
+    };
   })
 
   .controller('PageLoginController', function ($scope) {
