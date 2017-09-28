@@ -63,7 +63,10 @@ angular.module('AppRouteControllers', [])
             console.log("You answered a question correctly! "); // test
             $scope.examData[i].isCorrect = true;
             $scope.correctCount += 1;
-          } else console.log("You answered incorrectly :("); // test
+          } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
+            console.log("You answered incorrectly :("); // test
+            $scope.examData[i].isCorrect = false;
+          } else console.log("You didn't answer a question"); // test
         };
         var scorePercent = calcPercentage($scope.correctCount, examLength);
         $scope.scorePercent = scorePercent + '%';
