@@ -15,7 +15,7 @@ angular.module('AppServices', [])
     };
   })
 
-  // Exam list. (Want to keep the list and exam data seperate. Both could be json though, loaded from external file.)
+  // Exam list.
   .factory('ExamList', function () {
     return [
       {
@@ -41,12 +41,11 @@ angular.module('AppServices', [])
     ];
   })
 
-  // Retrieve Exam Data from json using 
+  // Retrieve Exam Data from json
   .factory('ExamData', function ($http) {
-    function getExamData() {
-      return $http.get('data/exam1.json');
-    }
     return {
-      getExamData: getExamData
-    };
+      getExamData: function(url) {
+        return $http.get(url) // return promise
+      }
+    }
   })

@@ -27,15 +27,12 @@ angular.module('AppRouteControllers', [])
 
   .controller('PageExamsController', function ($scope, ExamList) {
     $scope.heading = 'Test Your Super Powers';
-
     $scope.examList = ExamList;
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
     $scope.examList = ExamList;
-    var examName = $scope.examList[0].name;
-    $scope.heading = examName;
-    // how to select the current exam's data from the ExamList Service?
+    $scope.heading = $scope.examList[0].name;
   })
 
   .controller('ExamStart', function ($scope, ExamList, HideNav) {
@@ -46,27 +43,51 @@ angular.module('AppRouteControllers', [])
   .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
-    $scope.examAnswers = {};
-    ExamData.getExamData().then(function successCallback(response) { // Resolve promise
-      console.log(response);  // Test
-      $scope.examData = response.data; //get the data property of response
-    },
+    
+      ExamData.getExamData('data/exam1.json')
+      .then(function successCallback(response) {
+        $scope.examData = response.data;
+        console.log($scope.examData); //test
+      },
       function errorCallback(response) {
-        console.log("Couldn't load JSON file from ./data/");
+        console.log("Couldn't load JSON file - check if exam1.json file exiss in /data directory");
       });
+
+      $scope.submitExam = function(){
+        console.log($scope.examData); // test
+        $scope.correctCount = 0;
+        var examLength = $scope.examData.length;
+        console.log('number of questions:', examLength); // test;
+        for(var i=0; i<examLength; i++){
+          if($scope.examData[i].selected == $scope.examData[i].answer) {
+            console.log("You answered a question correctly! "); // test
+            $scope.examData[i].isCorrect = true;
+            $scope.correctCount += 1;
+          } else console.log("You answered incorrectly :("); // test
+        };
+        var scorePercent = calcPercentage($scope.correctCount, examLength);
+        $scope.scorePercent = scorePercent + '%';
+        $scope.scoreResult = getResult(scorePercent);
+      };
+
+      calcPercentage = function(correct, total) {
+        return (correct/total * 100).toFixed(2)
+      }
+
+      getResult = function(percentage) {
+        if (percentage >= 70) {
+          return 'Pass'
+        } else {
+          return 'Fail'
+        }
+      }
+
   })
 
-  .controller('TestsController', function ($scope, ExamList, HideNav, ExamData) {
+  .controller('TestsController', function ($scope, ExamList, HideNav) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
 
-    ExamData.getExamData().then(function successCallback(response) { // Resolve promise
-      console.log(response);  // Test
-      $scope.examData = response.data; //get the data property of response
-    },
-      function errorCallback(response) {
-        console.log("Couldn't load JSON file from ./data/");
-      });
   })
 
   .controller('PageLoginController', function ($scope) {

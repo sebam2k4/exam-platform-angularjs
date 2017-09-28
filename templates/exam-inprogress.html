@@ -14,31 +14,51 @@
   <div class="divider"></div>
   <section>
     <div class="row">
-      <div class="col s12">
+      <div class="col s8">
         <h5 class="left-border">Fetching JSON data from ./data/exam1.json ...</h5>
-        <ul>
-          <div ng-repeat="exam in examData">
-            <div ng-repeat="question in exam.questions">
-              <p>{{ question.name }}</p>
-              <ul>
-                <li ng-repeat="choice in question.choices">
-                  <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" type="radio" class="with-gap"
-                    ng-model="examAnswers.selections['questionId-' + question.questionId]" value="choiceId-{{question.questionId}}-{{choice.choiceId}}"/>
-                  <label for="choiceId-{{question.questionId}}-{{choice.choiceId}}">{{ choice.name }} - {{choice.isAnswer}}</label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </ul>
+        <div ng-repeat="question in examData">
+          <p>{{ question.questionText }}</p>
+          <ul id=question{{$index}}>
+            <li ng-repeat="choice in question.choices">
+              <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" type="radio" name="{{question.questionId}}" class="with-gap"
+                ng-model="question.selected" value="{{$index}}" />
+              <label for="choiceId-{{question.questionId}}-{{choice.choiceId}}">{{ choice.name }}</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col s4">
+        <p>Correct Answers: {{ correctCount }} out of {{examData.length}}</p>
+        <p>Percentage correct: {{ scorePercent }}</p>
+        <p>Pass or Fail? {{ scoreResult }}</p>
       </div>
     </div>
   </section>
   <section>
     <div class="row">
       <div class="col s12">
+        <button class="waves-effect waves-light btn-large" ng-click="submitExam()">Finish Exam</button>
+        <div>
           Answers:
-        <pre>{{ examAnswers | json }}</pre>
+          <pre>{{ examData | json }}</pre>
+        </div>
+
       </div>
     </div>
   </section>
 </main>
+
+<!-- copy of original
+<div ng-repeat="exam in examData">
+  <div ng-repeat="question in exam.questions">
+    <p>{{ question.name }}</p>
+    <ul>
+      <li ng-repeat="choice in question.choices">
+        <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" type="radio" class="with-gap"
+          ng-model="examAnswers.selections['questionId-' + question.questionId]" value="choiceId-{{question.questionId}}-{{choice.choiceId}}"/>
+        <label for="choiceId-{{question.questionId}}-{{choice.choiceId}}">{{ choice.name }} - {{choice.isAnswer}}</label>
+      </li>
+    </ul>
+  </div>
+</div>
+-->
