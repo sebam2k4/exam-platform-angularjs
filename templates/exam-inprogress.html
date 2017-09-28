@@ -18,7 +18,7 @@
         <h5 class="left-border">Fetching JSON data from ./data/exam1.json ...</h5>
         <div ng-repeat="question in examData">
           <p>{{ question.questionText }}</p>
-          <ul id=question{{$index}}>
+          <ul id="question{{$index}}" class="isCorrect-{{question.isCorrect}}">
             <li ng-repeat="choice in question.choices">
               <input id="choiceId-{{question.questionId}}-{{choice.choiceId}}" type="radio" name="{{question.questionId}}" class="with-gap"
                 ng-model="question.selected" value="{{$index}}" />
