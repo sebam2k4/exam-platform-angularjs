@@ -72,9 +72,7 @@ img.filter:hover {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
 }
-.selected-answer {
-  border: 2px solid coral;
-}
+
 .card-title {
   z-index: 100;
 }
@@ -240,6 +238,23 @@ ul.icon >li::before {
   justify-content: center;
   font-size: 0.875rem;
 }
+.isCorrect-true{
+  border: 2px solid #43A047;
+}
+.isCorrect-true::after {
+  content: "CORRECT";
+  color: #43A047;
+  padding-left: 2rem;
+}
+.isCorrect-false{
+  border: 2px solid #D32F2F;
+}
+.isCorrect-false::after{
+  content: "WRONG";
+  color: #D32F2F;
+  padding-left: 2rem;
+}
+
 
 
 @media only screen and (min-width: 601px) {  /* MEDIUM */
@@ -287,13 +302,7 @@ ul.icon >li::before {
 .animate.ng-enter.ng-enter-active{
   opacity: 1;
 }
-.rotate-90 {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
+
 
 /* weird stuff: */
 /* reset all left & right aligned elements to align center on small screens */
