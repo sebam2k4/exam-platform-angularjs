@@ -12,7 +12,7 @@ angular.module('AppServices', [])
     return {
       userName: 'Username',
       accountType: 'User Type'
-    };
+    }
   })
 
   // Exam list.
@@ -39,6 +39,14 @@ angular.module('AppServices', [])
       { examId: '11', name: 'UE4', provider: 'Unreal', path: 'exams/exam-info', image: 'img/ue4.jpg', addedDate: '2017-05-23', type: 'other' },
       { examId: '12', name: 'Six Sigma', provider: 'Black Belt Coach', path: 'exams/exam-info', image: 'img/six-sigma.jpg', addedDate: '2017-02-28', type: 'productivity' }
     ];
+  })
+
+  .factory('ExamMetrics', function() {
+    return {
+      correctCount: null,
+      scorePercent: '',
+      scoreResult: '',
+    }
   })
 
   // Retrieve Exam Data from json
