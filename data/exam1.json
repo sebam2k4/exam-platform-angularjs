@@ -2,6 +2,9 @@
   {
     "questionId": 101,
     "questionText": "QUESTION 1",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": false,
     "choices": [
       {
         "choiceId": 1,
@@ -28,6 +31,9 @@
   {
     "questionId": 102,
     "questionText": "QUESTION 2",
+    "selected": null,
+    "answer": 1,
+    "isCorrect": false,
     "choices": [
       {
         "choiceId": 1,
@@ -54,6 +60,9 @@
   {
     "questionId": 103,
     "questionText": "QUESTION 3",
+    "selected": null,
+    "answer": 2,
+    "isCorrect": false,
     "choices": [
       {
         "choiceId": 1,
