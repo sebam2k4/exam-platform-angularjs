@@ -89,9 +89,6 @@ img.filter:hover {
     padding-left: 2rem;
     margin: 2rem auto 3rem auto;
   }
-  .exam-in-progress {
-    margin-top: 3rem;
-  }
   .content .col > .row > .col:first-child {
     margin-top: 0;
   }
@@ -241,19 +238,24 @@ ul.icon >li::before {
 .isCorrect-true{
   border: 2px solid #43A047;
 }
-.isCorrect-true::after {
-  content: "CORRECT";
+.isCorrect-true::after{
   color: #43A047;
-  padding-left: 2rem;
+  content: "CORRECT";
 }
 .isCorrect-false{
   border: 2px solid #D32F2F;
 }
 .isCorrect-false::after{
-  content: "WRONG";
   color: #D32F2F;
-  padding-left: 2rem;
+  content: "WRONG";
 }
+.isCorrect-true::after,
+.isCorrect-false::after {
+  text-align: right;
+  display: block;
+  padding-right: .5rem;
+}
+
 
 
 

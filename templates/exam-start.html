@@ -4,21 +4,21 @@
       <div class="col s12">
           <h5 class="left-border">
             You Are About to<br />
-            Take the {{ examList[0].name }}
+            Start the {{ examList[0].name }} Exam
           </h5>
           <p>Please note:</p>
             <ul class="icon">
               <li>The site's navigation will be disabled once you start the exam.</li>
-              <li>You can quit your exam at any time from the Review section of the exam.</li>
-              <li>You will be able to review all your questions before finishing exam.</li>
+              <li>Choose your answer for each question</li>
+              <li>Click on 'Finish Exam' </li>
               <li>A score report will be shown after you finish the exam.</li>
             </ul>
             <p>Good Luck!</p>
-          <div class="left">
-            <a ng-click="hideNav.examInProgress = true" class="waves-effect waves-light btn-large" href="exams/exam-inprogress">Start Exam Now</a>
+          <div>
+            <a class="waves-effect waves-light btn-large" href="exams/exam-inprogress">Start Exam Now</a>
           </div>
-          <div class="right">
-            <a class="waves-effect waves-light btn-large" href="exams">Back To Safety</a>
+          <div>
+            <a class="waves-effect waves-light btn-large" ng-click="hideNav.examInProgress = false" href="exams">Back To Safety</a>
           </div>
       </div>
     </div>
