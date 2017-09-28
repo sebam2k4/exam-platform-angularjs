@@ -20,7 +20,7 @@ angular.module('AppServices', [])
     return [
       {
         examId: '1',
-        name: 'Sample Coding Exam',
+        name: 'General Coding',
         provider: 'Code Institute',
         path: 'exams/exam-info',
         image: 'img/sample-exam.jpg',
@@ -32,7 +32,7 @@ angular.module('AppServices', [])
       { examId: '4', name: 'JavaScript Basics', provider: 'Code Institute', path: 'exams/exam-info', image: 'img/javascript-v2.jpg', addedDate: '2017-08-12', type: 'coding' },
       { examId: '5', name: 'Routing & Switching', provider: 'Cisco', path: 'exams/exam-info', image: 'img/routing.jpg', addedDate: '2017-03-27', type: 'it_tech' },
       { examId: '6', name: 'Office365', provider: 'Cool guys at Microsoft', path: 'exams/exam-info', image: 'img/office.jpg', addedDate: '2017-07-06', type: 'productivity' },
-      { examId: '7', name: 'Secutity', provider: 'CompTIA', path: 'exams/exam-info', image: 'img/security.jpg', addedDate: '2017-09-21', type: 'it_tech' },
+      { examId: '7', name: 'Security', provider: 'CompTIA', path: 'exams/exam-info', image: 'img/security.jpg', addedDate: '2017-09-21', type: 'it_tech' },
       { examId: '8', name: 'Debugging', provider: 'Rubber Duckie', path: 'exams/exam-info', image: 'img/debugging.jpg', addedDate: '2017-09-16', type: 'coding' },
       { examId: '9', name: 'Proper Etiquette', provider: 'Your Aunt Mary', path: 'exams/exam-info', image: 'img/etiquette.jpg', addedDate: '2017-09-02', type: 'other' },
       { examId: '10', name: 'Machine Code', provider: 'CPU', path: 'exams/exam-info', image: 'img/machine-code.jpg', addedDate: '2017-08-11', type: 'coding' },
