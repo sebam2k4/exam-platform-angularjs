@@ -9,11 +9,12 @@ body {
 }
 .page-header {
   background-color: transparent;
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin: 0 auto 2rem auto;
 }
 .container {
   max-width: 980px;
+  width: 100%
 }
 .container.form {
   padding-bottom: 3rem;
@@ -86,7 +87,6 @@ img.filter:hover {
     width: 93%;
   }
   .page-header {
-    padding-left: 2rem;
     margin: 2rem auto 3rem auto;
   }
   .content .col > .row > .col:first-child {
@@ -192,9 +192,6 @@ h5 {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: white;
 }
-.duration {
-  padding-left: 1rem;
-}
 ul.nested-list {
   padding-left: 1rem;
   font-size: .875rem;
@@ -210,7 +207,7 @@ ul.icon >li::before {
   position: absolute;
   margin-left: -24px;
   margin-top: -7px;
-  /* revert back to just font-size: 1rem without absolute and margins in bugs */
+  /* revert back to just font-size: 1rem without absolute and margins if bugs */
 }
 .left-border {
   border-left: 4px solid rgb(255,112,67);
@@ -218,7 +215,14 @@ ul.icon >li::before {
   line-height: 110%;
   margin-top: 0
 }
-.btn-submit {
+.btn-left,
+.btn-right {
+  float: none;
+}
+.btn-large {
+  display: block;
+}
+.btn-large {
   margin-top: 1rem;
 }
 .page-footer {
@@ -231,8 +235,26 @@ ul.icon >li::before {
 }
 .page-footer .row {
   margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
 }
-.page-footer .footer-copyright {
+.footer-navigation li{
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.page-footer a{
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  opacity: inherit;
+}
+
+.page-footer a:hover{
+  color: rgba(255, 255, 255, 1)
+}
+.footer-links {
+  margin-top: 3rem;
+}
+.footer-copyright {
   justify-content: center;
   font-size: 0.875rem;
 }
@@ -258,7 +280,7 @@ ul.icon >li::before {
 }
 main.confetti {
   background-image: url("../img/memphis-colorful.png");
-  /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns/ */
+  /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns */
 }
 
 .certificate .result-message {
@@ -295,6 +317,15 @@ main.confetti {
     padding-left: 20px;
     line-height: 120%;
     margin-top: 0;
+  }
+  .btn-large {
+    display: inline-block;
+  }
+  .btn-left {
+    float: left;
+  }
+  .btn-right {
+    float: right;
   }
   .certificate .result-message {
     margin-top: -1rem;
@@ -351,10 +382,28 @@ main.confetti {
 }
 
 
-/* weird stuff: */
-/* reset all left & right aligned elements to align center on small screens */
+/* Apply some changes to MaterializeCSS style for small screen only */
 @media only screen and (max-width: 600px) {
   .center-s {
     text-align: center;
+  }
+  a.btn-large,
+  button.btn-large {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row .col{
+    padding: 0;
+  }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .page-header h1 {
+    font-size: 3rem;
+  }
+  .page-header h2 {
+    font-size: 1.5rem;
   }
 }
