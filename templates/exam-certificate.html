@@ -1,11 +1,31 @@
-<main class="container page-content exam-in-progress z-depth-5 white content">
-  <div class="divider"></div>
+<main class="container page-content certificate z-depth-5 white content" ng-class="{confetti: examMetrics.scoreResult === 'pass'}">
   <section>
     <div class="row">
-      <div class="col s8">
-        <p>Percentage correct: {{ examMetrics.scorePercent }}</p>
-        <p>Pass or Fail? {{ examMetrics.scoreResult }}</p>
-        <a class="waves-effect waves-light btn-large" ng-click="hideNav.examInProgress = false" href="exams">Back to exams</a>
+      <div class="col s12">
+        <h5 class="left-border">Exam <br>Results</h5>
+        <div class="result-message" ng-if="examMetrics.scoreResult === 'pass'">
+          <h2>
+            Way To Go!<br>
+            Congratulations!<br>
+            Happy Days!
+          </h2>
+        </div>
+        <div class="result-message" ng-if="examMetrics.scoreResult === 'fail'">
+            <h2 ng-class="{'error-text': examMetrics.scoreResult === 'fail'}">
+              Better Luck<br>
+              Next Time!
+            </h2>
+          </div>
+        <div input-field>
+          <input id="name" type="text" class="validate" value="{{userDetails.userName}}">
+          <label class="active" for="name">Your Name:</label>
+        </div>
+        <div class="exam-metrics">
+          <h2>{{ examList[0].name }}</h2>
+          <p class="uppercase-text">Score: {{ examMetrics.scorePercent }}</p>
+          <p class="uppercase-text">Result: <span class="bold-text deep-orange-text text-lighten-1">{{ examMetrics.scoreResult }}</span></p>
+        </div>
+        <a class="waves-effect waves-light btn-large center-align" ng-click="hideNav.examInProgress = false" href="exams">Exit</a>
       </div>
     </div>
   </section>

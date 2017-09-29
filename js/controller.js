@@ -1,7 +1,7 @@
 angular.module('AppRouteControllers', [])
 
   // Navigation (top/side-nav & footer) Controller outside of ngView
-  .controller('NavigationController', function ($scope, HideNav, UserDetails ) {
+  .controller('NavigationController', function ($scope, HideNav, UserDetails) {
     $scope.hideNav = HideNav;
     $scope.userDetails = UserDetails;
   })
@@ -82,20 +82,22 @@ angular.module('AppRouteControllers', [])
     // convert score to percentage value
     calcPercentage = function(correct, total) {
       return (correct/total * 100).toFixed(2)
-    }
+    };
 
     // return pass or fail result depending on score percentage
     getResult = function(percentage) {
       if (percentage >= 70) {
-        return 'Pass'
+        return 'pass'
       } else {
-        return 'Fail'
+        return 'fail'
       }
     };
   })
 
-  .controller('CertificateController', function ($scope, HideNav, ExamMetrics) {
+  .controller('CertificateController', function ($scope, HideNav, ExamList, UserDetails, ExamMetrics) {
     $scope.hideNav = HideNav;
+    $scope.examList = ExamList;
+    $scope.userDetails = UserDetails;
     $scope.examMetrics = ExamMetrics;
   })
 

@@ -155,13 +155,14 @@ h5 {
   color: #D32F2F;
   font-size: .875rem;
 }
-.bold-text a,
-a.bold-text {
-  color: rgb(255,112,67);
+.uppercase-text {
+  text-transform: uppercase;
+}
+.link-text {
+  color: #FF7043;
   font-weight: 700;
 }
-.bold-text a:hover,
-a.bold-text:hover {
+.link-text:hover {
   color: #ff8a65;
 }
 .nav-top .button-collapse {
@@ -255,8 +256,37 @@ ul.icon >li::before {
   display: block;
   padding-right: .5rem;
 }
+main.confetti {
+  background-image: url("../img/memphis-colorful.png");
+  /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns/ */
+}
 
+.certificate .result-message {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.certificate .result-message h2 {
+  font-weight: 700;
+  line-height: 130%;
+  font-size: 2.75rem;
+}
 
+.certificate input[type=text]:not(.browser-default) {
+  text-align: center;
+  font-size: 2rem;
+}
+.certificate .exam-metrics {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.certificate .exam-metrics h2 {
+  font-size: 3rem;
+}
+.certificate .exam-metrics p {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  font-size: 1.125rem;
+}
 
 
 @media only screen and (min-width: 601px) {  /* MEDIUM */
@@ -266,9 +296,24 @@ ul.icon >li::before {
     line-height: 120%;
     margin-top: 0;
   }
+  .certificate .result-message {
+    margin-top: -1rem;
+  }
+  .certificate .input-field {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (min-width: 993px) {  /* LARGE */
-
+  .certificate .result-message {
+    margin-top: -3rem;
+  }
+  .certificate .input-field {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
