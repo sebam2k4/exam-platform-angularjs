@@ -5,12 +5,16 @@
 Check out the interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) to get an idea of what the design and ui are going to be like.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Working demo:  [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project)
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> rebased from Master
 Working demo of the progress so far (May be slightly behind Master branch though): [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project/exams)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Overview
@@ -175,3 +179,11 @@ Go to main branch for project info:
 >>>>>>> updated readme
 >>>>>>> updated
 [Main Branch](https://github.com/sebam2k4/stream1-project)
+<<<<<<< HEAD
+=======
+>>>>>>> updated readme
+>>>>>>> updated readme
+=======
+[Main Branch](https://github.com/sebam2k4/stream1-project)
+>>>>>>> rebased from Master
+>>>>>>> rebased from Master
