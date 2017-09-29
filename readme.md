@@ -48,33 +48,38 @@ Overall, benefits outweigh the downsides!
 ## App Features
  
 ### Existing Features
-- Pages (html, css)
-  - Home
-  - Exams list
-  - Exam info
-  - Exam start
-  - FAQ
-- Forms
-  - Login validation
-  - Registration validation
-    - bind user input values for name and account type
-
+- Pages
+  - Home page
+  - FAQ page
+  - Exams list page
+  - Exam info page
+  - Exam start page
+  - Exam in-progress page
+  - Exam certificate page
+- Forms 
+  - Login with validation
+  - Registration with validation. On Submit:
+    - Binds user input values for name and account type (via 2-way data binding)
 - Navigation
   - Top Nav
   - Trigger side dashboard with user icon
-  - Mobile slide out navigation
+  - Mobile slide out navigation (touch hamburger button or swipe from right to left)
+- Exam
+  - Generate quesions and answer choices from json
+  - On Submit:
+    - Indicate correct and incorrect answer choices
+    - Calculate number of correct answers & show result
+    - Calculate score percentage correct
+    - Determine pass/fail result based on score percentage
+- Certificate
+  - provide different feedback on certificate page depending on pass/fail result from exam
+  - Show percentage score
+  - Show pass/fail result
+  - Provide editable name input
 
 ### Features Left to Implement
-- Pages (html, css)
-  - Exam review
-  - Score report
-- Exam (javascript)
-  - questions and answers loaded form JSON
-  - shuffle/randomize questions order
-  - shuffle answer position
-  - keep score
-  - keep time/duration and record time-stamp
-  - remove main navigation on test start
+- Pages
+  - Pricing
 
 ## Tech Used
 
@@ -132,3 +137,6 @@ Overall, benefits outweigh the downsides!
 Low priority taks listed here so I don't forget about them.
 
 1. Fix examList flex display. Don't use space-between.
+2. add alt text to images
+3. organize CSS styles
+4. Format css and html files (indentation, etc.)
