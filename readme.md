@@ -119,14 +119,17 @@ Overall, benefits outweigh the downsides!
   npm run server
   ```
 6. This will start the http-server to allow you to preview the website.
-6. The project will now run on [localhost:8080](http://127.0.0.1:8080)
-7. Make changes to the code and refresh the browser window to see your changes.
-8. Happy days!
+7. The project will now run on [localhost:8080](http://127.0.0.1:8080)
+8. Make changes to the code and refresh the browser window to see your changes.
+9. Happy days!
 
+
+## Resolved Bugs
+1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by ditching the MaterializeCSS grid and using flexbox for positioning the cards.
 
 ## Bugs
 
-* Slide-out side navigation doesn't close when clicked too far away from its container.
+* Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works fine on mobile/small. This seems to be tied to how MaterializeCSS is set up.
 
 ## Notes (For myself):
 
@@ -136,7 +139,5 @@ Overall, benefits outweigh the downsides!
 
 Low priority taks listed here so I don't forget about them.
 
-1. Fix examList flex display. Don't use space-between.
-2. add alt text to images
-3. organize CSS styles
-4. Format css and html files (indentation, etc.)
+* add alt text to images
+* Format css and html files (indentation, etc.)

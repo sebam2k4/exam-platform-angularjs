@@ -1,6 +1,5 @@
-
-/* LAYOUT STYLES */
-/*===============*/
+/* GENERAL PAGE LAYOUT + GENERAL STYLES */
+/*======================================*/
 html {
   font-size: 16px; /* set font-size on root for rem units */
 }
@@ -16,71 +15,34 @@ body {
   max-width: 980px;
   width: 100%
 }
-.container.form {
-  padding-bottom: 3rem;
-}
 .row {
   margin-bottom: 0;
 }
 .page-content .row {
   padding: 2rem 2rem;
 }
-.row.collapsible-faq {
-  padding-top: 0;
-}
 .col > .row,
 .directive-wrapper > .row {
   padding: 0;
 }
-.content .col > .row > .col {
+.page-content .col > .row > .col {
   margin-top: 2rem;
 }
-.exam-in-progress {
+h1 {
+  font-weight: 700;
+}
+h5 {
+  margin-bottom: 1.5rem;
+}
+.btn-left,
+.btn-right {
+  float: none;
+}
+.btn-large {
+  display: block;
+}
+.btn-large {
   margin-top: 1rem;
-}
-/* Use flex to fix ng-repeat layout for examList */
-.exam-list .flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.exam-list .flex-item{
-  width: 100%;
-}
-.exam-list .flex-item .card {
-  margin: .5rem .5rem 1rem .5rem;
-}
-img.filter {
-  filter: sepia(0.35) saturate(200%);
-}
-img.nghover,
-img.filter:hover {
-  filter: sepia(0) saturate(150%);
-}
-.gradient-overlay::after { /* Kind of a hack to get gradient overlay work over img */
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 99;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+59,0+59,0.5+81 */
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.5) 81%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
-}
-
-.card-title {
-  z-index: 100;
-}
-.exam-list .date-added,
-.exam-list .date-added i {
-  font-size: 0.875rem;
-  opacity: .6;
 }
 @media only screen and (min-width: 601px) {  /* MEDIUM */
   .container {
@@ -89,25 +51,134 @@ img.filter:hover {
   .page-header {
     margin: 2rem auto 3rem auto;
   }
-  .content .col > .row > .col:first-child {
+  .page-content .col > .row > .col:first-child {
     margin-top: 0;
   }
-  .exam-list .flex-item{
-    width: 50%;
+  .btn-large {
+    display: inline-block;
+  }
+  .btn-left {
+    float: left;
+  }
+  .btn-right {
+    float: right;
   }
 }
 @media only screen and (min-width: 993px) {  /* LARGE */
   .container {
     width: 90%;
   }
-  .exam-list .flex-item{
-    width: 33%;
+}
+/* Apply some tweaks to MaterializeCSS style for small screen only */
+@media only screen and (max-width: 600px) { /* SMALL SCREEN ONLY */
+  .center-s {
+    text-align: center;
+  }
+  a.btn-large,
+  button.btn-large {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row .col{
+    padding: 0;
+  }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .page-header h1 {
+    font-size: 3rem;
+  }
+  .page-header h2 {
+    font-size: 1.5rem;
   }
 }
 
+/* GENERAL REUSABLE STYLES */
 
-/* GENERAL STYLES */
-/*================*/
+img.filter {
+  -webkit-filter: sepia(0.35) saturate(200%);
+          filter: sepia(0.35) saturate(200%);
+}
+img.nghover,
+img.filter:hover {
+  -webkit-filter: sepia(0) saturate(150%);
+          filter: sepia(0) saturate(150%);
+}
+.divider {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.bold-text {
+  font-weight: 700;
+}
+.error-text {
+  color: #D32F2F;
+  font-size: .875rem;
+}
+.uppercase-text {
+  text-transform: uppercase;
+}
+.link-text {
+  color: #FF7043;
+  font-weight: 700;
+}
+.link-text:hover {
+  color: #ff8a65;
+}
+.left-border {
+  border-left: 4px solid rgb(255,112,67);
+  padding-left: 20px;
+  line-height: 110%;
+  margin-top: 0
+}
+ul.nested-list {
+  padding-left: 1rem;
+  font-size: .875rem;
+}
+ul.icon >li {
+  padding-left: 1rem;
+}
+
+ul.icon >li::before {
+  font-family: "Material Icons";
+  content:'\e409';
+  font-size: 1.5rem;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: -7px;
+}
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .left-border-m {
+    border-left: 4px solid rgb(255,112,67);
+    padding-left: 20px;
+    line-height: 120%;
+    margin-top: 0;
+  }
+}
+
+/* MAIN NAVIGATION */
+
+.nav-top .button-collapse {
+  float: right;
+}
+.nav-top .brand-logo {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  left: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: black;
+}
+.nav-top a,
+.nav-top ul a {
+  color: black;
+}
+.nav-top ul a:hover {
+  background-color: rgba(255,112,67, 0.1)
+}
 .nav-top li i.account {
   font-size: 3rem;
   color: rgba(0, 0, 0, 0.80)
@@ -133,100 +204,171 @@ img.filter:hover {
   position: relative;
   top: 4px;
 }
-h1 {
-  font-weight: 700;
-}
+
+
+/* MAIN HEADER */
+
 .page-header h2 {
   font-size: 1.64rem;
   line-height: 110%;
   margin: .82rem 0 .656rem 0;
 }
-h5 {
-  margin-bottom: 1.5rem;
-}
-.divider {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.bold-text {
-  font-weight: 700;
-}
-.error-text {
-  color: #D32F2F;
-  font-size: .875rem;
-}
-.uppercase-text {
-  text-transform: uppercase;
-}
-.link-text {
-  color: #FF7043;
-  font-weight: 700;
-}
-.link-text:hover {
-  color: #ff8a65;
-}
-.nav-top .button-collapse {
-  float: right;
-}
-.nav-top .brand-logo {
-  -webkit-transform: none;
-  transform: none;
-  left: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  color: black;
-}
-.nav-top a,
-.nav-top ul a {
-  color: black;
-}
-.nav-top ul a:hover {
-  background-color: rgba(255,112,67, 0.1)
-}
-.card .card-content {
-  color: white;
-}
-.card .card-action {
-  border-top: 1px solid rgba(255,255,255,0.25);
-}
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: white;
-}
-ul.nested-list {
-  padding-left: 1rem;
-  font-size: .875rem;
-}
-ul.icon >li {
-  padding-left: 1rem;
+
+/* FORM */
+.container.form {
+  padding-bottom: 3rem;
 }
 
-ul.icon >li::before {
-  font-family: "Material Icons";
-  content:'\e409';
-  font-size: 1.5rem;
-  position: absolute;
-  margin-left: -24px;
-  margin-top: -7px;
-  /* revert back to just font-size: 1rem without absolute and margins if bugs */
+/* FAQ */
+
+.row.collapsible-faq {
+  padding-top: 0;
 }
-.left-border {
-  border-left: 4px solid rgb(255,112,67);
-  padding-left: 20px;
-  line-height: 110%;
-  margin-top: 0
-}
-.btn-left,
-.btn-right {
-  float: none;
-}
-.btn-large {
-  display: block;
-}
-.btn-large {
+
+/* EXAM */
+
+.exam-in-progress {
   margin-top: 1rem;
 }
+.exam-list .flex-container { /* Use flex to fix ng-repeat+MaterializeCSS layout issues for examList */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.exam-list .flex-item{
+  width: 100%;
+}
+.exam-list .flex-item .card {
+  margin: .5rem .5rem 1rem .5rem;
+}
+.exam-list .card-title {
+  z-index: 100;
+}
+.exam-list .date-added,
+.exam-list .date-added i {
+  font-size: 0.875rem;
+  opacity: .6;
+}
+.exam-list .card .card-content {
+  color: white;
+}
+.gradient-overlay::after { /* Kind of a hack to get gradient overlay work over exam card imgages */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+59,0+59,0.5+81 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.5) 81%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.5) 81%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+.exam-list .card .card-action {
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+.exam-list .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: white;
+}
+.isCorrect-true{
+  border: 2px solid #43A047;
+}
+.isCorrect-true::after{
+  color: #43A047;
+  content: "CORRECT";
+}
+.isCorrect-false{
+  border: 2px solid #D32F2F;
+}
+.isCorrect-false::after{
+  color: #D32F2F;
+  content: "WRONG";
+}
+.isCorrect-true::after,
+.isCorrect-false::after {
+  text-align: right;
+  display: block;
+  padding-right: .5rem;
+}
+main.confetti {
+  background-image: url("../img/memphis-colorful.png");
+  /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns */
+}
+.certificate .result-message {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.certificate .result-message h2 {
+  font-weight: 700;
+  line-height: 130%;
+  font-size: 2.75rem;
+}
+.certificate input[type=text]:not(.browser-default) {
+  text-align: center;
+  font-size: 2rem;
+}
+.certificate .exam-metrics {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.certificate .exam-metrics h2 {
+  font-size: 3rem;
+}
+.certificate .exam-metrics p {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  font-size: 1.125rem;
+}
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .exam-list .flex-item{
+    width: 50%;
+  }
+  .certificate .result-message {
+    margin-top: -1rem;
+  }
+  .certificate .input-field {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 993px) {  /* LARGE */
+  .exam-list .flex-item{
+    width: 33.33%;
+  }
+  .certificate .result-message {
+    margin-top: -3rem;
+  }
+  .certificate .input-field {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* FOOTER */
+
 .page-footer {
   margin-bottom: 5rem;
+  -webkit-box-shadow:
+  inset 0 4px 5px 0 rgba(0,0,0,0.25),
+  0 1px 10px 0 rgba(0,0,0,0.12),
+  0 2px 10px -1px rgba(0,0,0,0.3),
+  0 1px 10px 0 rgba(0,0,0,0.12);
   box-shadow:
   inset 0 4px 5px 0 rgba(0,0,0,0.25),
   0 1px 10px 0 rgba(0,0,0,0.12),
@@ -255,110 +397,32 @@ ul.icon >li::before {
   margin-top: 3rem;
 }
 .footer-copyright {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 0.875rem;
 }
-.isCorrect-true{
-  border: 2px solid #43A047;
-}
-.isCorrect-true::after{
-  color: #43A047;
-  content: "CORRECT";
-}
-.isCorrect-false{
-  border: 2px solid #D32F2F;
-}
-.isCorrect-false::after{
-  color: #D32F2F;
-  content: "WRONG";
-}
-.isCorrect-true::after,
-.isCorrect-false::after {
-  text-align: right;
-  display: block;
-  padding-right: .5rem;
-}
-main.confetti {
-  background-image: url("../img/memphis-colorful.png");
-  /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns */
-}
-
-.certificate .result-message {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.certificate .result-message h2 {
-  font-weight: 700;
-  line-height: 130%;
-  font-size: 2.75rem;
-}
-
-.certificate input[type=text]:not(.browser-default) {
-  text-align: center;
-  font-size: 2rem;
-}
-.certificate .exam-metrics {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.certificate .exam-metrics h2 {
-  font-size: 3rem;
-}
-.certificate .exam-metrics p {
-  margin-top: .25rem;
-  margin-bottom: .25rem;
-  font-size: 1.125rem;
-}
-
-
-@media only screen and (min-width: 601px) {  /* MEDIUM */
-  .left-border-m {
-    border-left: 4px solid rgb(255,112,67);
-    padding-left: 20px;
-    line-height: 120%;
-    margin-top: 0;
-  }
-  .btn-large {
-    display: inline-block;
-  }
-  .btn-left {
-    float: left;
-  }
-  .btn-right {
-    float: right;
-  }
-  .certificate .result-message {
-    margin-top: -1rem;
-  }
-  .certificate .input-field {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (min-width: 993px) {  /* LARGE */
-  .certificate .result-message {
-    margin-top: -3rem;
-  }
-  .certificate .input-field {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 
 /* ANIMATIONS & TRANSITIONS */
+
 /* Nav hide animation */
 .animate-hide-nav.ng-hide {
-  display: block !important; /* transition doesn't work with display:none */
+  display: block !important;
+  -webkit-transform: translateY( -65px );
+  -ms-transform: translateY( -65px );
   transform: translateY( -65px );
+  -webkit-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
   transition: all linear 0.5s;
   opacity: 0;
 }
 .animate-hide-footer.ng-hide {
   display: block !important;
+  -webkit-transform: translateY( 35px );
+  -ms-transform: translateY( 35px );
   transform: translateY( 35px );
+  -webkit-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
   transition: all linear 0.5s;
   opacity: 0;
 }
@@ -366,44 +430,20 @@ main.confetti {
 .animate-hide-nav.ng-hide-remove,
 .animate-hide-footer.ng-hide-add,
 .animate-hide-footer.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
 
-/* ngView Animation */
-/* starting animations */
+/* ngView View Transition */
+/* starting transition */
 .animate.ng-enter {
   -webkit-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
   transition:0.5s linear all;
   opacity: 0;
 }
-/* destination animations */
+/* destination transition */
 .animate.ng-enter.ng-enter-active{
   opacity: 1;
-}
-
-
-/* Apply some changes to MaterializeCSS style for small screen only */
-@media only screen and (max-width: 600px) {
-  .center-s {
-    text-align: center;
-  }
-  a.btn-large,
-  button.btn-large {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .row .col{
-    padding: 0;
-  }
-  .container .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .page-header h1 {
-    font-size: 3rem;
-  }
-  .page-header h2 {
-    font-size: 1.5rem;
-  }
 }
