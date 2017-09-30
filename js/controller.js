@@ -9,7 +9,6 @@ angular.module('AppRouteControllers', [])
   // ngView controllers
   .controller('PageHomeController', function ($scope) {
     $scope.heading = 'Validating Your Skills';
-    $scope.images = ['img/img1.jpg', 'img/img4.jpg', 'img/img5.jpg'];
   })
 
   .controller('PageFaqController', function ($scope) {
