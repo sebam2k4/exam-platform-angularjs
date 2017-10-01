@@ -51,6 +51,7 @@ Overall, benefits outweigh the downsides!
 - Pages
   - Home page
   - FAQ page
+  - Pricing page
   - Exams list page
   - Exam info page
   - Exam start page
@@ -62,10 +63,10 @@ Overall, benefits outweigh the downsides!
     - Binds user input values for name and account type (via 2-way data binding)
 - Navigation
   - Top Nav
-  - Trigger side dashboard with user icon
-  - Mobile slide out navigation (touch hamburger button or swipe from right to left)
+  - Side dashboard (trigger by user icon)
+  - Mobile slide out navigation (tap/click hamburger button or swipe from right to left)
 - Exam
-  - Generate quesions and answer choices from json
+  - Generate quesions and answer choices from json data
   - On Submit:
     - Indicate correct and incorrect answer choices
     - Calculate number of correct answers & show result
@@ -78,8 +79,7 @@ Overall, benefits outweigh the downsides!
   - Provide editable name input
 
 ### Features Left to Implement
-- Pages
-  - Pricing
+- Home Page content
 
 ## Tech Used
 
@@ -129,7 +129,7 @@ Overall, benefits outweigh the downsides!
 
 ## Bugs
 
-* Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works fine on mobile/small. This seems to be tied to how MaterializeCSS is set up.
+* Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
 
 ## Notes (For myself):
 
@@ -139,5 +139,4 @@ Overall, benefits outweigh the downsides!
 
 Low priority taks listed here so I don't forget about them.
 
-* add alt text to images
 * Format css and html files (indentation, etc.)
