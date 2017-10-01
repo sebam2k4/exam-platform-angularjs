@@ -238,10 +238,6 @@ ul.icon >li::before {
 }
 
 /* EXAM */
-
-.exam-in-progress {
-  margin-top: 1rem;
-}
 .exam-list .flex-container { /* Use flex to fix ng-repeat+MaterializeCSS layout issues for examList */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +291,31 @@ ul.icon >li::before {
 }
 .exam-list .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: white;
+}
+.exam-in-progress {
+  margin-top: 1rem;
+}
+.exam-in-progress p {
+  margin-bottom: .5rem;
+  font-size: 1.125rem;
+}
+.exam-in-progress ul:not(.browser-default) {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+.exam-in-progress li:not(.browser-default) {
+  padding-bottom: 1rem;
+}
+.exam-in-progress label {
+  color: #424242;
+}
+.exam-in-progress .divider {
+  margin-left: 0;
+  margin-right: 0;
+}
+.exam-in-progress input[type="radio"]:checked+label {
+  text-decoration: underline;
+  text-decoration-color: #FF7043;
 }
 .isCorrect-true{
   border: 2px solid #43A047;

@@ -12,6 +12,7 @@
               <label for="choiceId-{{question.questionId}}-{{choice.choiceId}}" >{{ choice.name }}</label>
             </li>
           </ul>
+          <div class="divider"></div>
         </div>
         <p ng-show="examFinished">You answered {{ examMetrics.correctCount }} out of {{examData.length}} questions correctly.</p>
         <button class="waves-effect waves-light btn-large" ng-click="submitExam()" ng-hide="examFinished">Finish Exam</button>
