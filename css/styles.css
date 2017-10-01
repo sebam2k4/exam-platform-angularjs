@@ -140,7 +140,9 @@ ul.nested-list {
 ul.icon >li {
   padding-left: 1rem;
 }
-
+ul.icon >li:not(:first-of-type) {
+  padding-top: .5rem;
+}
 ul.icon >li::before {
   font-family: "Material Icons";
   content:'\e409';
@@ -171,6 +173,7 @@ ul.icon >li::before {
   margin-left: 1rem;
   margin-right: 1rem;
   color: black;
+  font-size: 1.75rem;
 }
 .nav-top a,
 .nav-top ul a {
@@ -204,7 +207,16 @@ ul.icon >li::before {
   position: relative;
   top: 4px;
 }
-
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .nav-top ul a {
+    padding: 0 10px;
+  }
+}
+@media only screen and (min-width: 993px) {  /* LARGE */
+  .nav-top ul a {
+    padding: 0 15px;
+  }
+}
 
 /* MAIN HEADER */
 
@@ -401,6 +413,21 @@ main.confetti {
   -ms-flex-pack: center;
   justify-content: center;
   font-size: 0.875rem;
+}
+
+/* PRICING TABLE */
+table.striped > tbody > tr:nth-child(odd) {
+  background-color: rgba(255,112,67, 0.1);
+}
+table.highlight > tbody > tr:hover {
+  background-color: #FF7043;
+  color: white;
+}
+.backdrop{
+  background-color: #FF7043;
+}
+table .material-icons {
+  vertical-align: middle;
 }
 
 /* ANIMATIONS & TRANSITIONS */
