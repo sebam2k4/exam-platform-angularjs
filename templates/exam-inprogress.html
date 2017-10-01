@@ -4,6 +4,7 @@
       <div class="col s12">
         <h5 class="left-border">{{ examList[0].name }} <br>Exam in Progress</h5>
         <div ng-repeat="question in examData">
+          <p class="uppercase-text">Question {{ $index + 1}} of {{ examData.length }}</p>
           <p>{{ question.questionText }}</p>
           <ul id="question{{$index}}" class="isCorrect-{{question.isCorrect}}">
             <li ng-repeat="choice in question.choices">

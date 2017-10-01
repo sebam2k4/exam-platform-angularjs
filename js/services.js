@@ -4,7 +4,10 @@ angular.module('AppServices', [])
   // testing disappearing navigation on button click & toggle
   // needed to pass either 'true' or 'false' value from ng-view controllers to trigger ng-hide in HideController.
   .factory('HideNav', function () {
-    return { examInProgress: '' };
+    return { 
+             examInProgress: '',
+             removeNav: '' 
+           };
   })
 
   // pass data collected in registration form to other views. Includes some default values for placeholder if user hasn't done the form.
@@ -12,7 +15,7 @@ angular.module('AppServices', [])
     return {
       userName: 'Username',
       accountType: 'User Type'
-    }
+    };
   })
 
   // Exam list.

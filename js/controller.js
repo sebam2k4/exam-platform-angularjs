@@ -19,9 +19,11 @@ angular.module('AppRouteControllers', [])
     $scope.heading = 'Subscription Options';
   })
 
-  .controller('PageExamsController', function ($scope, ExamList) {
+  .controller('PageExamsController', function ($scope, ExamList, HideNav) {
     $scope.heading = 'Test Your Super Powers';
     $scope.examList = ExamList;
+    $scope.hideNav = HideNav;
+    $scope.hideNav.removeNav = "";                      // remove .remove-nav class from top navigation and footer
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
@@ -39,6 +41,7 @@ angular.module('AppRouteControllers', [])
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
     $scope.examMetrics = ExamMetrics;
+    $scope.hideNav.removeNav = "remove-nav";
 
     // retrieve promise from ExamData service
     // and assign response data to scope variable
@@ -118,6 +121,7 @@ angular.module('AppRouteControllers', [])
     $scope.examList = ExamList;
     $scope.userDetails = UserDetails;
     $scope.examMetrics = ExamMetrics;
+    $scope.hideNav.removeNav = "remove-nav";
   })
 
   .controller('PageLoginController', function ($scope) {

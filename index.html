@@ -19,7 +19,7 @@
 <body>
 
   <!-- TOP NAV -->
-  <div ng-controller="NavigationController">
+  <div ng-controller="NavigationController" class="{{ hideNav.removeNav }}">
     <nav ng-hide="hideNav.examInProgress" class="nav-top animate-hide-nav white">
       <div class="nav-wrapper container">
         <a href="." class="brand-logo">ExamOrange</a>
@@ -72,7 +72,7 @@
   <div ng-view autoscroll="true" class="animate"></div>
 
   <!-- FOOTER -->
-  <div ng-controller="NavigationController">
+  <div ng-controller="NavigationController" class="{{ hideNav.removeNav }}">
     <footer class="container page-footer z-depth-2 animate-hide-footer" ng-hide="hideNav.examInProgress">
       <div class="row">
         <div class="col s12 center">

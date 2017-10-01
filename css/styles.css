@@ -294,6 +294,7 @@ ul.icon >li::before {
 }
 .exam-in-progress {
   margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 .exam-in-progress p {
   margin-bottom: .5rem;
@@ -341,6 +342,10 @@ main.confetti {
   background-image: url("../img/memphis-colorful.png");
   /* pattern image attribution: https://www.toptal.com/designers/subtlepatterns */
 }
+.certificate {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
 .certificate .result-message {
   text-align: center;
   margin-bottom: 3rem;
@@ -348,7 +353,7 @@ main.confetti {
 .certificate .result-message h2 {
   font-weight: 700;
   line-height: 130%;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
 }
 .certificate input[type=text]:not(.browser-default) {
   text-align: center;
@@ -481,6 +486,9 @@ table .material-icons {
   -webkit-transition: all linear 0.5s;
   -o-transition: all linear 0.5s;
   transition: all linear 0.5s;
+}
+.remove-nav {
+  display: none;
 }
 
 /* ngView View Transition */
