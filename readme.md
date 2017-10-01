@@ -4,7 +4,7 @@
 
 Check out the interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) to get an idea of what the design and ui are going to be like.
 
-Working demo of the progress so far (May be slightly behind Master branch though): [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project/exams)
+Working demo of the progress so far (May be slightly behind Master branch though): [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project)
 
 ## Overview
 
@@ -95,10 +95,6 @@ Overall, benefits outweigh the downsides!
 - **[npm](https://www.npmjs.com/)**
   - Helps manage most of the dependencies in the application
 
-## Contributing
-
-- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :) However feel free to download the project and experiment!
-
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
 2. After you've that, you'll need to make sure that you have **npm** installed - You can get **npm** by installing Node from [here](https://nodejs.org/en/)
@@ -123,20 +119,49 @@ Overall, benefits outweigh the downsides!
 8. Make changes to the code and refresh the browser window to see your changes.
 9. Happy days!
 
+## Testing
+
+### Manual Testing
+
+#### Compatibility
+- Website looks consistent in both layout and style on different desktop browsers on Windows 10 operating system, including Chrome 61, Firefox 56, Opera 48, Vivaldi 1.12, MS Edge 40, and IE 11 and their mobile preview modes if available.
+- Also consistent on latest android and windows mobile devices. (not tested on apple iOS)
+
+#### Registration Form
+- Accessing:
+  - From homepage: go to 'Pricing' page in top navigation and click on 'Register' button below pricing table.
+  - From homepage: go to login in top navigation and click 'register' link
+  - From homepage: go to login in top navigation and try to log in. Error message will appear containing a link to registration page.
+  - On mobile device, swipe from right edge to left or use hamburger icon in top bar to open side navigation and tap on 'Register' link
+- Form Validation - Password Field:
+  - Requires min 8 character length - no max limit.
+  - Does not validate with just letters, numbers, or special characters
+  - Valid special characters tested: :/#[]@!$&'()*+,;=.<>"?
+  - Accepts space characters
+- Exam taking
+  - From exams page, clicking on 'info' or 'take exam' takes user to informational page about a sample exam. From here user has to click 'Take This Exam' button and then finally click on 'Start Exam Now' to start the actual sample exam.
+  - Questions display in different order everytime new exam is started
+  - Clicking 'Finish Exam' checks answer selections for correct and incorrect and provides score feedback.
+  - User then clicks 'Next' to continue on to the scorecard/certificate.
+  - Score card provides percent score and a pass or fail result. 
 
 ## Resolved Bugs
-1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by ditching the MaterializeCSS grid and using flexbox for positioning the cards.
+1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
 
 ## Bugs
 
-* Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
+- Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
 
 ## Notes (For myself):
 
-* need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
+- need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
 
 ## To Do:
 
 Low priority taks listed here so I don't forget about them.
 
-* Format css and html files (indentation, etc.)
+- Format css and html files (indentation, etc.)
+
+## Contributing
+
+- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :) However feel free to download the project and experiment!
