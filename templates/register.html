@@ -13,7 +13,7 @@
     <div class="row">
       <!-- run submitForm() function on submit after form validates (html5 validation) -->
       <form name="register-form" ng-submit="submitForm(true)" class="col s12 m10 push-m1 l8 push-l2">
-        <!-- EMAIL - must contain only 2 to 3 letters from a-z after . -->
+        <!-- E-MAIL ADDRESS -->
         <div class="row">
           <div input-field class="col s12">
             <input id="email" name="email" type="email" class="validate" required>
@@ -56,30 +56,36 @@
         <!-- ADDRESS -->
         <div class="directive-wrapper" ng-show="account.type == 'user' || account.type =='org'">
           <div class="row">
+            <!-- STREET NAME LINE 1 -->
             <div input-field class="col s8">
               <input id="address-line1" name="address" type="text" class="validate" required>
               <label for="address1-line1" data-error="Can't be blank" data-success="looks good!">Street Address Line 1*</label>
             </div>
+            <!-- APARTMENT NO -->
             <div input-field class="col s4">
               <input id="address-apt" name="address" type="text" class="validate">
               <label for="address-apt" data-success="looks good!">Apt No</label>
             </div>
           </div>
           <div class="row">
+            <!-- STREET NAME LINE 2 -->
             <div input-field class="col s8">
               <input id="address-line2" name="address" type="text" class="validate">
               <label for="address1-line2" data-success="looks good!">Street Address Line 2</label>
             </div>
+            <!-- POST CODE -->
             <div input-field class="col s4">
               <input id="address-code" name="address" type="text" class="validate">
               <label for="address-code" data-success="looks good!">Post code</label>
             </div>
           </div>
           <div class="row">
+            <!-- CITY -->
             <div input-field class="col s8">
               <input id="address-city" name="address" type="text" class="validate" required>
               <label for="address1-city" data-error="Can't be blank" data-success="looks good!">City*</label>
             </div>
+            <!-- SELECT COUNTRY -->
             <div input-field class="col s4">
               <select id="address-country" name="address" material-select>
                   <option ng-repeat="country in countries | orderBy: name">{{ country }}</option>
@@ -127,21 +133,24 @@
             </div>
           </div>
           <div class="row">
+            <!-- C/C NUMBER -->
             <div input-field class="col s8">
               <input id="card-number" name="payment" type="text" pattern="[0-9]{16}" maxlength="16" data-length="16" autocomplete="off" class="validate" ng-required="account.type == 'org'">
               <label for="card-number" data-error="must be 16 numbers" data-success="looks good!">Card Number*</label>
             </div>
+            <!-- C/C TYPE -->
             <div input-field class="col s4">
               <select id="card-type" name="payment" material-select>
-                    <option>Visa</option>
-                    <option>MasterCard</option>
-                    <option>American Express</option>
-                    <option>Discover</option>
-                  </select>
+                <option>Visa</option>
+                <option>MasterCard</option>
+                <option>American Express</option>
+                <option>Discover</option>
+              </select>
               <label>Card Type</label>
             </div>
           </div>
           <div class="row">
+            <!-- DATE SELECTION -->
             <div input-field class="col s6">
               <label for="card-date">Expiry date</label>
               <input input-date type="text" name="created" id="card-date" ng-model="currentTime" container="" format="mm/yyyy" months-full="{{ month }}"
@@ -150,11 +159,13 @@
                 select-years="6" select-months="true" on-start="onStart()" on-render="onRender()" on-open="onOpen()" on-close="onClose()"
                 on-set="onSet()" on-stop="onStop()" />
             </div>
+            <!-- C/C CCV -->
             <div input-field class="col s4">
               <input id="card-ccv" name="payment" type="text" pattern="[0-9]{3}" maxlength="3" data-length="3" autocomplete="off" class="validate" ng-required="account.type == 'org'">
               <label for="card-ccv" data-error="need 3 numbers" data-success="Thanks ;)">CCV*)</label>
             </div>
           </div>
+          <!-- T/C CHECKBOX -->
           <p>
             <input type="checkbox" id="terms" ng-required="account.type == 'org'" />
             <label for="terms">Accept Terms &amp; Conditions</label>

@@ -9,11 +9,10 @@
           </h2>
         </div>
         <div class="result-message" ng-if="examMetrics.scoreResult === 'fail'">
-            <h2 ng-class="{'error-text': examMetrics.scoreResult === 'fail'}">
-              Better Luck<br>
-              Next Time!
-            </h2>
-          </div>
+          <h2 ng-class="{'error-text': examMetrics.scoreResult === 'fail'}">
+            Better Luck<br> Next Time!
+          </h2>
+        </div>
         <div input-field>
           <input id="name" type="text" class="validate" value="{{userDetails.userName}}">
           <label class="active" for="name">Your Name:</label>
