@@ -17,6 +17,7 @@ Working demo of the progress so far (May be slightly behind Master branch though
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Overview
 
 ### What is this app for?
@@ -187,3 +188,6 @@ Go to main branch for project info:
 [Main Branch](https://github.com/sebam2k4/stream1-project)
 >>>>>>> rebased from Master
 >>>>>>> rebased from Master
+=======
+[Main Branch](https://github.com/sebam2k4/stream1-project)
+>>>>>>> rebase from master
