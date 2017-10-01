@@ -69,5 +69,189 @@
         "name": "It selects all elements with the given tag name <header>"
       }
     ]
+  },
+  {
+    "questionId": 103,
+    "questionText": "What is the correct HTML for referring to an external Cascading Style Sheet?",
+    "selected": null,
+    "answer": 2,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "<stylesheet>mystyle.css</stylesheet>"
+      },
+      {
+        "choiceId": 1,
+        "name": "style src=\"mystyle.css\">"
+      },
+      {
+        "choiceId": 2,
+        "name": "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
+      },
+      {
+        "choiceId": 3,
+        "name": "<script type=\"text/javascript\" src=\"mystyle.css\"></script>"
+      }
+    ]
+  },
+  {
+    "questionId": 104,
+    "questionText": "Which is the correct CSS syntax?",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "body {color: black;}"
+      },
+      {
+        "choiceId": 1,
+        "name": "{body:color=black;}"
+      },
+      {
+        "choiceId": 2,
+        "name": "{body;color:black;}"
+      },
+      {
+        "choiceId": 3,
+        "name": "body:color=black;"
+      }
+    ]
+  },
+  {
+    "questionId": 105,
+    "questionText": "When using the CSS padding property, are you allowed to use negative values?",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "True"
+      },
+      {
+        "choiceId": 1,
+        "name": "False"
+      }
+    ]
+  },
+  {
+    "questionId": 106,
+    "questionText": "What is the correct JavaScript syntax to change the content of the following HTML element: <p id=\"demo\">This is some text.</p> ?",
+    "selected": null,
+    "answer": 2,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "document.getElement(\"p\").innerHTML = \"Hello World!\";"
+      },
+      {
+        "choiceId": 1,
+        "name": "#demo.innerHTML = \"Hello World!\";"
+      },
+      {
+        "choiceId": 2,
+        "name": "document.getElementById(\"demo\").innerHTML = \"Hello World!\";"
+      },
+      {
+        "choiceId": 3,
+        "name": "document.getElementByClassName(\"p\").innerHTML = \"Hello World!\";"
+      }
+    ]
+  },
+  {
+    "questionId": 107,
+    "questionText": "How do you create a function in JavaScript?",
+    "selected": null,
+    "answer": 3,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "function = myFunctionName() {}"
+      },
+      {
+        "choiceId": 1,
+        "name": "function:myFunctionName() {}"
+      },
+      {
+        "choiceId": 2,
+        "name": "function = new myFunctionName() {}"
+      },
+      {
+        "choiceId": 3,
+        "name": "function myFunctionName() {}"
+      }
+    ]
+  },
+  {
+    "questionId": 108,
+    "questionText": "What is the correct HTML for making a text input field?",
+    "selected": null,
+    "answer": 2,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "<textfield>"
+      },
+      {
+        "choiceId": 1,
+        "name": "<input type=\"textfield\">"
+      },
+      {
+        "choiceId": 2,
+        "name": "<input type=\"text\">"
+      },
+      {
+        "choiceId": 3,
+        "name": "<textinput type=\"text\">"
+      }
+    ]
+  },
+  {
+    "questionId": 109,
+    "questionText": "HTML comments start with <!-- and end with -->",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "True"
+      },
+      {
+        "choiceId": 1,
+        "name": "False"
+      }
+    ]
+  },
+  {
+    "questionId": 110,
+    "questionText": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+    "selected": null,
+    "answer": 3,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "title"
+      },
+      {
+        "choiceId": 1,
+        "name": "src"
+      },
+      {
+        "choiceId": 2,
+        "name": "desc"
+      },
+      {
+        "choiceId": 3,
+        "name": "alt"
+      }
+    ]
   }
 ]
