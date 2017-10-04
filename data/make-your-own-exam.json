@@ -1,0 +1,52 @@
+[
+  {
+    "questionId": 100,
+    "questionText": "< put your question text here >",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "< answer choice #1 text here - to mark correct answer: put the correct choice's index number in 'answer' property. Example: If this choice is correct answer, then you'd set 'answer': 0 >"
+      },
+      {
+        "choiceId": 1,
+        "name": "< answer choice #2 text here >"
+      },
+      {
+        "choiceId": 2,
+        "name": "< answer choice #3 text here >"
+      },
+      {
+        "choiceId": 3,
+        "name": "< answer choice #4 text here >"
+      }
+    ]
+  },
+  {
+    "questionId": 101,
+    "questionText": "< put your question text here >",
+    "selected": null,
+    "answer": 0,
+    "isCorrect": null,
+    "choices": [
+      {
+        "choiceId": 0,
+        "name": "< answer choice #1 text here - to mark correct answer: use choices index number for 'answer' property>"
+      },
+      {
+        "choiceId": 1,
+        "name": "< answer choice #2 text here >"
+      },
+      {
+        "choiceId": 2,
+        "name": "< answer choice #2 text here >"
+      },
+      {
+        "choiceId": 3,
+        "name": "< answer choice #2 text here >"
+      }
+    ]
+  }
+]
