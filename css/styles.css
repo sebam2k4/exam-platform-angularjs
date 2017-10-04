@@ -309,6 +309,8 @@ ul.icon >li::before {
 }
 .exam-in-progress label {
   color: #424242;
+  overflow-wrap: break-word;  /* break long words, paths, code snippets, etc */
+  max-width: 100%;            /* needed for overflow-wrap to know where to break words */
 }
 .exam-in-progress .divider {
   margin-left: 0;
