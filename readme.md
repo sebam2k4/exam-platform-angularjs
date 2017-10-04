@@ -138,30 +138,31 @@ Overall, benefits outweigh the downsides!
   - Does not validate with just letters, numbers, or special characters
   - Valid special characters tested: :/#[]@!$&'()*+,;=.<>"?
   - Accepts space characters
-- Exam taking
+
+#### Exam taking
+- Functionality
   - From exams page, clicking on 'info' or 'take exam' takes user to informational page about a sample exam. From here user has to click 'Take This Exam' button and then finally click on 'Start Exam Now' to start the actual sample exam.
   - Questions display in different order everytime new exam is started
   - Clicking 'Finish Exam' checks answer selections for correct and incorrect and provides score feedback.
   - User then clicks 'Next' to continue on to the scorecard/certificate.
-  - Score card provides percent score and a pass or fail result. 
+  - Score card provides percent score and a pass or fail result.
+- Scoring
+  - Getting 8 correct answers out of 11 results in 72% score and a pass.
+  - Getting 7 correct answers out of 11 results in 63% score and a fail.
+  - Getting 7 of fewer correct answers results in fail.
+  - Getting 8 or more correct answers results in pass.
 
 ## Resolved Bugs
 1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
+2. After applying autoscroll="true" attribute to ng-view and adding css transitions to ng-view animate classes the following occures: Click link to another page/view, the new page animates and then jumps to the top causing an ugly effect. Used a .run function to scroll window to top on $routeChangeSuccess. This seems fix the problem, however, when user tries to scroll down before the transitio is finished, the window jumps back to top. It is a partial fix.
 
 ## Bugs
 
 - Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
 
-## Notes (For myself):
-
-- need to figure out how to copy scripts and css from node_modules to app directory and update the index.html file with new paths. Probably need a build tool like grunt?
-
-## To Do:
-
-Low priority taks listed here so I don't forget about them.
-
-- Format css and html files (indentation, etc.)
-
 ## Contributing
 
 - As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :) However feel free to download the project and experiment!
+
+## Notes to self:
+
