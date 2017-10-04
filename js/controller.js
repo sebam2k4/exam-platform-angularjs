@@ -23,10 +23,15 @@ angular.module('AppRouteControllers', [])
     $scope.heading = 'Test Your Super Powers';
     $scope.examList = ExamList;
 <<<<<<< HEAD
+<<<<<<< HEAD
     $scope.hideNav = HideNav;
     $scope.hideNav.removeNav = "";                      // remove .remove-nav class from top navigation and footer
 =======
 >>>>>>> Updated controllers
+=======
+    $scope.hideNav = HideNav;
+    $scope.hideNav.removeNav = "";                      // remove .remove-nav class from top navigation and footer
+>>>>>>> Added changes from master branch
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
