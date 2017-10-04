@@ -219,11 +219,25 @@ ul.icon >li::before {
 }
 
 /* MAIN HEADER */
-
 .page-header h2 {
   font-size: 1.64rem;
   line-height: 110%;
   margin: .82rem 0 .656rem 0;
+}
+
+/* HOME PAGE */
+.home-page ul {
+  margin-left: 1rem;
+  text-align: left;
+}
+
+@media only screen and (min-width: 601px) {  /* MEDIUM */
+  .home-page ul {
+    margin-left: 0;
+  }
+  .home-page img.responsive-img {
+    width: 100%;
+  }
 }
 
 /* FORM */
