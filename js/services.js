@@ -5,9 +5,9 @@ angular.module('AppServices', [])
   // needed to pass either 'true' or 'false' value from ng-view controllers to trigger ng-hide in HideController.
   .factory('HideNav', function () {
     return { 
-             examInProgress: '',
-             removeNav: '' 
-           };
+      examInProgress: '',
+      removeNav: '' 
+    };
   })
 
   // pass data collected in registration form to other views. Includes some default values for placeholder if user hasn't done the form.
@@ -50,7 +50,7 @@ angular.module('AppServices', [])
       correctCount: null,
       scorePercent: '',
       scoreResult: '',
-    }
+    };
   })
 
   // Retrieve Exam Data from json
@@ -59,5 +59,5 @@ angular.module('AppServices', [])
       getExamData: function(url) {
         return $http.get(url) // return promise
       }
-    }
+    };
   })

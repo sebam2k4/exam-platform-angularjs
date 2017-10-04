@@ -60,7 +60,7 @@ angular.module('AppRouteControllers', [])
     // checks answers and creates metrics
     $scope.submitExam = function(){
       console.log($scope.examData);                     // test
-      $scope.examFinished = true                        // shows 'Next' button in view after submitting exam
+      $scope.examFinished = true;                       // shows 'Next' button in view after submitting exam
       var correctCount = 0;
       var examLength = $scope.examData.length;
       console.log('number of questions:', examLength);  // test;
@@ -86,15 +86,15 @@ angular.module('AppRouteControllers', [])
 
     // convert score to percentage value
     calcPercentage = function(correct, total) {
-      return (correct/total * 100).toFixed(2)
+      return (correct/total * 100).toFixed(2);
     };
 
     // return pass or fail result depending on score percentage
     getResult = function(percentage) {
       if (percentage >= 70) {
-        return 'pass'
+        return 'pass';
       } else {
-        return 'fail'
+        return 'fail';
       }
     };
 
