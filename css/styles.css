@@ -355,7 +355,7 @@ main.confetti {
 .certificate .result-message h2 {
   font-weight: 700;
   line-height: 130%;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 .certificate input[type=text]:not(.browser-default) {
   text-align: center;
@@ -366,7 +366,7 @@ main.confetti {
   margin-bottom: 2rem;
 }
 .certificate .exam-metrics h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .certificate .exam-metrics p {
   margin-top: .25rem;
@@ -378,20 +378,25 @@ main.confetti {
     width: 50%;
   }
   .certificate .result-message {
-    margin-top: -1rem;
+    margin-top: -3rem;
+  }
+  .certificate .result-message h2 {
+    font-weight: 700;
+    line-height: 130%;
+    font-size: 3.125rem;
   }
   .certificate .input-field {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
+  .certificate .exam-metrics h2 {
+    font-size: 2.75rem;
+  }
 }
 @media only screen and (min-width: 993px) {  /* LARGE */
   .exam-list .flex-item{
     width: 33.33%;
-  }
-  .certificate .result-message {
-    margin-top: -3rem;
   }
   .certificate .input-field {
     width: 65%;
