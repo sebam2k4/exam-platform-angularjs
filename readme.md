@@ -1,23 +1,24 @@
-# Code Institute - Stream 1 Project
+# Examination Platform - Front End Project
 
 ## Demo
 
-Check out the interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) to get an idea of what the design and ui are going to be like.
+[**Working Demo**](https://sebam2k4.github.io/stream1-project) deployed to Github Pages
 
-Working demo of the progress so far (May be slightly behind Master branch though): [https://sebam2k4.github.io/stream1-project/](https://sebam2k4.github.io/stream1-project)
+And here is an interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) that was used in the design process of the application.
 
 ## Overview
 
 ### What is this app for?
 
-It's for all your multiple choice quizzing and examination needs :) This is a front-end web development project for a hypothetical examination app.
+It is intended as a front end project for a general purpose quizzing or examination application. It can be used for general skill assesment, certification exams, mock tests, gathering data, or just surveys.
 
 ### What does it do?
 
-It contains informational views about the application and services offered, such as: faq, pricing, exam list, & login/registration forms.
-It also allows you to take a sample interactive exam and provide be provided with score report at end
+It contains page views about the application and services offered, such as: faq, pricing, exam list, & login/registration forms.
 
-The idea is that the complete app would allows organizations to host their multiple choice exams/quizzes and users could register to take them. However, no backend for this to be possible is going to be implemented at this stage. This is more of a proof of concept with focus on front end and set of of AngualrJS templates, controllers, routes, and services.
+It also uses two-way data binding and AngularJS directives to create and display multiple choice questions and answer choices from a JSON file.
+
+The idea is that the complete app would allows organizations to host their multiple choice exams/quizzes and users could register to take them. However, no backend for this to be possible is implemented. This is more of a proof of concept with focus on front end and set of of AngualrJS templates, controllers, routes, and services.
 
 ### How does it work
 
@@ -37,13 +38,11 @@ This is a Single Page Application on AngularJS and uses JSON data to generate ex
   - Good Documentation: [Developer Guide](https://docs.angularjs.org/guide) & [API Reference](https://docs.angularjs.org/api)
   - Large Community
   - Can get very productive
-- Downsides:
+- Some Downsides:
   - Steep Learning Curve (At least I thinks so :)
   - Lots of unfamiliar terms
   - Many ways to do things
   - SEO ?    
-
-Overall, benefits outweigh the downsides!
 
 ## App Features
  
@@ -79,7 +78,7 @@ Overall, benefits outweigh the downsides!
   - Provide editable name input
 
 ### Features Left to Implement
-- Home Page content
+  - None left I think....
 
 ## Tech Used
 
@@ -154,15 +153,17 @@ Overall, benefits outweigh the downsides!
 
 ## Resolved Bugs
 1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
-2. After applying autoscroll="true" attribute to ng-view and adding css transitions to ng-view animate classes the following occures: Click link to another page/view, the new page animates and then jumps to the top causing an ugly effect. Used a .run function to scroll window to top on $routeChangeSuccess. This seems fix the problem, however, when user tries to scroll down before the transitio is finished, the window jumps back to top. It is a partial fix.
+2. After applying `autoscroll="true"` attribute to ng-view and adding css transitions to ng-view animate classes the following occures: Click link to another page/view, the new page animates and then jumps to the top causing an ugly effect. Used a .run function to scroll window to top on $routeChangeSuccess. This seems fix the problem, however, when user tries to scroll down before the transitio is finished, the window jumps back to top. It is a partial fix.
 
 ## Bugs
 
 - Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
 
+## Other Issues and notes
+
+* The JSON files from which the exams are generated includes the answer to every question in the `answer` property. This would not be safe for a real exam as it exposes the anser to the front end. Ideally, the user's answers would be saved to another JSON and compared to an answer key on the back end. This could be accomplished using the `onSubmit` method the `ExamInProgress` controller.
+
 ## Contributing
 
-- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. I will keep ya posted :) However feel free to download the project and experiment!
-
-## Notes to self:
+- As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. However, feel free to download the project and experiment!
 
