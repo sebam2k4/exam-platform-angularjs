@@ -157,7 +157,7 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 
 This is due to the ng-view's css animation classes having a transition property set on them. 
 
-I used a `run()` function with `scrollTo` method with a timeout set to 0.
+I used a `run()` function with `scrollTo` method with a timeout set to 0. This was found as an answer to similar issue on Stack Overflow(add cource)
 
 This seems fix the problem, however, now when user tries to scroll down before the transition is finished, the viewport jumps back to top. It is a partial fix.
 
