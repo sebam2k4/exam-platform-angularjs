@@ -150,8 +150,6 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
   - Getting 7 correct answers out of 11 results in 63% score and a fail.
   - Getting 7 of fewer correct answers results in fail.
   - Getting 8 or more correct answers results in pass.
-- Hading navigation for exam
-  - 
 
 ## Resolved Bugs
 1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
