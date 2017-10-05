@@ -23,7 +23,7 @@ angular.module('AppRouteControllers', [])
     $scope.heading = 'Test Your Super Powers';
     $scope.examList = ExamList;
     $scope.hideNav = HideNav;
-    $scope.hideNav.removeNav = "";                      // remove .remove-nav class from top navigation and footer
+    $scope.hideNav.removeNav = "";  // remove .remove-nav class from top navigation and footer
   })
 
   .controller('ExamInfo', function ($scope, ExamList) {
@@ -34,7 +34,7 @@ angular.module('AppRouteControllers', [])
   .controller('ExamStart', function ($scope, ExamList, HideNav) {
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
-    $scope.hideNav.examInProgress = true;               // hides navigation
+    $scope.hideNav.examInProgress = true;  // hides navigation in view
   })
 
   .controller('ExamInProgress', function ($scope, ExamList, HideNav, ExamData, ExamMetrics) {
@@ -47,34 +47,28 @@ angular.module('AppRouteControllers', [])
     // and assign response data to scope variable
     ExamData.getExamData('data/exam1.json')
     .then(function successCallback(response) {
-      $scope.examData = response.data;
-      console.log($scope.examData);                     //test
-      $scope.examData = shuffle($scope.examData);       //shuffles question order everytime exam data is loaded
-      console.log('after shuffle: ', $scope.examData);  //test
+      $scope.examData = shuffle(response.data);  //shuffles question order everytime exam data is loaded
     },
-    function errorCallback(response) {
-      console.log("Couldn't load JSON file - check if exam1.json file exists in /data directory");
+    function errorCallback() {
+      console.warn("Couldn't load JSON file - check if exam1.json file exists in /data directory");
     });
 
     // Function runs on submitting exam:
     // checks answers and creates metrics
     $scope.submitExam = function(){
-      console.log($scope.examData);                     // test
-      $scope.examFinished = true;                       // shows 'Next' button in view after submitting exam
+
+      $scope.examFinished = true;  // shows 'Next' button in view after submitting exam
       var correctCount = 0;
       var examLength = $scope.examData.length;
-      console.log('number of questions:', examLength);  // test;
 
       // check answers and keep count of correct answers:
       for(var i=0; i<examLength; i++){
         if($scope.examData[i].selected == $scope.examData[i].answer) {
-          console.log("You answered a question correctly! ");                     // test
           $scope.examData[i].isCorrect = true;
           correctCount += 1;
         } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
-          console.log("You answered incorrectly :(");                             // test
           $scope.examData[i].isCorrect = false;
-        } else console.log("You didn't answer a question");                       // test
+        }
       };
       // Get some exam metrics:
       $scope.examMetrics.correctCount = correctCount;
@@ -113,7 +107,7 @@ angular.module('AppRouteControllers', [])
           array[randomIndex] = temp;
       }
       return array;
-    }
+    };
   })
   
   .controller('CertificateController', function ($scope, HideNav, ExamList, UserDetails, ExamMetrics) {
@@ -129,8 +123,7 @@ angular.module('AppRouteControllers', [])
     // Function runs on validated login form submit:
     $scope.submitForm = function(isValid) {
       if (isValid) {
-        console.log('This Login form validated');           // Test
-        $scope.validated = true;                            // show message on page
+        $scope.validated = true;  // show validation message in view
       }
     };
   })
@@ -143,11 +136,10 @@ angular.module('AppRouteControllers', [])
     // Function runs on validated registration form submit:
     $scope.submitForm = function(isValid) {
       if (isValid) {
-        console.log('This Registration form validated!');   // Test
-        $scope.validated = true;                            // shows message in view
-        $scope.openModal = true;                            // triggers info modal in view
+        $scope.validated = true;  // shows validation message in view
+        $scope.openModal = true;  // triggers info modal in view
 
-        // Make account.name and account.type collected in view available to other controllers:
+        // Make collected in view account.name and account.type available to other controllers:
         $scope.userDetails.userName = $scope.account.name;
         if ($scope.account.type === 'user'){
           $scope.userDetails.accountType = 'Exam Taker';
@@ -171,22 +163,4 @@ angular.module('AppRouteControllers', [])
     var days = 2190; // show 6 years
     $scope.minDate = (new Date($scope.currentTime.getTime() - ( 0 ))).toISOString(); // show only dates in future
     $scope.maxDate = (new Date($scope.currentTime.getTime() + ( 1000 * 60 * 60 *24 * days ))).toISOString();
-    $scope.onStart = function () {
-        console.log('onStart');
-    };
-    $scope.onRender = function () {
-        console.log('onRender');
-    };
-    $scope.onOpen = function () {
-        console.log('onOpen');
-    };
-    $scope.onClose = function () {
-        console.log('onClose');
-    };
-    $scope.onSet = function () {
-        console.log('onSet');
-    };
-    $scope.onStop = function () {
-        console.log('onStop');
-    };
   })
