@@ -1,28 +1,22 @@
 # Examination Platform - Front End Project
 
-## Demo
-
-[**Working Demo**](https://sebam2k4.github.io/stream1-project) deployed to Github Pages
-
-And here is an interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) that was used in the design process of the application.
-
 ## Overview
 
 ### What is this app for?
 
-A front end for a general purpose quizzing or examination application. It can be used for skill assesment, training, certification exams, mock tests, gathering data, or just surveys.
+A front end for a general purpose quizzing or examination application. It can be used for skill assesment, training, certification exams, mock tests, gathering data, and surveys.
 
 ### What does it do?
 
 It contains page views about the application and services offered, such as: faq, pricing, exam list, and login/registration forms.
 
-It also uses two-way data binding and AngularJS directives to create and display multiple choice questions and answer choices from a JSON file.
+It also uses two-way data binding and AngularJS directives to load and display multiple choice questions and answer choices from a JSON file.
 
-The idea is that the complete app would allows organizations to build and host their multiple choice exams/quizzes and users could register to take them. However, no backend for this to be possible is implemented. This is more of a proof of concept with focus on front end and set of AngualrJS templates, controllers, routes, services, and directives.
+The idea is that the complete full-stack app would allow organizations to build and host their multiple choice exams/quizzes and users could register to take them. However, no backend for this to be possible is implemented. This is more of a proof of concept with focus on front end and set of AngualrJS templates, controllers, routes, services, and directives.
 
 ### How does it work
 
-This is a Single Page Application on AngularJS framework and uses JSON data to generate exam questions and answers. The site is styled with MaterializeCSS.
+This is a Single Page Application on AngularJS framework and uses JSON data to generate exam questions and answers. The site is styled with MaterializeCSS and custom CSS.
 
 ### Why AngularJS?
 
@@ -77,9 +71,6 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
   - Show pass/fail result
   - Provide editable name input
 
-### Features Left to Implement
-  - None left I think....
-
 ## Tech Used
 
 ### Some of the tech used includes:
@@ -90,12 +81,18 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 - **[MaterializeCSS](http://materializecss.com/)**
   - To give the project a minimalist, responsive layout based on Google's Material Design.
 - **[Angular-materialize](https://krescruz.github.io/angular-materialize)**
-  - Plugin that includes few directives to ensure materialize plays nice with angular framework.
+  - Plugin that includes few directives to ensure certain components of materializeCSS work properly within angularJS framework.
 - **[npm](https://www.npmjs.com/)**
-  - Helps manage most of the dependencies in the application
+  - Helps manage all of the dependencies in the application
+
+## Demo
+
+[**Working Demo**](https://sebam2k4.github.io/exam-platform-angularjs) deployed to Github Pages
+
+And here is an interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) that was used in the design process of the application.
 
 ### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
+1. Firstly you will need to clone this repository by running the ```git clone https://github.com/sebam2k4/exam-platform-angularjs``` command
 2. After you've that, you'll need to make sure that you have **npm** installed - You can get **npm** by installing Node from [here](https://nodejs.org/en/)
 3. Once **npm** is installed, you'll need to install all of the dependencies in *package.json* by running this command from the app's root directory:
   ```
@@ -118,10 +115,14 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 8. Make changes to the code and refresh the browser window to see your changes.
 9. Happy days!
 
+### Deployment
+
+The application has been deployed to GitHub Pages from gh-pages branch. 
+
 ## Testing
 
 ### Manual Testing
-
+(Note To Self: write actual manual tests performed)
 #### Compatibility
 - Website looks consistent in both layout and style on different desktop browsers on Windows 10 operating system, including Chrome 61, Firefox 56, Opera 48, Vivaldi 1.12, MS Edge 40, and IE 11 and their mobile preview modes if available.
 - Also consistent on latest android and windows mobile devices. (not tested on apple iOS)
@@ -157,7 +158,7 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 
 This is due to the ng-view's css animation classes having a transition property set on them. 
 
-I used a `run()` function with `scrollTo` method with a timeout set to 0. This was found as an answer to similar issue on Stack Overflow(add cource)
+I used a `run()` function with `scrollTo` method with a timeout set to 0. This was found as an answer to similar issue on Stack Overflow(add source)
 
 This seems fix the problem, however, now when user tries to scroll down before the transition is finished, the viewport jumps back to top. It is a partial fix.
 
@@ -167,7 +168,7 @@ This seems fix the problem, however, now when user tries to scroll down before t
 
 ## Other Issues and notes
 
-* The JSON files from which the exams are generated includes the answer to every question in the `answer` property. This would not be safe for a real exam as it exposes the answer to the front end. Ideally, the user's answers would be saved to another JSON and compared to an answer key on the back end. This could be accomplished by moding the existing `SubmitExam` function in the `ExamInProgress` controller or modifying the `exam-inprogress` view to use a form and use the `onSubmit` method.
+* The JSON file from which the exam's data is being loaded from includes the answer to every question in the `answer` property. This would not be safe for a real exam as it exposes the answer to the front end. Ideally, the user's answers would be saved to another JSON and compared to an answer key on the back end. This could be accomplished by moding the existing `SubmitExam` function in the `ExamInProgress` controller or modifying the `exam-inprogress` view to use a form and use the `onSubmit` method.
 
 ## Contributing
 
