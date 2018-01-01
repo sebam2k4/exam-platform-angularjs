@@ -117,7 +117,11 @@ And here is an interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984
 
 ### Deployment
 
-The application has been deployed to GitHub Pages from gh-pages branch. 
+The application has been deployed to GitHub Pages from gh-pages branch. This required few changes to be made on the gh-pages branch for the deployed application to work correctly.
+
+1. Changed all absolute paths in html to relative paths.
+2. Updated the base tag in index.html to the repository's name.
+3. Added a 404.html page to force redirecting to homepage on page refresh and page not found.
 
 ## Testing
 
