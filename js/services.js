@@ -40,7 +40,7 @@ angular.module('AppServices', [])
       { examId: '8', name: 'Debugging', provider: 'Rubber Duckie', image: 'img/debugging.jpg', imageAlt: 'ladybug in grass', addedDate: '2017-09-16', type: 'coding' },
       { examId: '9', name: 'Proper Etiquette', provider: 'Your Aunt Mary', image: 'img/etiquette.jpg', imageAlt: 'tea on table', addedDate: '2017-09-02', type: 'other' },
       { examId: '10', name: 'Machine Code', provider: 'CPU', image: 'img/machine-code.jpg', imageAlt: 'number board', addedDate: '2017-08-11', type: 'coding' },
-      { examId: '11', name: 'UE4', provider: 'Unreal', image: 'img/ue4.jpg', imageAlt: 'ahnds holding a gamepad', addedDate: '2017-05-23', type: 'other' },
+      { examId: '11', name: 'UE4', provider: 'Unreal', image: 'img/ue4.jpg', imageAlt: 'hands holding a gamepad', addedDate: '2017-05-23', type: 'other' },
       { examId: '12', name: 'Six Sigma', provider: 'Black Belt Coach', image: 'img/six-sigma.jpg', imageAlt: 'man wearing tuxedo on a motorbike', addedDate: '2017-02-28', type: 'productivity' }
     ];
   })
