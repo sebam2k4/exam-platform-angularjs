@@ -93,6 +93,9 @@ h5 {
   .page-header h2 {
     font-size: 1.5rem;
   }
+  .user-details .user-profile-container {
+    padding-right: .6rem;
+  }
 }
 
 /* GENERAL REUSABLE STYLES */
