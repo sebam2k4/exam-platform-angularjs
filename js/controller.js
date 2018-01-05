@@ -75,10 +75,10 @@ angular.module('AppRouteControllers', [])
       // check answers and keep count of correct answers:
       for(var i=0; i<examLength; i++){
         if($scope.examData[i].selected == $scope.examData[i].answer) {
-          $scope.examData[i].isCorrect = true;
+          $scope.examData[i].isCorrect = true;  // used to give user feedback of correct answers after submiting exam
           correctCount += 1;
         } else if ($scope.examData[i].selected !== $scope.examData[i].answer) {
-          $scope.examData[i].isCorrect = false;
+          $scope.examData[i].isCorrect = false;  // used to give user feedback of incorrect answers after submiting exam
         }
       };
       // Get some exam metrics:
