@@ -21,19 +21,30 @@ angular.module('AppRouteControllers', [])
 
   .controller('PageExamsController', function ($scope, ExamList, HideNav) {
     $scope.heading = 'Test Your Super Powers';
-    $scope.examList = ExamList;
     $scope.hideNav = HideNav;
     $scope.hideNav.removeNav = "";  // remove .remove-nav class from top navigation and footer
+
+    // retrieve promise from ExamList service
+    // and assign response data to scope variable
+    ExamList.getExamList('data/exam-list.json')
+    .then(function successCallback(response) {
+      $scope.examList = response.data;
+    },
+    function errorCallback() {
+      console.warn("Couldn't load JSON file - check if exam-list.json file exists in /data directory");
+      $scope.showErrorMessage = true;
+    });
   })
 
-  .controller('ExamInfo', function ($scope, ExamList) {
-    $scope.examList = ExamList;
-    $scope.heading = $scope.examList[0].name;
+  .controller('ExamInfo', function ($scope) {
+    // hardcoding the value for view's heading as all exams load the same 'Coding Exam'
+    // if there were more than 1 exam then inject ExamList factory, retrieve a response via a promise
+    // and use a for loop to assign coresponding heading for each exam for view
+    $scope.heading = "Coding Exam";
   })
 
-  .controller('ExamStart', function ($scope, ExamList, HideNav) {
+  .controller('ExamStart', function ($scope, HideNav) {
     $scope.hideNav = HideNav;
-    $scope.examList = ExamList;
     $scope.hideNav.examInProgress = true;  // hides navigation in view
   })
 

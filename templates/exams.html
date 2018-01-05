@@ -49,6 +49,7 @@
   <!-- EXAM LIST -->
   <section>
     <div class="row exam-list">
+      <p ng-if="showErrorMessage">Error loading available exams. Please try again later or contact us for details</p>
       <div class="flex-container">
         <div class="flex-item" data-ng-repeat="exam in examList | filter: {type:exam.type}">
           <div class="card hoverable deep-orange lighten-1" ng-mouseenter="isHover = true" ng-mouseleave="isHover = false">
