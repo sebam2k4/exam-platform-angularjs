@@ -22,7 +22,8 @@ angular.module('AppRouteControllers', [])
   .controller('PageExamsController', function ($scope, ExamList, HideNav) {
     $scope.heading = 'Test Your Super Powers';
     $scope.hideNav = HideNav;
-    $scope.hideNav.removeNav = "";  // remove .remove-nav class from top navigation and footer
+    // make sure the navigation reappears when user uses back in browser during exam
+    $scope.hideNav.examInProgress = false;
 
     // retrieve promise from ExamList service
     // and assign response data to scope variable
@@ -36,11 +37,15 @@ angular.module('AppRouteControllers', [])
     });
   })
 
-  .controller('ExamInfo', function ($scope) {
-    // hardcoding the value for view's heading as all exams load the same 'Coding Exam'
-    // if there were more than 1 exam then inject ExamList factory, retrieve a response via a promise
-    // and use a for loop to assign coresponding heading for each exam for view
+  .controller('ExamInfo', function ($scope, HideNav) {
+    /* hardcoding the value for view's heading as all exams load the same 'Coding Exam'
+      if there were more than 1 exam then inject ExamList factory, retrieve a response via a promise
+      and use a for loop to assign coresponding heading for each exam for view 
+    */
     $scope.heading = "Coding Exam";
+    // bring back navigation on going back in browser
+    $scope.hideNav = HideNav;
+    $scope.hideNav.examInProgress = false;  // hides navigation in view
   })
 
   .controller('ExamStart', function ($scope, HideNav) {
@@ -52,7 +57,6 @@ angular.module('AppRouteControllers', [])
     $scope.hideNav = HideNav;
     $scope.examList = ExamList;
     $scope.examMetrics = ExamMetrics;
-    $scope.hideNav.removeNav = "remove-nav";
 
     // retrieve promise from ExamData service
     // and assign response data to scope variable

@@ -309,7 +309,8 @@ ul.icon >li::before {
 .exam-list .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: white;
 }
-.exam-in-progress {
+
+.exam-in-progress, .exam-start {
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
