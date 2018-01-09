@@ -20,7 +20,7 @@
 <body>
 
   <!-- TOP NAVIGATION -->
-  <div ng-controller="NavigationController" class="{{ hideNav.removeNav }}">
+  <div ng-controller="NavigationController" ng-class="{ 'remove-nav': hideNav.examInProgress }">
     <nav ng-hide="hideNav.examInProgress" class="nav-top animate-hide-nav white">
       <div class="nav-wrapper container">
         <a href="." class="brand-logo">ExamOrange</a>
