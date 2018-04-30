@@ -122,7 +122,7 @@
   },
   {
     "questionId": 105,
-    "questionText": "When using the CSS padding property, are you allowed to use negative values?",
+    "questionText": "When using the CSS margin property, are you allowed to use negative values?",
     "selected": null,
     "answer": 0,
     "isCorrect": null,
