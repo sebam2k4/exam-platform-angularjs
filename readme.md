@@ -2,11 +2,11 @@
 
 ## Overview
 
-### What is this app for?
+### What is this app for
 
 A front end for a general purpose quizzing or examination application. It can be used for skill assesment, training, certification exams, mock tests, gathering data, and surveys.
 
-### What does it do?
+### What does it do
 
 It contains page views about the application and services offered, such as: faq, pricing, exam list, and login/registration forms.
 
@@ -18,7 +18,11 @@ The idea is that the complete full-stack app would allow organizations to build 
 
 This is a Single Page Application on AngularJS framework and uses JSON data to generate exam questions and answers. The site is styled with MaterializeCSS and custom CSS.
 
-### Why AngularJS?
+### Planning
+
+Adobe Xd was used for initial visual planning and design of the application before any actual development started. The Adobe XD interactive prototype that was finally produced is availabe [here](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/)
+
+### Why AngularJS
 
 - AngularJS Featurs:
   - Improved User Experience
@@ -36,11 +40,12 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
   - Steep Learning Curve (At least I thinks so :)
   - Lots of unfamiliar terms
   - Many ways to do things
-  - SEO ?    
+  - SEO
 
 ## App Features
- 
+
 ### Existing Features
+
 - Pages
   - Home page
   - FAQ page
@@ -50,7 +55,7 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
   - Exam start page
   - Exam in-progress page
   - Exam certificate page
-- Forms 
+- Forms
   - Login with HTML5 validation.
   - Registration with HTML5 validation.
     - On Submit: Binds user input values for name and account type (via 2-way data binding) which are then used in side dashboard and `exam-certificate` view.
@@ -74,6 +79,7 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 ## Tech Used
 
 ### Some of the tech used includes:
+
 - **[AngularJS](https://angularjs.org/)**
   - To handle page routing
   - Single Page Application
@@ -87,32 +93,38 @@ This is a Single Page Application on AngularJS framework and uses JSON data to g
 
 ## Demo
 
-[**Working Demo**](https://sebam2k4.github.io/exam-platform-angularjs) deployed to Github Pages
-
-And here is an interactive [Adobe Xd prototype](https://xd.adobe.com/view/d2c984c5-1fc0-49ce-b6e2-c75375493a07/) that was used in the design process of the application.
+[**Working Demo**](https://sebam2k4.github.io/exam-platform-angularjs) deployed on Github Pages
 
 ### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone https://github.com/sebam2k4/exam-platform-angularjs``` command
+
+1. First, you will need to clone this repository by running the `git clone https://github.com/sebam2k4/exam-platform-angularjs` command
 2. After you've that, you'll need to make sure that you have **npm** installed - You can get **npm** by installing Node from [here](https://nodejs.org/en/)
 3. Once **npm** is installed, you'll need to install all of the dependencies in *package.json* by running this command from the app's root directory:
-  ```
+
+  ```shell
   npm install
   ```
+
 4. This will install the following dependencies:
   - angular
-  - angular-animate 
+  - angular-animate
   - angular-route
   - angular-materialize
   - materialize-css
   - http-server (dev dependancy)
 
 5. After those dependencies have been installed, you can then run
-  ```
+
+  ```shell
   npm run server
   ```
+
 6. This will start the http-server to allow you to preview the website.
+
 7. The project will now run on [localhost:8080](http://127.0.0.1:8080)
+
 8. Make changes to the code and refresh the browser window to see your changes.
+
 9. Happy days!
 
 ### Deployment
@@ -126,55 +138,42 @@ The application has been deployed to GitHub Pages from gh-pages branch. This req
 ## Testing
 
 ### Manual Testing
-(Note To Self: write actual manual tests performed)
-#### Compatibility
-- Website looks consistent in both layout and style on different desktop browsers on Windows 10 operating system, including Chrome 61, Firefox 56, Opera 48, Vivaldi 1.12, MS Edge 40, and IE 11 and their mobile preview modes if available.
-- Also consistent on latest android and windows mobile devices. (not tested on apple iOS)
 
-#### Registration Form
-- Accessing:
-  - From homepage: go to 'Pricing' page in top navigation and click on 'Register' button below pricing table.
-  - From homepage: go to login in top navigation and click 'register' link
-  - From homepage: go to login in top navigation and try to log in. Error message will appear containing a link to registration page.
-  - On mobile device, swipe from right edge to left or use hamburger icon in top bar to open side navigation and tap on 'Register' link
-- Form Validation - Password Field:
-  - Requires min 8 character length - no max limit.
-  - Does not validate with just letters, numbers, or special characters
-  - Valid special characters tested: :/#[]@!$&'()*+,;=.<>"?
-  - Accepts space characters
+A number of different manual tests were performed to make sure application and many of its features are working as expected
 
-#### Exam taking
-- Functionality
-  - From exams page, clicking on 'info' or 'take exam' takes user to informational page about the sample exam. From here user has to click 'Take This Exam' button and then finally click on 'Start Exam Now' to start the actual sample exam.
-  - Questions display in different order everytime new exam is started.
-  - Clicking 'Finish Exam' checks answer selections for correct and incorrect and provides score feedback.
-  - User then clicks 'Next' to continue on to the scorecard/certificate.
-  - Score card provides percent score and a pass or fail result.
-- Scoring
-  - Getting 8 correct answers out of 11 results in 72% score and a pass.
-  - Getting 7 correct answers out of 11 results in 63% score and a fail.
-  - Getting 7 of fewer correct answers results in fail.
-  - Getting 8 or more correct answers results in pass.
+Views and routes were tested by clicking on application links in navigation, footer, and other placements throughout the site to make the user is routed to the correct page.
 
-## Resolved Bugs
-1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
-2. `autoscroll="true` attribute is used to scroll the viewport to top after the view is updated, however, it would only trigger after the view is updated and the transition is played causing undesirable delay and noticable page jump to top.
+I tested the registration form's password input field validation in the following ways:
 
-This is due to the ng-view's css animation classes having a transition property set on them. 
+- Entered less than 8 lowercase letters to get a minimum length, number required, and uppercase letter required validation errors
+- Entered the following special characters :/#[]@!$&'()*+,;=.<>"? along with one lowercase letter, uppercase letter, and number to pass password validation (:/#[]@!$&'()*+,;=.<>"?aB1)
 
-I used a `run()` function with `scrollTo` method with a timeout set to 0. This was found as an answer to similar issue on Stack Overflow(add source)
+I tested the exam taking functionality in the following ways:
 
-This seems fix the problem, however, now when user tries to scroll down before the transition is finished, the viewport jumps back to top. It is a partial fix.
+- on the 'exams' page, I clicked on 'info' or 'take exam' to make sure the app takes me to the exam info view. Then to get the exam started I tested the 'Take This Exam' button and then the 'Start Exam Now'.
+- I have started the exam multiple times to check that the question order is randomized everytime new exam is started.
+- I have started and ended the exam multiple times to check that the navigation and footer disappear on exam start, and then reapper on exam finish.
+- Made sure clicking 'Finish Exam' checks answer selections for correct and incorrect and provides score feedback.
+- Tested the exam result page that is show a pass or fail result depending on the score.
+- Checked multiple times that scores over 8 correct answers result in a pass screen.
+- Checked multiple times that scores under 8 correct answers result in a fail result screen.
+
+For testing layout responsiveness I have used both an Android and Windows phone as well as Chrome Developer Tools' device toolbar. The application's responsiveness was checked against different mobile orientations (portrait/landscape) as well as different screen sizes on desktop. I've also tested on different desktop borowsers: Chrome, Mozilla, Brave, and Edge.
 
 ## Bugs
 
-- Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile/small. This seems to be an issue with MaterializeCSS itself.
+- Slide-out side navigation doesn't close when clicked too far away from its container on medium and large screens. Works correctly on mobile. This seems to be an issue with MaterializeCSS itself.
+
+## Resolved Bugs
+
+1. The filterable list of exams on /exams page would create big horizontal gaps between the cards on certain browser widths due to overflowing content making some cards grow in size. This was fixed by replacing the MaterializeCSS grid with flexbox for positioning the cards.
+
+2. `autoscroll="true` attribute is used to scroll the viewport to top after the view is updated (accessing another page), however, it would only trigger after the view is updated and the transition is played causing undesirable delay and noticable page jump to top. This is due to the ng-view's css animation classes having a transition property set on them. I used a `run()` function with `scrollTo` method with a timeout set to 0. This seems fix the problem, however, now when user tries to scroll down before the transition is finished, the viewport jumps back to top. It is a partial fix.
 
 ## Other Issues and notes
 
-* The JSON file from which the exam's data is being loaded from includes the answer to every question in the `answer` property. This would not be safe for a real exam as it exposes the answer to the front end. Ideally, the user's answers would be saved to another JSON and compared to an answer key on the back end. This could be accomplished by moding the existing `SubmitExam` function in the `ExamInProgress` controller or modifying the `exam-inprogress` view to use a form and use the `onSubmit` method.
+- The JSON file from which the exam's data is being loaded from includes the answer to every question in the `answer` property. This would not be safe for a real exam as it exposes the answer to the client (front-end). Ideally, the user's answers would be saved to another JSON and compared to an answer key stored on the server (back-end). This could be accomplished by modifying the existing `SubmitExam` function in the `ExamInProgress` controller or modifying the `exam-inprogress` view to use a form and use the `onSubmit` method to send user answers to the server.
 
 ## Contributing
 
 - As this is a graded project for a course, no contributions are accepted at this moment :) I suppose after it's been graded then it can be opened to contributions. However, feel free to download the project and experiment!
-
