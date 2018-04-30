@@ -141,12 +141,12 @@ The application has been deployed to GitHub Pages from gh-pages branch. This req
 
 A number of different manual tests were performed to make sure application and many of its features are working as expected
 
-Views and routes were tested by clicking on application links in navigation, footer, and other placements throughout the site to make the user is routed to the correct page.
+Views and routes were tested by clicking on application links in navigation, footer, and other placements throughout the site to make sure the user is routed to the correct page.
 
 I tested the registration form's password input field validation in the following ways:
 
 - Entered less than 8 lowercase letters to get a minimum length, number required, and uppercase letter required validation errors
-- Entered the following special characters :/#[]@!$&'()*+,;=.<>"? along with one lowercase letter, uppercase letter, and number to pass password validation (:/#[]@!$&'()*+,;=.<>"?aB1)
+- Entered the following special characters :/#[]@!$&'()*+,;=.<>"? along with one lowercase letter, uppercase letter, and number to pass password validation (`:/#[]@!$&'()*+,;=.<>"?aB1`)
 
 I tested the exam taking functionality in the following ways:
 
